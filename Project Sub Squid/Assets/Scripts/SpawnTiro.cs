@@ -6,6 +6,12 @@ public class SpawnTiro : MonoBehaviour
 {
 
     public Transform bullet;
+
+    //public GameObject shot;
+	public Transform shotSpawn;
+
+    public float fireRate;
+	private float nextFire;
     
     // Start is called before the first frame update
     void Start()
@@ -16,9 +22,12 @@ public class SpawnTiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
+        
+        if(Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextFire)
         {
-            Instantiate(bullet);
+            nextFire = Time.time + fireRate;
+            Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
         }
     }
+        
 }

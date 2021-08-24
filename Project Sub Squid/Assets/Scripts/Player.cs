@@ -6,11 +6,14 @@ public class Player : MonoBehaviour
 {
     public float velocity = 10.0f;
     public float rotation = 90.0f;
+
+
+    
     
 
     void Start () 
     {
-
+        
     }
 
     // Update is called once per frame
@@ -19,9 +22,8 @@ public class Player : MonoBehaviour
         float y = Input.GetAxis("Horizontal");
         float x = Input.GetAxis("Vertical");
 
-        Vector3 dir = new Vector3(x, -y , 0) * velocity;
+        Vector3 dir = new Vector3(-x, y , 0) * velocity;
 
         transform.Translate(dir * Time.deltaTime);
-
     }
 }

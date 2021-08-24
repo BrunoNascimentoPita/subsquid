@@ -336,6 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 10
   rotation: 90
+  dashSpeed: 0
 --- !u!1 &705035765
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,15 +535,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0913ee8c036b6dc468615920c91704e0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0913ee8c036b6dc468615920c91704e0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0913ee8c036b6dc468615920c91704e0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0913ee8c036b6dc468615920c91704e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,6 +618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 22
   rotation: 0
+  dashSpeed: 5
+  dashRate: 0.3
 --- !u!4 &1808367756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0913ee8c036b6dc468615920c91704e0, type: 3}

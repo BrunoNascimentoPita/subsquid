@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public float velocity = 10.0f;
     public float rotation = 90.0f;
 
+    public float dashSpeed;
+
 
     
     
@@ -25,5 +27,10 @@ public class Player : MonoBehaviour
         Vector3 dir = new Vector3(-x, y , 0) * velocity;
 
         transform.Translate(dir * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.J))
+        {
+            transform.Translate(dir * Time.deltaTime * dashSpeed);
+        }
     }
 }

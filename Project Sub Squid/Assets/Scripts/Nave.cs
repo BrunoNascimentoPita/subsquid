@@ -6,6 +6,11 @@ public class Nave : MonoBehaviour
 {
     public float velocity = 10.0f;
     public float rotation = 90.0f;
+
+    public float dashSpeed;
+
+    public float dashRate;
+	private float nextDash;
     
 
     void Start () 
@@ -22,6 +27,13 @@ public class Nave : MonoBehaviour
         Vector3 dir = new Vector3(0, z , x) * velocity;
 
         transform.Translate(dir * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.J) && Time.time > nextDash)
+        {
+            nextDash = Time.time + dashRate;
+            transform.Translate(dir * Time.deltaTime * dashSpeed);
+            Debug.Log("Dash");
+        }
 
     }
 }

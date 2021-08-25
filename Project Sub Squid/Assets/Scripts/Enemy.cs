@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float velocity = 10.0f;
-    public float rotation = 90.0f;
+    public float eixoX;
+    public float eixoZ;
     
 
     void Start () 
@@ -16,8 +17,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 dirEnemy = new Vector3(-velocity, 0 , 0) * velocity;
+        /*
+        Vector3 dirEnemy = new Vector3(velocity, 0 , 0);
 
         transform.Translate(dirEnemy * Time.deltaTime);
+        */
+
+        Vector3 dir = new Vector3(0, eixoZ , eixoX) * velocity;
+
+        transform.Translate(dir * Time.deltaTime);
     }
 }

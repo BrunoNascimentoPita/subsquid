@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     //private float movetime = 0.8f;
 
     
-    public int vidaInimigo = 5;
-    public int danoSofrido = 2;
+    public float vidaInimigo = 5f;
+    public float danoSofrido = 2f;
     
     private bool dirRight;
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4680690746670421378}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +133,6 @@ MonoBehaviour:
   enemy: {fileID: 5491100426894577052}
   rb: {fileID: 4680690746670421382}
   rotationY: 270
+  bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
+  shotSpawnEnemy: {fileID: 5152010300387252006}
+  fireRate: 1.5

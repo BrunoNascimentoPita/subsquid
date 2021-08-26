@@ -18,5 +18,14 @@ public class TiroInimigo : MonoBehaviour
         transform.position += Vector3.left * speedTiro * Time.deltaTime;
         Destroy(this.gameObject, 5.0f);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject, 0.1f);
+            Debug.Log("Tiro inimigo acertou");
+        }
+    }
 }
 

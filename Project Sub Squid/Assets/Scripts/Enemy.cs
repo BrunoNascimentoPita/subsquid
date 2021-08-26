@@ -23,6 +23,17 @@ public class Enemy : MonoBehaviour
 
     public float rotationY = 250;
 
+    // TIRO
+    public Transform bulletEnemy;
+
+    //public GameObject shot;
+	public Transform shotSpawnEnemy;
+
+    public float fireRate;
+	private float nextFire;
+
+    //
+
     void Start () 
     {
         enemy.transform.Rotate(0, rotationY, 0);
@@ -52,5 +63,13 @@ public class Enemy : MonoBehaviour
             timer = 0f;
         }
         */
+        //Tiro
+        if(Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(bulletEnemy, shotSpawnEnemy.position, shotSpawnEnemy.rotation);
+        }
+        //
+
     }
 }

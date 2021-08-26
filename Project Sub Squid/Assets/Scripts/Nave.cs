@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Nave : MonoBehaviour
-{
+{   
+    /*
     public float velocity = 10.0f;
     public float rotation = 90.0f;
 
@@ -12,10 +13,10 @@ public class Nave : MonoBehaviour
     public float dashRate;
 	private float nextDash;
 
-    //
+    */
 
     Rigidbody corpoRigido2D;
-    public float forcaPulo = 5, velocidade = 2;
+    public float velocidade = 20;
     
 
     void Start () 

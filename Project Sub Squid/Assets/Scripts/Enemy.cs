@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
 
     public Rigidbody rb;
 
-    public float rotationY = 260;
+    public float rotationY = 250;
 
     void Start () 
     {

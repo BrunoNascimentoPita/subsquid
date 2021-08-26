@@ -132,4 +132,4 @@ MonoBehaviour:
   eixoX: 1
   enemy: {fileID: 5491100426894577052}
   rb: {fileID: 4680690746670421382}
-  rotationY: 260
+  rotationY: 270

@@ -16,7 +16,7 @@ public class Nave : MonoBehaviour
     */
 
     Rigidbody corpoRigido2D;
-    public float velocidade = 20;
+    public float velocidade = 50;
     
 
     void Start () 

@@ -25,7 +25,7 @@ public class SpawnEnemy : MonoBehaviour
     void StartSpawn()
     {
           int PontosSpawnIndex = Random.Range(0, pontosdeSpawn.Length);
-            Instantiate(enemy, pontosdeSpawn[PontosSpawnIndex].position, pontosdeSpawn[PontosSpawnIndex].rotation);
+          Instantiate(enemy, pontosdeSpawn[PontosSpawnIndex].position, Quaternion.identity);
 
     }
 

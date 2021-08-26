@@ -11,20 +11,28 @@ public class Nave : MonoBehaviour
 
     public float dashRate;
 	private float nextDash;
+
+    //
+
+    Rigidbody corpoRigido2D;
+    public float forcaPulo = 5, velocidade = 2;
     
 
     void Start () 
     {
-
+        corpoRigido2D = GetComponent<Rigidbody> ();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        Movimentacao ();
 
-        Vector3 dir = new Vector3(0, z , x) * velocity;
+        /*
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+
+        Vector3 dir = new Vector3(0, y , x) * velocity;
 
         transform.Translate(dir * Time.deltaTime);
 
@@ -34,6 +42,12 @@ public class Nave : MonoBehaviour
             transform.Translate(dir * Time.deltaTime * dashSpeed);
             Debug.Log("Dash");
         }
-
+        */
     }
+    void Movimentacao() 
+    {
+      corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
+      corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+       
+   }
 }

@@ -70,6 +70,16 @@ public class Enemy : MonoBehaviour
             Instantiate(bulletEnemy, shotSpawnEnemy.position, shotSpawnEnemy.rotation);
         }
         //
+        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Tiro")
+        {
+            Debug.Log("levou um tiro do player");
+            Destroy(this.gameObject);
+        }
 
     }
 }

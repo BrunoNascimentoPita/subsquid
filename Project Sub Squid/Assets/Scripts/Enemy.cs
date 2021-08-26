@@ -11,6 +11,10 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     //private float movetime = 0.8f;
 
+    
+    public int vidaInimigo = 5;
+    public int danoSofrido = 2;
+    
     private bool dirRight;
 
     //private float timer;
@@ -70,6 +74,11 @@ public class Enemy : MonoBehaviour
             Instantiate(bulletEnemy, shotSpawnEnemy.position, shotSpawnEnemy.rotation);
         }
         //
+
+        if(vidaInimigo <= 0)
+        {
+            Destroy(gameObject);
+        }
         
     }
 
@@ -78,7 +87,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             Debug.Log("levou um tiro do player");
-            Destroy(this.gameObject);
+            vidaInimigo = vidaInimigo - danoSofrido;
         }
 
     }

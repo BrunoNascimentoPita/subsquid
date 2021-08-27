@@ -17,7 +17,7 @@ public class TiroParticula : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.left * speedTiro * Time.deltaTime;
+        transform.position += Vector3.right * speedTiro * Time.deltaTime;
         Destroy(this.gameObject, 5.0f);
     }
 

@@ -96,5 +96,11 @@ public class Enemy : MonoBehaviour
             vidaInimigo = vidaInimigo - danoSofrido;
         }
 
+        if (other.gameObject.tag == "TiroTriplo")
+        {
+            Debug.Log("levou um tiro do player");
+            vidaInimigo = vidaInimigo - 1;
+        }
+
     }
 }

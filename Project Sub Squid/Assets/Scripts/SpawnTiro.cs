@@ -8,6 +8,8 @@ public class SpawnTiro : MonoBehaviour
     public Transform bullet;
     public Transform bullet2;
 
+    public Transform bullet3;
+
     //public GameObject shot;
 	public Transform shotSpawn;
     
@@ -34,6 +36,11 @@ public class SpawnTiro : MonoBehaviour
             Tiro2();
         }
 
+        if(Input.GetKeyDown(KeyCode.L) && Time.time > nextFire)
+        {
+            Tiro3();
+        }
+
 
     }
 
@@ -48,6 +55,12 @@ public class SpawnTiro : MonoBehaviour
     {
         nextFire = Time.time + fireRate;
         Instantiate(bullet2, shotSpawn.position, shotSpawn.rotation);
+    }
+
+    void Tiro3()
+    {
+        nextFire = Time.time + fireRate;
+        Instantiate(bullet3, shotSpawn.position, shotSpawn.rotation);
     }
         
 }

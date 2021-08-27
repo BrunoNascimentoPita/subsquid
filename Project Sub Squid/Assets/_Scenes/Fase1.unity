@@ -538,6 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   bullet2: {fileID: 0}
+  bullet3: {fileID: 0}
   shotSpawn: {fileID: 705035766}
   fireRate: 0.1
 --- !u!1 &741223164
@@ -708,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   bullet2: {fileID: 6967154269048400682, guid: e1bec5b7599debc419ad6a3af1db610d, type: 3}
+  bullet3: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
   shotSpawn: {fileID: 781673487}
   fireRate: 0.1
 --- !u!1001 &1131444447

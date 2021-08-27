@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Tiro
+  - TiroDuplo
   layers:
   - Default
   - TransparentFX

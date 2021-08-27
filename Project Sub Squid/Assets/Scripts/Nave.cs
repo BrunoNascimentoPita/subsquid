@@ -40,7 +40,7 @@ public class Nave : MonoBehaviour
         if (Input.GetKey(KeyCode.J) && Time.time > nextDash)
         {
             nextDash = Time.time + dashRate;
-            transform.Translate(dir * Time.deltaTime * dashSpeed);
+            corpoRigido2D.velocity = new Vector2 (5 * dashSpeed, 0);
             Debug.Log("Dash");
         }
         */

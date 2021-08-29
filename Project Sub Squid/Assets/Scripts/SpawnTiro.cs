@@ -26,7 +26,7 @@ public class SpawnTiro : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.Mouse0) && Time.time > nextFire)
+        if(Input.GetKeyDown(KeyCode.J) && Time.time > nextFire)
         {
             Tiro1();
         }

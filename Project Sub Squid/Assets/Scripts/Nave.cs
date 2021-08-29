@@ -8,15 +8,15 @@ public class Nave : MonoBehaviour
     public float velocity = 10.0f;
     public float rotation = 90.0f;
 
-    public float dashSpeed;
+    public float dashSpeed = 15;
 
     public float dashRate;
 	private float nextDash;
-
     */
+    
 
     Rigidbody corpoRigido2D;
-    public float velocidade = 50;
+    public float velocidade = 2;
 
 
     public float vidaPlayer = 10f;
@@ -42,10 +42,10 @@ public class Nave : MonoBehaviour
 
         transform.Translate(dir * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.J) && Time.time > nextDash)
+        if (Input.GetKey(KeyCode.U) && Time.time > nextDash)
         {
             nextDash = Time.time + dashRate;
-            corpoRigido2D.velocity = new Vector2 (5 * dashSpeed, 0);
+            corpoRigido2D.velocity = transform.forward * dashSpeed;
             Debug.Log("Dash");
         }
         */

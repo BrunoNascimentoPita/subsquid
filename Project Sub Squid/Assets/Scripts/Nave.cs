@@ -17,6 +17,11 @@ public class Nave : MonoBehaviour
 
     Rigidbody corpoRigido2D;
     public float velocidade = 50;
+
+
+    public float vidaPlayer = 10f;
+
+    public float danoPlayer = 2f;
     
 
     void Start () 
@@ -59,12 +64,26 @@ public class Nave : MonoBehaviour
         transform.position = new Vector3 (Mathf.Clamp (transform.position.x, leftBorder, rightBorder), Mathf.Clamp (transform.position.y, topBorder, bottomBorder), transform.position.z);
 
         //
+
+        if(vidaPlayer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Movimentacao() 
     {
       corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
       corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "TiroEnemy")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaPlayer = vidaPlayer - danoPlayer;
+        }
     }
 
 }

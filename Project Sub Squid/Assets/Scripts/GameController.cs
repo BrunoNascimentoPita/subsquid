@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        /*
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(Time.timeScale == 1)
@@ -35,6 +36,8 @@ public class GameController : MonoBehaviour
             }
 
         }
+        */
+
 
     }
 
@@ -58,15 +61,20 @@ public class GameController : MonoBehaviour
     {
         
         pauseTela.SetActive(true);
-        volumeSlider.SetActive(true);
+        //volumeSlider.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void Resume()
     {
         pauseTela.SetActive(false);
-        volumeSlider.SetActive(false);
+        //volumeSlider.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void Sair()
+    {
+        Application.Quit();
     }
     
 

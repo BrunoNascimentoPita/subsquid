@@ -69,6 +69,13 @@ public class Nave : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            GameController.instance.ShowPauseTela();
+        }
     }
 
     void Movimentacao() 

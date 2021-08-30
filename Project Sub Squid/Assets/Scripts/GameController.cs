@@ -72,6 +72,11 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void MenuInicial()
+    {
+        SceneManager.LoadScene("_MenuInicial");
+    }
+
     public void Sair()
     {
         Application.Quit();

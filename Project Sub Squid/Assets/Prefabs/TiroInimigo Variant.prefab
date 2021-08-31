@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2216712538860760644, guid: 18d89158644f73541a556c7b7071a960, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: TiroEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2216712538860760647, guid: 18d89158644f73541a556c7b7071a960, type: 3}

@@ -19,7 +19,7 @@ public class Nave : MonoBehaviour
     public float velocidade = 2;
 
 
-    public float vidaPlayer = 10f;
+    public float vidaPlayer = 5f;
 
     public float danoPlayer = 2f;
     
@@ -67,6 +67,8 @@ public class Nave : MonoBehaviour
 
         if(vidaPlayer <= 0)
         {
+            Time.timeScale = 0;
+            GameController.instance.ShowGameOver();
             Destroy(gameObject);
         }
 

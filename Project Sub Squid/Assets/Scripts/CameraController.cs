@@ -26,6 +26,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     public void CameraTremer()
     {
+        Debug.Log("CameraTremeu");
         anim.Play("CameraTreme");
     }
 }

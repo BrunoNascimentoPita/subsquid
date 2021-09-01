@@ -92,6 +92,7 @@ public class Nave : MonoBehaviour
         {
             Debug.Log("levou um tiro do Inimigo");
             vidaPlayer = vidaPlayer - danoPlayer;
+            CameraController.instance.CameraTremer();
         }
     }
 

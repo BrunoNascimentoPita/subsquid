@@ -1742,6 +1742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477cf16147e9064ab34ba07bc82bbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashSpeed: 35
+  dashRate: 0.5
   velocidade: 10
   vidaPlayer: 5
   danoPlayer: 2
@@ -12474,6 +12476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477cf16147e9064ab34ba07bc82bbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashSpeed: 15
+  dashRate: 0
   velocidade: 20
   vidaPlayer: 10
   danoPlayer: 2

@@ -8,11 +8,12 @@ public class Nave : MonoBehaviour
     public float velocity = 10.0f;
     public float rotation = 90.0f;
 
-    public float dashSpeed = 15;
+    */
+
+    public float dashSpeed = 35;
 
     public float dashRate;
 	private float nextDash;
-    */
     
 
     Rigidbody corpoRigido2D;
@@ -33,7 +34,7 @@ public class Nave : MonoBehaviour
     void Update()
     {
         Movimentacao ();
-
+    
         /*
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
@@ -42,13 +43,16 @@ public class Nave : MonoBehaviour
 
         transform.Translate(dir * Time.deltaTime);
 
+        */
+
+
+
         if (Input.GetKey(KeyCode.U) && Time.time > nextDash)
         {
-            nextDash = Time.time + dashRate;
-            corpoRigido2D.velocity = transform.forward * dashSpeed;
-            Debug.Log("Dash");
+            DashM();
         }
-        */
+
+        
             // Impedir o player de sair da area da camera
 
         var distanceZ = (transform.position - Camera.main.transform.position).z;
@@ -84,6 +88,13 @@ public class Nave : MonoBehaviour
     {
       corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
       corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+    }
+
+    void DashM() 
+    {
+        Debug.Log("Dash");
+      corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
+      corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
     }
 
     void OnTriggerEnter(Collider other)

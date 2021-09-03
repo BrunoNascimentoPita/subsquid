@@ -9,6 +9,7 @@ TagManager:
   - TiroDuplo
   - TiroTriplo
   - TiroEnemy
+  - TiroPesado
   layers:
   - Default
   - TransparentFX

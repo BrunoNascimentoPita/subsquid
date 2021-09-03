@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour
     //private float movetime = 0.8f;
 
     
-    public float vidaInimigo = 5f;
-    public float danoSofrido = 2f;
+    public float vidaInimigo = 10f;
+    public float danoSofrido = 3f;
     
     private bool dirRight;
 
@@ -93,13 +93,20 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "TiroDuplo")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigo = vidaInimigo - danoSofrido;
+            vidaInimigo = vidaInimigo - 2;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - 1;
+        }
+
+        if (other.gameObject.tag == "TiroPesado")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaInimigo = vidaInimigo - 4;
+            
         }
 
     }

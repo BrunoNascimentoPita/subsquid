@@ -109,5 +109,11 @@ public class Enemy : MonoBehaviour
             
         }
 
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("chocou com o player");
+            Destroy(this.gameObject, 0.1f);
+        }
+
     }
 }

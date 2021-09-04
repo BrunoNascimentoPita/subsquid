@@ -105,6 +105,13 @@ public class Nave : MonoBehaviour
             vidaPlayer = vidaPlayer - danoPlayer;
             CameraController.instance.CameraTremer();
         }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaPlayer = vidaPlayer - 4;
+            CameraController.instance.CameraTremer();
+        }
     }
 
 }

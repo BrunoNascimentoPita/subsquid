@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2216712538860760640}
   - component: {fileID: 2216712538860760641}
   - component: {fileID: 2216712538860760646}
-  - component: {fileID: 2216712538860760647}
+  - component: {fileID: 5457815504722526485}
   m_Layer: 0
-  m_Name: Tiro
+  m_Name: TiroZigZag
   m_TagString: Tiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &2216712538860760647
+--- !u!114 &5457815504722526485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2216712538860760644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a106a2a6c0ccaa49ba4c8e7e9c2208f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d88bd9fa41a750448af9d1f85a9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTiro: 30
+  speedTiro: 10
+  tempoMinimo: 0.3
+  tempoMaximo: 0.6

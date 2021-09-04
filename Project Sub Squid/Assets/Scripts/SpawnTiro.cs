@@ -12,6 +12,8 @@ public class SpawnTiro : MonoBehaviour
 
     public Transform bulletPesado;
 
+    public Transform bulletZigZag;
+
     //public GameObject shot;
 	public Transform shotSpawn;
     
@@ -48,6 +50,11 @@ public class SpawnTiro : MonoBehaviour
             TiroPesado();
         }
 
+        if(Input.GetKeyDown(KeyCode.O) && Time.time > nextFire)
+        {
+            TiroZigZag();
+        }
+
 
     }
 
@@ -75,5 +82,12 @@ public class SpawnTiro : MonoBehaviour
         nextFire = Time.time + fireRate;
         Instantiate(bulletPesado, shotSpawn.position, shotSpawn.rotation);
     }
+
+    void TiroZigZag()
+    {
+        nextFire = Time.time + fireRate;
+        Instantiate(bulletZigZag, shotSpawn.position, shotSpawn.rotation);
+    }
+
         
 }

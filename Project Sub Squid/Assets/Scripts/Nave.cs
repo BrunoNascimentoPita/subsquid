@@ -12,8 +12,11 @@ public class Nave : MonoBehaviour
 
     public float dashSpeed = 35;
 
-    public float dashRate;
-	private float nextDash;
+     public float fireRateDash = 0.5f;
+    private float nextFireDash = 0.0f;
+
+    public static bool isDash = false;
+    
     
 
     Rigidbody corpoRigido2D;
@@ -47,9 +50,13 @@ public class Nave : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.U) && Time.time > nextDash)
+        if (Input.GetKeyDown(KeyCode.U) && Time.time > nextFireDash)
         {
+            nextFireDash = Time.time + fireRateDash;
             DashM();
+            isDash = true;
+            Debug.Log("Não pode atirar");
+            StartCoroutine ("IsDash");
         }
 
         
@@ -84,6 +91,13 @@ public class Nave : MonoBehaviour
         }
     }
 
+    IEnumerator IsDash()
+    {
+        yield return new WaitForSeconds (0.3f);
+        isDash = false;
+        Debug.Log("PodeAtirar");
+    }
+
     void Movimentacao() 
     {
       corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
@@ -95,6 +109,7 @@ public class Nave : MonoBehaviour
         Debug.Log("Dash");
       corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
       corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
+      
     }
 
     void OnTriggerEnter(Collider other)

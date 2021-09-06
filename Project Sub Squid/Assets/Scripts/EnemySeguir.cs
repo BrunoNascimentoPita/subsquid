@@ -10,6 +10,7 @@ public class EnemySeguir : MonoBehaviour
 
     public GameObject enemySeguir;
 
+
     public float vidaInimigoSeguir = 2f;
     public float danoSofridoSeguir = 3f;
 
@@ -20,6 +21,7 @@ public class EnemySeguir : MonoBehaviour
     {
         //rbEnemy = this.GetComponent<Rigidbody>();
         posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform;
+        enemySeguir.transform.Rotate(0, 260, 0);
         
     }
 
@@ -34,7 +36,7 @@ public class EnemySeguir : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
             //enemySeguir.transform.Rotate(0, 260, 0);
             Debug.Log("Ta indo para Esquerda");
-            VirarParaEsquerda();
+            //VirarParaEsquerda();
 
                 
             }
@@ -45,9 +47,8 @@ public class EnemySeguir : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
             //enemySeguir.transform.Rotate(0, 90, 0);
             Debug.Log("Ta indo para Direita");
-            VirarParaDireita();
+            //VirarParaDireita();
             }
-            
             //rbEnemy.velocity = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo);
         }
 

@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeInimigo: 5
+  enemySeguir: {fileID: 5229211859737062910}
   vidaInimigoSeguir: 2
   danoSofridoSeguir: 3
   posicaoDoJogador: {fileID: 0}

@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector3(-speed, 0, 0);
+        
         /*
         if(dirRight)
         {

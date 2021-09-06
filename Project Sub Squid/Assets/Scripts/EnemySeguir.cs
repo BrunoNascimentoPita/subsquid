@@ -8,8 +8,11 @@ public class EnemySeguir : MonoBehaviour
     //public Rigidbody rbEnemy;
     public float velocidadeInimigo;
 
+    public GameObject enemySeguir;
+
     public float vidaInimigoSeguir = 2f;
     public float danoSofridoSeguir = 3f;
+
 
     public Transform posicaoDoJogador;
     // Start is called before the first frame update
@@ -17,6 +20,7 @@ public class EnemySeguir : MonoBehaviour
     {
         //rbEnemy = this.GetComponent<Rigidbody>();
         posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform;
+        
     }
 
     // Update is called once per frame
@@ -24,7 +28,26 @@ public class EnemySeguir : MonoBehaviour
     {
         if (posicaoDoJogador.gameObject != null)
         {
+            if (enemySeguir.transform.position.x - posicaoDoJogador.transform.position.x > posicaoDoJogador.transform.position.x)
+            {
+            
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
+            //enemySeguir.transform.Rotate(0, 260, 0);
+            Debug.Log("Ta indo para Esquerda");
+            VirarParaEsquerda();
+
+                
+            }
+
+            if (enemySeguir.transform.position.x - posicaoDoJogador.transform.position.x < posicaoDoJogador.transform.position.x)
+            {
+            
+            transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
+            //enemySeguir.transform.Rotate(0, 90, 0);
+            Debug.Log("Ta indo para Direita");
+            VirarParaDireita();
+            }
+            
             //rbEnemy.velocity = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo);
         }
 
@@ -32,6 +55,16 @@ public class EnemySeguir : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void VirarParaEsquerda()
+    {
+        enemySeguir.transform.Rotate(0, 260, 0);
+    }
+
+    void VirarParaDireita()
+    {
+        enemySeguir.transform.Rotate(0, 90, 0);
     }
 
     void OnTriggerEnter(Collider other)

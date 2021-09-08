@@ -10,6 +10,7 @@ TagManager:
   - TiroTriplo
   - TiroEnemy
   - TiroPesado
+  - Hp_Barra
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Nave : MonoBehaviour
 {   
@@ -26,11 +27,16 @@ public class Nave : MonoBehaviour
     public float vidaPlayer = 5f;
 
     public float danoPlayer = 2f;
+
+    // Barra de HP
+
+    private Image BarraHp;
     
 
     void Start () 
     {
         corpoRigido2D = GetComponent<Rigidbody> ();
+        BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -119,6 +125,7 @@ public class Nave : MonoBehaviour
             Debug.Log("levou um tiro do Inimigo");
             vidaPlayer = vidaPlayer - danoPlayer;
             CameraController.instance.CameraTremer();
+            PerderHP();
         }
 
         if (other.gameObject.tag == "Enemy")
@@ -126,7 +133,14 @@ public class Nave : MonoBehaviour
             Debug.Log("levou um tiro do Inimigo");
             vidaPlayer = vidaPlayer - 4;
             CameraController.instance.CameraTremer();
+            PerderHP();
         }
+    }
+
+    void PerderHP()
+    {
+        float vida_paraBarra = vidaPlayer * 10;
+        BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 30 );
     }
 
 }

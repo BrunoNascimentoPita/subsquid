@@ -1808,7 +1808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477cf16147e9064ab34ba07bc82bbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 200
+  dashSpeed: 175
   fireRateDash: 0.5
   velocidade: 10
   vidaPlayer: 5
@@ -7324,13 +7324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 5491100426894577052, guid: 966c2c118bb4cb04d89fc39adf6f6b31, type: 3}
-  tempoSpawn: 2
+  tempoSpawn: 3
   pontosdeSpawn:
   - {fileID: 88699355}
   - {fileID: 741223165}
   - {fileID: 269531946}
   enemySeguir: {fileID: 5229211859737062910, guid: b2651f661f08d10458bc6d5d45cc0c81, type: 3}
-  tempoSpawnES: 3
+  tempoSpawnES: 4
   pontosdeSpawnES:
   - {fileID: 1633228331}
   - {fileID: 119607484}

@@ -125,7 +125,7 @@ public class Nave : MonoBehaviour
             Debug.Log("levou um tiro do Inimigo");
             vidaPlayer = vidaPlayer - danoPlayer;
             CameraController.instance.CameraTremer();
-            PerderHP();
+            ChecarHp();
         }
 
         if (other.gameObject.tag == "Enemy")
@@ -133,14 +133,23 @@ public class Nave : MonoBehaviour
             Debug.Log("levou um tiro do Inimigo");
             vidaPlayer = vidaPlayer - 4;
             CameraController.instance.CameraTremer();
-            PerderHP();
+            ChecarHp();
+        }
+
+        if (other.gameObject.tag == "PowerUpVida")
+        {
+            
+            vidaPlayer = vidaPlayer + 2;
+            CameraController.instance.CameraTremer();
+            ChecarHp();
         }
     }
 
-    void PerderHP()
+    void ChecarHp()
     {
         float vida_paraBarra = vidaPlayer * 10;
         BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 30 );
     }
+    
 
 }

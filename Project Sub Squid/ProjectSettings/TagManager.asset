@@ -11,6 +11,7 @@ TagManager:
   - TiroEnemy
   - TiroPesado
   - Hp_Barra
+  - PowerUpVida
   layers:
   - Default
   - TransparentFX

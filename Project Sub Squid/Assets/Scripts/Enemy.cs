@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
 
         if(vidaInimigo <= 0)
         {
+            GameController.instance.SetScore(10);
             Destroy(gameObject);
         }
         

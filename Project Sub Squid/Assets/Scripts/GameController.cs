@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     public GameObject pauseTela;
     public GameObject volumeSlider;
 
+    public Text scoreText;
+    private int score;
+
     public static GameController instance;
     // Start is called before the first frame update
     void Start()
@@ -80,6 +83,12 @@ public class GameController : MonoBehaviour
     public void Sair()
     {
         Application.Quit();
+    }
+
+    public void SetScore(int scorePoints)
+    {
+        score += scorePoints;
+        scoreText.text = score.ToString();
     }
     
 

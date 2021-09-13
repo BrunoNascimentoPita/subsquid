@@ -47,7 +47,7 @@ MonoBehaviour:
   BGM: {fileID: 5491238121187443220}
   musicMenuInicial: {fileID: 8300000, guid: b8804bf7e918c884482649459a8c71f6, type: 3}
   musicSelectFase: {fileID: 0}
-  musicFase1: {fileID: 8300000, guid: c8c6cb870304e9a4f91b8fc1d9006d19, type: 3}
+  musicFase1: {fileID: 8300000, guid: 16e9d4043d621ee4e94c4430ccdb5af1, type: 3}
   musicFase2: {fileID: 0}
   musicFase3: {fileID: 0}
 --- !u!82 &5491238121187443220

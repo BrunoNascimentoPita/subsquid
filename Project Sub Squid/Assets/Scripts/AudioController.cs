@@ -48,6 +48,7 @@ public class AudioController : MonoBehaviour
            } 
         }
 
+        /*
         if(SceneManager.GetActiveScene().buildIndex == 1)
         {
           if (BGM.clip != musicSelectFase)
@@ -56,7 +57,9 @@ public class AudioController : MonoBehaviour
            } 
         }
 
-        if(SceneManager.GetActiveScene().buildIndex == 2)
+        */
+
+        if(SceneManager.GetActiveScene().buildIndex == 1)
         {
            if (BGM.clip != musicFase1)
            {

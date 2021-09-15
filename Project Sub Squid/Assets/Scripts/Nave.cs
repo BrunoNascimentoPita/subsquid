@@ -17,6 +17,15 @@ public class Nave : MonoBehaviour
     private float nextFireDash = 0.0f;
 
     public static bool isDash = false;
+
+    // Powerups
+
+    public static bool noPowerUp = true;
+    public static bool powerUp1 = false;
+    public static bool powerUp2 = false;
+    public static bool powerUp3 = false;
+
+
     
     
 
@@ -140,9 +149,37 @@ public class Nave : MonoBehaviour
         {
             
             vidaPlayer = vidaPlayer + 2;
-            CameraController.instance.CameraTremer();
             ChecarHp();
         }
+
+        if (other.gameObject.tag == "PW1")
+        {
+            Debug.Log("Pegou o power up 1");
+            noPowerUp = false;
+            powerUp1 = true;
+            powerUp2 = false;
+            powerUp3 = false;
+
+        }
+
+        if (other.gameObject.tag == "PW2")
+        {
+            Debug.Log("Pegou o power up 1");
+            noPowerUp = false;
+            powerUp1 = false;
+            powerUp2 = true;
+            powerUp3 = false;
+        }
+
+        if (other.gameObject.tag == "PW3")
+        {
+            Debug.Log("Pegou o power up 1");
+            noPowerUp = false;
+            powerUp1 = false;
+            powerUp2 = false;
+            powerUp3 = true;
+        }
+
     }
 
     void ChecarHp()

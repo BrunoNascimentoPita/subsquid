@@ -275,6 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 173748818}
   - component: {fileID: 173748819}
+  - component: {fileID: 173748820}
   m_Layer: 0
   m_Name: SpawnTiro
   m_TagString: Untagged
@@ -303,7 +304,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173748817}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44641c891ea948c4b9e427fe712038e2, type: 3}
   m_Name: 
@@ -315,6 +316,25 @@ MonoBehaviour:
   bulletZigZag: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   shotSpawn: {fileID: 173748818}
   fireRate: 0.2
+--- !u!114 &173748820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173748817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813f3b0b262ca8446a07f7ab066ebe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8565547982932083287, guid: 044a53c384669df4d8e9201aa60f724f, type: 3}
+  bulletPw1: {fileID: 6967154269048400682, guid: e1bec5b7599debc419ad6a3af1db610d, type: 3}
+  bulletPw2: {fileID: 0}
+  bulletPw3: {fileID: 0}
+  bulletpw3: {fileID: 0}
+  shotSpawn: {fileID: 173748818}
+  fireRate: 1
 --- !u!1 &269531945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1594,7 @@ GameObject:
   - component: {fileID: 805926496}
   m_Layer: 0
   m_Name: PowerUpVIda
-  m_TagString: PowerUpVida
+  m_TagString: PW1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -12,6 +12,7 @@ TagManager:
   - TiroPesado
   - Hp_Barra
   - PowerUpVida
+  - PW1
   layers:
   - Default
   - TransparentFX

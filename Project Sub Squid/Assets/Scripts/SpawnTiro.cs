@@ -30,27 +30,27 @@ public class SpawnTiro : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.J) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false)
         {
             Tiro1();
         }
 
-        if(Input.GetKeyDown(KeyCode.K) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.K) && Time.time > nextFire && Nave.isDash == false)
         {
             Tiro2();
         }
 
-        if(Input.GetKeyDown(KeyCode.L) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.L) && Time.time > nextFire && Nave.isDash == false)
         {
             Tiro3();
         }
 
-        if(Input.GetKeyDown(KeyCode.I) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.I) && Time.time > nextFire && Nave.isDash == false)
         {
             TiroPesado();
         }
 
-        if(Input.GetKeyDown(KeyCode.O) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.O) && Time.time > nextFire && Nave.isDash == false)
         {
             TiroZigZag();
         }

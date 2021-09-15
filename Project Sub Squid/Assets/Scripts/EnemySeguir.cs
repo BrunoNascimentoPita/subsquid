@@ -35,7 +35,7 @@ public class EnemySeguir : MonoBehaviour
             
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
             //enemySeguir.transform.Rotate(0, 260, 0);
-            Debug.Log("Ta indo para Esquerda");
+            //Debug.Log("Ta indo para Esquerda");
             //VirarParaEsquerda();
 
                 
@@ -46,7 +46,7 @@ public class EnemySeguir : MonoBehaviour
             
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo * Time.deltaTime);
             //enemySeguir.transform.Rotate(0, 90, 0);
-            Debug.Log("Ta indo para Direita");
+            //Debug.Log("Ta indo para Direita");
             //VirarParaDireita();
             }
             //rbEnemy.velocity = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo);

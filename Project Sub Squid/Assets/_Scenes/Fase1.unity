@@ -314,7 +314,7 @@ MonoBehaviour:
   bulletPesado: {fileID: 5426075593347914917, guid: b30b6eb8eeb789548985075a44188635, type: 3}
   bulletZigZag: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   shotSpawn: {fileID: 173748818}
-  fireRate: 0.1
+  fireRate: 0.2
 --- !u!1 &269531945
 GameObject:
   m_ObjectHideFlags: 0

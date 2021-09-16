@@ -183,6 +183,16 @@ public class Nave : MonoBehaviour
             powerUp2 = false;
             powerUp3 = true;
             StartCoroutine ("NoPowerUps");
+        }
+
+        if (other.gameObject.tag == "PW3")
+        {
+            Debug.Log("Pegou o power up 1");
+            noPowerUp = false;
+            powerUp1 = false;
+            powerUp2 = false;
+            powerUp3 = true;
+            StartCoroutine ("NoPowerUps");
             
         }
 

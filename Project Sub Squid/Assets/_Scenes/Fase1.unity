@@ -330,9 +330,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 8565547982932083287, guid: 044a53c384669df4d8e9201aa60f724f, type: 3}
   bulletPw1: {fileID: 6967154269048400682, guid: e1bec5b7599debc419ad6a3af1db610d, type: 3}
-  bulletPw2: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
-  bulletPw3: {fileID: 0}
-  bulletpw3: {fileID: 0}
+  bulletPw2: {fileID: 5426075593347914917, guid: b30b6eb8eeb789548985075a44188635, type: 3}
+  bulletPw3: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
+  bulletPW4: {fileID: 0}
   shotSpawn: {fileID: 173748818}
   fireRate: 0.2
 --- !u!1 &269531945
@@ -7652,8 +7652,9 @@ MonoBehaviour:
   - {fileID: 2477902800352817184, guid: 9a236bcc14765a64b86d3e9d85d2bec8, type: 3}
   - {fileID: 5367822752101850332, guid: dc2642d201c30a14181f7c15645ef33a, type: 3}
   - {fileID: 7896559538903933398, guid: cd1ad85037878e84f9580886469dba01, type: 3}
-  spawntime: 7
-  spawndelay: 12
+  - {fileID: 2378698160415087481, guid: 7c762832e0bc8b7429fa22e5bca6e798, type: 3}
+  spawntime: 2
+  spawndelay: 2
   pontosdeSpawnPW:
   - {fileID: 1743949142}
   - {fileID: 886169917}

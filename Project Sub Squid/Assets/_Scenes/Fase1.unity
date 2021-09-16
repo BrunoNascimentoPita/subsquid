@@ -7652,8 +7652,8 @@ MonoBehaviour:
   - {fileID: 2477902800352817184, guid: 9a236bcc14765a64b86d3e9d85d2bec8, type: 3}
   - {fileID: 5367822752101850332, guid: dc2642d201c30a14181f7c15645ef33a, type: 3}
   - {fileID: 7896559538903933398, guid: cd1ad85037878e84f9580886469dba01, type: 3}
-  spawntime: 3
-  spawndelay: 3
+  spawntime: 7
+  spawndelay: 12
   pontosdeSpawnPW:
   - {fileID: 1743949142}
   - {fileID: 886169917}

@@ -1802,6 +1802,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856133592}
   m_CullTransparentMesh: 1
+--- !u!1 &886169916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 886169917}
+  m_Layer: 0
+  m_Name: PontoDeSpawnPW2
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &886169917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886169916}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 6.3, y: 0.38531357, z: -1.3711388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1872846477}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &887419175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7085,6 +7115,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6074437288536987897, guid: 4908d32434df48a42927250acf45f0af, type: 3}
   m_PrefabInstance: {fileID: 1147246595}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1221160924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1221160925}
+  m_Layer: 0
+  m_Name: PontoDeSpawnPW3
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1221160925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221160924}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.1, y: -5.8346863, z: -1.3711388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1872846477}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1240552924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7661,6 +7721,16 @@ MonoBehaviour:
   - {fileID: 119607484}
   - {fileID: 373542640}
   - {fileID: 1554380500}
+  spawnPW:
+  - {fileID: 1827035169}
+  - {fileID: 1757144824}
+  - {fileID: 1774068803}
+  spawntime: 3
+  spawndelay: 3
+  pontosdeSpawnPW:
+  - {fileID: 1743949142}
+  - {fileID: 886169917}
+  - {fileID: 1221160925}
 --- !u!4 &1564728734
 Transform:
   m_ObjectHideFlags: 0
@@ -7929,6 +7999,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729660010}
   m_CullTransparentMesh: 1
+--- !u!1 &1743949141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743949142}
+  m_Layer: 0
+  m_Name: PontoDeSpawnPW1
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743949142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743949141}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 5.3, y: 5.4053135, z: -1.3711388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1872846477}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1757144824
 GameObject:
   m_ObjectHideFlags: 0
@@ -13337,6 +13437,9 @@ Transform:
   - {fileID: 119607484}
   - {fileID: 373542640}
   - {fileID: 1554380500}
+  - {fileID: 1743949142}
+  - {fileID: 886169917}
+  - {fileID: 1221160925}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

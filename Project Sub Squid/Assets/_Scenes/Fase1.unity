@@ -791,36 +791,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4908d32434df48a42927250acf45f0af, type: 3}
---- !u!1 &373542639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 373542640}
-  m_Layer: 0
-  m_Name: PontoDeSpawnES3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &373542640
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373542639}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.73, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1872846477}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &495644762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1757,7 +1727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1872846477}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &887419175
 GameObject:
@@ -7070,7 +7040,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1872846477}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1240552924
 PrefabInstance:
@@ -7586,7 +7556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554380500}
   m_Layer: 0
-  m_Name: PontoDeSpawnES4
+  m_Name: PontoDeSpawnES3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7604,7 +7574,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1872846477}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1564728732
 GameObject:
@@ -7635,9 +7605,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c774a3233142e2d45a76c96aff69eb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 5491100426894577052, guid: 966c2c118bb4cb04d89fc39adf6f6b31, type: 3}
+  enemy:
+  - {fileID: 3631637680032664661, guid: cb01ae6d7e447fb41a0e819010e7b68e, type: 3}
+  - {fileID: 5139734463530483895, guid: aa5596a258d0a294d8878c2d600e9dd3, type: 3}
+  - {fileID: 6991730774829601032, guid: 65b947be2609bb44c9c08b8b810fb30f, type: 3}
   tempoSpawn: 3
-  pontosdeSpawn:
+  pontosdeSpawnEnemy:
   - {fileID: 88699355}
   - {fileID: 741223165}
   - {fileID: 269531946}
@@ -7646,7 +7619,6 @@ MonoBehaviour:
   pontosdeSpawnES:
   - {fileID: 1633228331}
   - {fileID: 119607484}
-  - {fileID: 373542640}
   - {fileID: 1554380500}
   spawnPW:
   - {fileID: 2477902800352817184, guid: 9a236bcc14765a64b86d3e9d85d2bec8, type: 3}
@@ -7955,7 +7927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1872846477}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1781126941
 GameObject:
@@ -13115,7 +13087,6 @@ Transform:
   - {fileID: 269531946}
   - {fileID: 1633228331}
   - {fileID: 119607484}
-  - {fileID: 373542640}
   - {fileID: 1554380500}
   - {fileID: 1743949142}
   - {fileID: 886169917}

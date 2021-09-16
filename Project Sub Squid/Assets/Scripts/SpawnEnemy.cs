@@ -5,9 +5,10 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
 
-    public GameObject enemy;
+    public GameObject[] enemy;
+    int randowEnemy;
     public float tempoSpawn;
-    public Transform[] pontosdeSpawn;
+    public Transform[] pontosdeSpawnEnemy;
 
     // Inimigo Seguir
 
@@ -41,21 +42,22 @@ public class SpawnEnemy : MonoBehaviour
 
     void StartSpawn()
     {
-          int PontosSpawnESIndex = Random.Range(0, pontosdeSpawnES.Length);
-          Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnESIndex].position, Quaternion.identity);
+            randowEnemy = Random.Range(0, enemy.Length);
+            int PontosSpawnIndexEnemy = Random.Range(0, pontosdeSpawnEnemy.Length);
+            Instantiate(enemy[randowEnemy], pontosdeSpawnEnemy[PontosSpawnIndexEnemy].position, Quaternion.identity);
 
     }
 
     void StartSpawnES()
     {
-          int PontosSpawnIndex = Random.Range(0, pontosdeSpawn.Length);
-          Instantiate(enemy, pontosdeSpawn[PontosSpawnIndex].position, Quaternion.identity);
+          int PontosSpawnIndexES = Random.Range(0, pontosdeSpawnES.Length);
+          Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnIndexES].position, Quaternion.identity);
 
     }
 
     void SpawnRandomPW()
     { 
-            randomPW= Random.Range(0, spawnPW.Length);
+            randomPW = Random.Range(0 ,enemy.Length);
             int PontosSpawnIndexPW = Random.Range(0, pontosdeSpawnPW.Length);
             Instantiate(spawnPW[randomPW], pontosdeSpawnPW[PontosSpawnIndexPW].position, Quaternion.identity);
             //Instantiate(spawnPW[randomPW],transform.position, transform.rotation);

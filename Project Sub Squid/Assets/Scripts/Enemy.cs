@@ -27,6 +27,8 @@ public class Enemy : MonoBehaviour
 
     public float rotationY = 250;
 
+    public float rotationX;
+
     // TIRO
     public Transform bulletEnemy;
 
@@ -40,7 +42,7 @@ public class Enemy : MonoBehaviour
 
     void Start () 
     {
-        enemy.transform.Rotate(0, rotationY, 0);
+        enemy.transform.Rotate(rotationX, rotationY, 0);
         rb = this.GetComponent<Rigidbody>();
 
     }

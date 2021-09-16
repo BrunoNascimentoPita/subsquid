@@ -33,7 +33,7 @@ public class Nave : MonoBehaviour
     public float velocidade = 2;
 
 
-    public float vidaPlayer = 5f;
+    public float vidaPlayer = 10f;
 
     public float danoPlayer = 2f;
 
@@ -62,6 +62,8 @@ public class Nave : MonoBehaviour
         transform.Translate(dir * Time.deltaTime);
 
         */
+
+        Debug.Log(vidaPlayer);
 
         
 
@@ -159,6 +161,7 @@ public class Nave : MonoBehaviour
             powerUp1 = true;
             powerUp2 = false;
             powerUp3 = false;
+            StartCoroutine ("NoPowerUps");
 
         }
 
@@ -169,6 +172,7 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = true;
             powerUp3 = false;
+            StartCoroutine ("NoPowerUps");
         }
 
         if (other.gameObject.tag == "PW3")
@@ -178,6 +182,8 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = true;
+            StartCoroutine ("NoPowerUps");
+            
         }
 
     }
@@ -186,6 +192,15 @@ public class Nave : MonoBehaviour
     {
         float vida_paraBarra = vidaPlayer * 10;
         BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 30 );
+    }
+
+    IEnumerator NoPowerUps()
+    {
+         yield return new WaitForSeconds (5.0f);
+            noPowerUp = true;
+            powerUp1 = false;
+            powerUp2 = false;
+            powerUp3 = false;
     }
     
 

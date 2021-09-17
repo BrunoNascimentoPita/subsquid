@@ -15,6 +15,7 @@ TagManager:
   - PW1
   - PW2
   - PW3
+  - TiroLaser
   layers:
   - Default
   - TransparentFX

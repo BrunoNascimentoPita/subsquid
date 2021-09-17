@@ -40,17 +40,35 @@ public class Nave : MonoBehaviour
     // Barra de HP
 
     private Image BarraHp;
+
+    // tiros novos
+
+    Gun[] guns;
+    bool shoot;
     
 
     void Start () 
     {
         corpoRigido2D = GetComponent<Rigidbody> ();
         BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
+        guns = transform.GetComponentsInChildren<Gun>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        shoot = Input.GetKeyDown(KeyCode.K);
+
+        if(shoot)
+        {
+            shoot = false;
+            foreach(Gun gun in guns)
+            {
+                gun.Shoot();
+            }
+        }
+
         Movimentacao ();
     
         /*

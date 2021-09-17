@@ -14,8 +14,11 @@ public class SpawnTiro : MonoBehaviour
 
     public Transform bulletZigZag;
 
+    public Transform bulletLaser;
+        
+
     //public GameObject shot;
-	public Transform shotSpawn;
+    public Transform shotSpawn;
     
     public float fireRate;
 	private float nextFire;
@@ -55,6 +58,11 @@ public class SpawnTiro : MonoBehaviour
             TiroZigZag();
         }
 
+        if (Input.GetKey(KeyCode.Y) && Time.time > nextFire && Nave.isDash == false)
+        {
+            TiroLaser();    
+        }
+
 
     }
 
@@ -89,5 +97,11 @@ public class SpawnTiro : MonoBehaviour
         Instantiate(bulletZigZag, shotSpawn.position, shotSpawn.rotation);
     }
 
-        
+    void TiroLaser()
+    {
+        nextFire = Time.time + fireRate;
+        Instantiate(bulletLaser, shotSpawn.position, shotSpawn.rotation);
+    }
+
+
 }

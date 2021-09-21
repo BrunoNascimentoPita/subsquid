@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4026778344572466807}
   - component: {fileID: 4026778344572466804}
   - component: {fileID: 4026778344572466805}
+  - component: {fileID: 28147174493745250}
   m_Layer: 0
   m_Name: SpriteEnemy
   m_TagString: Enemy
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026778344572466803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.06, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5421, y: 0.8265, z: 1}
   m_Children: []
   m_Father: {fileID: 4026778345109277772}
@@ -96,6 +97,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &28147174493745250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026778344572466803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a75cdf5d8ce9c02438d834c9f357cf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  vidaEnemyGroup: 5
+  danoEnemyGroup: 2
 --- !u!1 &4026778345109277770
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +123,7 @@ GameObject:
   - component: {fileID: 4026778345109277772}
   - component: {fileID: 4026778345109277773}
   - component: {fileID: -8974015351755046574}
+  - component: {fileID: 4302100400940242757}
   m_Layer: 0
   m_Name: EnemyType1
   m_TagString: Untagged
@@ -122,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4026778345109277770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.93, y: 0.20170425, z: 0.083364606}
+  m_LocalPosition: {x: 0, y: 0, z: 0.083364606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4026778344572466802}
@@ -142,6 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  vidaEnemyGroup: 5
+  danoEnemyGroup: 2
 --- !u!114 &-8974015351755046574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +176,16 @@ MonoBehaviour:
   amplitude: 2
   frequency: 0.5
   inverted: 0
+--- !u!65 &4302100400940242757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4026778345109277770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

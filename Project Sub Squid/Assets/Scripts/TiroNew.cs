@@ -40,5 +40,10 @@ public class TiroNew : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
         }
 
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
+
     }
 }

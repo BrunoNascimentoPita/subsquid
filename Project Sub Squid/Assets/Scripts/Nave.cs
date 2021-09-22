@@ -25,6 +25,11 @@ public class Nave : MonoBehaviour
     public static bool powerUp2 = false;
     public static bool powerUp3 = false;
 
+    // Tiro K
+
+     public float fireRate;
+	 private float nextFire;
+
 
     
     
@@ -58,13 +63,14 @@ public class Nave : MonoBehaviour
     void Update()
     {
         
-        shoot = Input.GetKeyDown(KeyCode.K);
+        shoot = Input.GetKey(KeyCode.K);
 
-        if(shoot)
+        if(shoot && Time.time > nextFire)
         {
             shoot = false;
             foreach(Gun gun in guns)
             {
+                nextFire = Time.time + fireRate;
                 gun.Shoot();
             }
         }

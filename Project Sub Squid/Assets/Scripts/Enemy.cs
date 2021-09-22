@@ -113,6 +113,13 @@ public class Enemy : MonoBehaviour
             
         }
 
+        if (other.gameObject.tag == "5Tiros")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaInimigo = vidaInimigo - 0.2f;
+            
+        }
+
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("chocou com o player");

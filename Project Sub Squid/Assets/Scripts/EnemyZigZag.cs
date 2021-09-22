@@ -72,6 +72,13 @@ public class EnemyZigZag : MonoBehaviour
             
         }
 
+        if (other.gameObject.tag == "5Tiros")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaEnemyGroup = vidaEnemyGroup - 0.5f;
+            
+        }
+
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("chocou com o player");

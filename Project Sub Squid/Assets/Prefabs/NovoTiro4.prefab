@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3897392291189469328}
   m_Layer: 0
   m_Name: NovoTiro4
-  m_TagString: Tiro
+  m_TagString: 5Tiros
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

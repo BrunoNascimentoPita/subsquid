@@ -27,6 +27,8 @@ public class TiroBoss1 : MonoBehaviour
             DestroyProjectile();
         }
 
+        Destroy(gameObject, 15.0f);
+
     }
 
     void OnTriggerEnter(Collider other)

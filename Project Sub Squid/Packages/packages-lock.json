@@ -79,9 +79,9 @@
       }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "11.0.0",
-      "depth": 1,
-      "source": "builtin",
+      "version": "file:../LocalPackages/com.unity.render-pipelines.high-definition-config",
+      "depth": 0,
+      "source": "local",
       "dependencies": {
         "com.unity.render-pipelines.core": "11.0.0"
       }

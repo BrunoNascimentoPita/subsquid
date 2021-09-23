@@ -990,6 +990,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850648121}
     m_Modifications:
+    - target: {fileID: -8974015351755046574, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
+      propertyPath: inverted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4026778345109277770, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
       propertyPath: m_Name
       value: EnemyType1 (2)
@@ -1332,7 +1336,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 30}
+  m_SizeDelta: {x: 100, y: 7}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &691418295
 MonoBehaviour:
@@ -7055,6 +7059,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850648121}
     m_Modifications:
+    - target: {fileID: -8974015351755046574, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
+      propertyPath: inverted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4026778345109277770, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
       propertyPath: m_Name
       value: EnemyType1 (3)
@@ -7112,6 +7120,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850648121}
     m_Modifications:
+    - target: {fileID: -8974015351755046574, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
+      propertyPath: inverted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4026778345109277770, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
       propertyPath: m_Name
       value: EnemyType1
@@ -7946,7 +7958,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 30}
+  m_SizeDelta: {x: 100, y: 7}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1420980269
 MonoBehaviour:
@@ -8077,6 +8089,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850648121}
     m_Modifications:
+    - target: {fileID: -8974015351755046574, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
+      propertyPath: inverted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4026778345109277770, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
       propertyPath: m_Name
       value: EnemyType1 (1)
@@ -8166,7 +8182,7 @@ MonoBehaviour:
   - {fileID: 741223165}
   - {fileID: 269531946}
   enemySeguir: {fileID: 5229211859737062910, guid: b2651f661f08d10458bc6d5d45cc0c81, type: 3}
-  tempoSpawnES: 4
+  tempoSpawnES: 10
   pontosdeSpawnES:
   - {fileID: 1633228331}
   - {fileID: 119607484}

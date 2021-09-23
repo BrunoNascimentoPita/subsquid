@@ -58,10 +58,12 @@ public class SpawnTiro : MonoBehaviour
             TiroZigZag();
         }
 
-        if (Input.GetKey(KeyCode.Y) && Time.time > nextFire && Nave.isDash == false)
+        if (Input.GetKey(KeyCode.U) && Time.time > nextFire && Nave.isDash == false)
         {
-            TiroLaser();    
+            TiroLaser(); 
         }
+
+
 
 
     }
@@ -96,7 +98,6 @@ public class SpawnTiro : MonoBehaviour
         nextFire = Time.time + fireRate;
         Instantiate(bulletZigZag, shotSpawn.position, shotSpawn.rotation);
     }
-
     void TiroLaser()
     {
         nextFire = Time.time + fireRate;

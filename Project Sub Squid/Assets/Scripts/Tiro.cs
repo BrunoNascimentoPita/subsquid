@@ -24,6 +24,7 @@ public class Tiro : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
+           
             Destroy(this.gameObject, 0.1f);
         }
 

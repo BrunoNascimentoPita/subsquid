@@ -55,6 +55,7 @@ public class EnemySeguir : MonoBehaviour
         if(vidaInimigoSeguir <= 0)
         {
             GameController.instance.SetScore(5);
+            GameController.instance.ContadorDeinimigos();
             Destroy(gameObject);
         }
     }

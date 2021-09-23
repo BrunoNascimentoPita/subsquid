@@ -15,6 +15,10 @@ public class GameController : MonoBehaviour
     public Text scoreText;
     private int score;
 
+    // chamar boss
+
+    public static int contadorEnemy;
+
     public static GameController instance;
     // Start is called before the first frame update
     void Start()
@@ -41,6 +45,7 @@ public class GameController : MonoBehaviour
         }
         */
 
+        Debug.Log("Inimigos mortos" + contadorEnemy);
 
     }
 
@@ -89,6 +94,11 @@ public class GameController : MonoBehaviour
     {
         score += scorePoints;
         scoreText.text = score.ToString();
+    }
+
+    public void ContadorDeinimigos()
+    {
+        contadorEnemy += 1;
     }
     
 

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
 
+    public UnityEvent chamarBoss1;
     public GameObject gameOver;
     public GameObject winTela;
     public GameObject pauseTela;
@@ -46,6 +48,11 @@ public class GameController : MonoBehaviour
         */
 
         Debug.Log("Inimigos mortos" + contadorEnemy);
+
+        if(contadorEnemy == 5)
+        {
+            chamarBoss1.Invoke();
+        }
 
     }
 

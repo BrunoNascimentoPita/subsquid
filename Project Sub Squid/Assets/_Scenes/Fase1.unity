@@ -577,6 +577,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c66f4d3f9c36c4bb743434da5823d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chamarBoss1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 627161858}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1564728733}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: CancelInvoke
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gameOver: {fileID: 2046867610}
   winTela: {fileID: 0}
   pauseTela: {fileID: 67999715}
@@ -1289,7 +1316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d3d6d88cdeb9894db5e829f27b5a6a4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d3d6d88cdeb9894db5e829f27b5a6a4, type: 3}
       propertyPath: m_TagString

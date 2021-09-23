@@ -116,7 +116,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             Debug.Log("levou um tiro do Inimigo");
-            vidaInimigo = vidaInimigo - 0.2f;
+            vidaInimigo = vidaInimigo - 0.5f;
             
         }
 

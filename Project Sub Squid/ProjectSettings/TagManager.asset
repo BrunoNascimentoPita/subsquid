@@ -18,6 +18,7 @@ TagManager:
   - TiroLaser
   - 5Tiros
   - Boss1
+  - PontoDoBoss1
   layers:
   - Default
   - TransparentFX

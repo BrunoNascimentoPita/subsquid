@@ -118,6 +118,7 @@ MonoBehaviour:
   vidaInimigoSeguir: 2
   danoSofridoSeguir: 3
   posicaoDoJogador: {fileID: 0}
+  particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
 --- !u!1 &5229327027729166256
 GameObject:
   m_ObjectHideFlags: 0

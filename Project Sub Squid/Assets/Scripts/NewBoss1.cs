@@ -6,13 +6,15 @@ public class NewBoss1 : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float speed = 8f;
+     [SerializeField] float speedAttack = 20f;
 
     public GameObject boss1;
-    public Transform posicaoDoJogador;
+    private Transform posicaoDoJogador;
 
     public Transform posicaoDoBoss1;
 
 
+    
     
 
 
@@ -53,44 +55,38 @@ public class NewBoss1 : MonoBehaviour
             case State.Attack2: Attack2State(); break;
             case State.Attack3: Attack3State(); break;
         }
+
     }
 
     void NormalState()
     {
+        Debug.Log("State normal");
         if (posicaoDoBoss1.gameObject != null)
         {
            
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoBoss1.position, speed * Time.deltaTime);
         }
 
+        StartCoroutine ("TrocarStateAttack1");
+    }
 
+    IEnumerator TrocarStateAttack1()
+    {
+        yield return new WaitForSeconds (5.0f);
+        state = State.Attack1;
+
+        
     }
 
     void Attack1State()
     {
+        Debug.Log("State attack1");
+
         if (posicaoDoJogador.gameObject != null)
         {
-            if (boss1.transform.position.x - posicaoDoJogador.transform.position.x > posicaoDoJogador.transform.position.x)
-            {
-            
-            transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, speed * Time.deltaTime);
-            //enemySeguir.transform.Rotate(0, 260, 0);
-            //Debug.Log("Ta indo para Esquerda");
-            //VirarParaEsquerda();
-
-                
-            }
-
-            if (boss1.transform.position.x - posicaoDoJogador.transform.position.x < posicaoDoJogador.transform.position.x)
-            {
-            
-            transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, speed * Time.deltaTime);
-            //enemySeguir.transform.Rotate(0, 90, 0);
-            //Debug.Log("Ta indo para Direita");
-            //VirarParaDireita();
-            }
-            //rbEnemy.velocity = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, velocidadeInimigo);
+            transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, speedAttack * Time.deltaTime);
         }
+
 
     }
      

@@ -87,8 +87,6 @@ public class Nave : MonoBehaviour
 
         */
 
-        Debug.Log(vidaPlayer);
-
         
 
         if (Input.GetKeyDown(KeyCode.U) && Time.time > nextFireDash)

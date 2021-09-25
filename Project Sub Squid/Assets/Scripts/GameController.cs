@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
 
         Debug.Log("Inimigos mortos" + contadorEnemy);
 
-        if(contadorEnemy == 5)
+        if(contadorEnemy == 3)
         {
             chamarBoss1.Invoke();
         }
@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(lvlName);
         Time.timeScale = 1;
+        contadorEnemy = 0;
     }
 
     public void ShowWinTela()

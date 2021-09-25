@@ -6,7 +6,7 @@ public class NewBoss1 : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float speed = 8f;
-     [SerializeField] float speedAttack = 20f;
+     [SerializeField] float speedAttack = 16f;
 
     public GameObject boss1;
     private Transform posicaoDoJogador;
@@ -72,8 +72,16 @@ public class NewBoss1 : MonoBehaviour
 
     IEnumerator TrocarStateAttack1()
     {
-        yield return new WaitForSeconds (5.0f);
+        yield return new WaitForSeconds (1.0f);
         state = State.Attack1;
+
+        
+    }
+
+    IEnumerator VoltarNormalState()
+    {
+        yield return new WaitForSeconds (1.0f);
+        state = State.Normal;
 
         
     }
@@ -87,6 +95,7 @@ public class NewBoss1 : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, speedAttack * Time.deltaTime);
         }
 
+        StartCoroutine ("VoltarNormalState");
 
     }
      

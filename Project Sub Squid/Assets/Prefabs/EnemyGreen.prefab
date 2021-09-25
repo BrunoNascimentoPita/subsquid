@@ -141,3 +141,4 @@ MonoBehaviour:
   bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
   shotSpawnEnemy: {fileID: 7659583601592421298}
   fireRate: 3
+  particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}

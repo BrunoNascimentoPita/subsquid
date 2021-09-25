@@ -16,6 +16,9 @@ public class EnemySeguir : MonoBehaviour
 
 
     public Transform posicaoDoJogador;
+
+    public ParticleSystem particulaExplosaoPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +60,8 @@ public class EnemySeguir : MonoBehaviour
             GameController.instance.SetScore(5);
             GameController.instance.ContadorDeinimigos();
             Destroy(gameObject);
+            ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
     }
 
@@ -108,6 +113,8 @@ public class EnemySeguir : MonoBehaviour
         {
             Debug.Log("chocou com o player");
             Destroy(this.gameObject, 0.1f);
+            ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
 
     }

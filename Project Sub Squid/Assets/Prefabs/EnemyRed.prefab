@@ -138,6 +138,8 @@ MonoBehaviour:
   enemy: {fileID: 3631637680032664661}
   rb: {fileID: 1007552688775930917}
   rotationY: 270
+  rotationX: 0
   bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
   shotSpawnEnemy: {fileID: 4120225856145921775}
   fireRate: 3
+  particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}

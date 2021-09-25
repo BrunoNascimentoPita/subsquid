@@ -38,7 +38,8 @@ public class Enemy : MonoBehaviour
     public float fireRate;
 	private float nextFire;
 
-    //
+    //particulas explosion
+    public ParticleSystem particulaExplosaoPrefab;
 
     void Start () 
     {
@@ -83,6 +84,8 @@ public class Enemy : MonoBehaviour
             GameController.instance.SetScore(10);
             GameController.instance.ContadorDeinimigos();
             Destroy(gameObject);
+            ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
         
     }
@@ -125,6 +128,8 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("chocou com o player");
             Destroy(this.gameObject, 0.1f);
+            ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
 
     }

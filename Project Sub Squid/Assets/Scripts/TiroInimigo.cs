@@ -24,7 +24,7 @@ public class TiroInimigo : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-            Debug.Log("Tiro inimigo acertou");
+            
         }
     }
 }

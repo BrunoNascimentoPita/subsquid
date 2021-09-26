@@ -6,12 +6,17 @@ public class NewBoss1 : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] float speed = 8f;
-     [SerializeField] float speedAttack = 16f;
+    [SerializeField] float speedAttack = 16f;
+    [SerializeField] float attack1Duration = 1.0f;
+    [SerializeField] float stateNormalDuration = 8f;
+    [SerializeField] float vidaBoss1 = 100f;
 
     public GameObject boss1;
     private Transform posicaoDoJogador;
 
     public Transform posicaoDoBoss1;
+
+    private Vector2 target;
 
 
     
@@ -35,13 +40,19 @@ public class NewBoss1 : MonoBehaviour
         //rbEnemy = this.GetComponent<Rigidbody>();
         posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform;
         posicaoDoBoss1 = GameObject.FindGameObjectWithTag("PontoDoBoss1").transform;
+        target = new Vector2(posicaoDoBoss1.position.x, posicaoDoBoss1. position.y);
+        
         //boss1.transform.Rotate(0, 260, 0);
         
     }
 
     void Update()
     {
-        
+         if(vidaBoss1 <= 0)
+        {
+            GameController.instance.SetScore(100);
+            Destroy(gameObject);
+        }
     }
 
 
@@ -61,41 +72,50 @@ public class NewBoss1 : MonoBehaviour
     void NormalState()
     {
         Debug.Log("State normal");
+
+        currentAttack += Time.fixedDeltaTime;
+
         if (posicaoDoBoss1.gameObject != null)
         {
            
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoBoss1.position, speed * Time.deltaTime);
         }
 
-        StartCoroutine ("TrocarStateAttack1");
+        if(transform.position.x == target.x && transform.position.y == target.y)
+        {
+            state = State.Attack1;
+        }
+
+
+        /*
+        if (currentAttack > stateNormalDuration)
+        {
+            state = State.Attack1;
+            currentAttack = 0f;
+        }
+        */
     }
 
-    IEnumerator TrocarStateAttack1()
-    {
-        yield return new WaitForSeconds (1.0f);
-        state = State.Attack1;
-
-        
-    }
-
-    IEnumerator VoltarNormalState()
-    {
-        yield return new WaitForSeconds (1.0f);
-        state = State.Normal;
-
-        
-    }
+    
 
     void Attack1State()
     {
         Debug.Log("State attack1");
+
+        currentAttack += Time.fixedDeltaTime;
 
         if (posicaoDoJogador.gameObject != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoJogador.position, speedAttack * Time.deltaTime);
         }
 
-        StartCoroutine ("VoltarNormalState");
+        if (currentAttack > attack1Duration)
+        {
+            state = State.Normal;
+            currentAttack = 0f;
+        }
+
+        //StartCoroutine("VoltarNormalState");
 
     }
      
@@ -120,5 +140,39 @@ public class NewBoss1 : MonoBehaviour
     
     }
 
-    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Tiro")
+        {
+            Debug.Log("Boss levou um tiro do player");
+            vidaBoss1 = vidaBoss1 - 3;
+        }
+
+        if (other.gameObject.tag == "TiroDuplo")
+        {
+            Debug.Log("Boss levou um tiro do playerr");
+            vidaBoss1 = vidaBoss1 - 2;
+        }
+
+        if (other.gameObject.tag == "TiroTriplo")
+        {
+            Debug.Log("Boss levou um tiro do playerr");
+            vidaBoss1 = vidaBoss1 - 1;
+        }
+
+        if (other.gameObject.tag == "TiroPesado")
+        {
+            Debug.Log("Boss levou um tiro do player");
+            vidaBoss1 = vidaBoss1 - 4;
+            
+        }
+
+        if (other.gameObject.tag == "5Tiros")
+        {
+            Debug.Log("lBoss levou um tiro do player");
+            vidaBoss1 = vidaBoss1 - 0.5f;
+            
+        }
+
+    }
 }

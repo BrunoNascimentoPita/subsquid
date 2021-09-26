@@ -1691,7 +1691,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  speedAttack: 20
+  speedAttack: 22
+  attack1Duration: 1.1
+  stateNormalDuration: 3
+  vidaBoss1: 100
   boss1: {fileID: 627161858}
   posicaoDoBoss1: {fileID: 0}
 --- !u!1001 &682640893

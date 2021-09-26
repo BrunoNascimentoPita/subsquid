@@ -94,7 +94,7 @@ public class Nave : MonoBehaviour
             nextFireDash = Time.time + fireRateDash;
             DashM();
             isDash = true;
-            Debug.Log("Não pode atirar");
+            
             StartCoroutine ("IsDash");
         }
 
@@ -134,7 +134,7 @@ public class Nave : MonoBehaviour
     {
         yield return new WaitForSeconds (0.3f);
         isDash = false;
-        Debug.Log("PodeAtirar");
+        
     }
 
     void Movimentacao() 
@@ -155,7 +155,7 @@ public class Nave : MonoBehaviour
     {
         if (other.gameObject.tag == "TiroEnemy")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaPlayer = vidaPlayer - danoPlayer;
             CameraController.instance.CameraTremer();
             ChecarHp();
@@ -163,8 +163,16 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
-            Debug.Log("levou um tiro do Inimigo");
-            vidaPlayer = vidaPlayer - 4;
+            
+            vidaPlayer = vidaPlayer - 2;
+            CameraController.instance.CameraTremer();
+            ChecarHp();
+        }
+
+        if (other.gameObject.tag == "Boss1")
+        {
+            
+            vidaPlayer = vidaPlayer - 5;
             CameraController.instance.CameraTremer();
             ChecarHp();
         }
@@ -178,7 +186,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW1")
         {
-            Debug.Log("Pegou o power up 1");
+            
             noPowerUp = false;
             powerUp1 = true;
             powerUp2 = false;
@@ -189,7 +197,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW2")
         {
-            Debug.Log("Pegou o power up 1");
+            
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = true;
@@ -199,7 +207,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW3")
         {
-            Debug.Log("Pegou o power up 1");
+            
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
@@ -209,7 +217,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW3")
         {
-            Debug.Log("Pegou o power up 1");
+            
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;

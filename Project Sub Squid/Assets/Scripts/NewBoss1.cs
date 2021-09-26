@@ -51,6 +51,7 @@ public class NewBoss1 : MonoBehaviour
          if(vidaBoss1 <= 0)
         {
             GameController.instance.SetScore(100);
+            GameController.instance.ShowWinTela();
             Destroy(gameObject);
         }
     }

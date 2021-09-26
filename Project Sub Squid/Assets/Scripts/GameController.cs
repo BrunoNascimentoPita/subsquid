@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
 
         Debug.Log("Inimigos mortos" + contadorEnemy);
 
-        if(contadorEnemy == 3)
+        if(contadorEnemy == 15)
         {
             chamarBoss1.Invoke();
         }

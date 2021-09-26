@@ -10,6 +10,8 @@ public class TiroBoss1 : MonoBehaviour
     private Transform  player;
     private Vector2 target;
 
+    public ParticleSystem particulaExplosaoTiroBossPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,5 +44,7 @@ public class TiroBoss1 : MonoBehaviour
     void DestroyProjectile()
     {
         Destroy(gameObject);
+        ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoTiroBossPrefab, this.transform.position, Quaternion.identity);
+        Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
     }
 }

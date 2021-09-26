@@ -1626,6 +1626,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8d3d6d88cdeb9894db5e829f27b5a6a4, type: 3}
   m_PrefabInstance: {fileID: 682640893}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &627161859 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8d3d6d88cdeb9894db5e829f27b5a6a4, type: 3}
+  m_PrefabInstance: {fileID: 682640893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &627161860
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8895,6 +8900,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4026778345109277772, guid: c92fd2a174610e547a02bd9ac3e6795f, type: 3}
   m_PrefabInstance: {fileID: 4026778343938379193}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1538203155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538203156}
+  - component: {fileID: 1538203157}
+  m_Layer: 0
+  m_Name: SpawnTiroBoss1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538203156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538203155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.14, z: -14.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 627161859}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1538203157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538203155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ab70d47951dbc41bd91e5366b78bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletEnemy: {fileID: 390409400323742120, guid: 5bbf8c5918e2d1f47b7ec56d43af4ff1, type: 3}
+  shotSpawnEnemy: {fileID: 1538203156}
+  fireRate: 3
 --- !u!1 &1554380499
 GameObject:
   m_ObjectHideFlags: 0

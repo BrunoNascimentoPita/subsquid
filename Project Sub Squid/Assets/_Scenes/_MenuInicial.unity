@@ -556,9 +556,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: menuinicial
-    clip: {fileID: 8300000, guid: b8804bf7e918c884482649459a8c71f6, type: 3}
+    clip: {fileID: 8300000, guid: fe2878641c898094e86875a9443dc7d6, type: 3}
     group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 1
+    volume: 0.372
     pitch: 1
     loop: 1
     source: {fileID: 0}

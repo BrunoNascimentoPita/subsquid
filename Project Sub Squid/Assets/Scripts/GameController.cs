@@ -26,6 +26,8 @@ public class GameController : MonoBehaviour
     void Start()
     {
         instance = this;
+        FindObjectOfType<Audio_menager>().Play("faseambientacao");
+        FindObjectOfType<Audio_menager>().Play("musicafase");
     }
 
     void Update()

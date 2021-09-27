@@ -12,6 +12,11 @@ public void PlayGame()
         Time.timeScale = 1;
 }
 
+void Start()
+{
+    FindObjectOfType<Audio_menager>().Play("menuinicial");
+}
+
 
 public void Sair()
     {

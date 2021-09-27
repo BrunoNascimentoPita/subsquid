@@ -57,7 +57,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void SpawnRandomPW()
     { 
-            randomPW = Random.Range(0 ,enemy.Length);
+            randomPW = Random.Range(0 ,spawnPW.Length);
             int PontosSpawnIndexPW = Random.Range(0, pontosdeSpawnPW.Length);
             Instantiate(spawnPW[randomPW], pontosdeSpawnPW[PontosSpawnIndexPW].position, Quaternion.identity);
             //Instantiate(spawnPW[randomPW],transform.position, transform.rotation);

@@ -57,6 +57,7 @@ public class Nave : MonoBehaviour
         corpoRigido2D = GetComponent<Rigidbody> ();
         BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
         guns = transform.GetComponentsInChildren<Gun>();
+        
     }
 
     // Update is called once per frame

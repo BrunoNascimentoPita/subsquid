@@ -36,6 +36,7 @@ public class SpawnTiro : MonoBehaviour
         if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false)
         {
             Tiro1();
+            FindObjectOfType<Audio_menager>().Play("tiro");
         }
 
         if(Input.GetKey(KeyCode.K) && Time.time > nextFire && Nave.isDash == false)

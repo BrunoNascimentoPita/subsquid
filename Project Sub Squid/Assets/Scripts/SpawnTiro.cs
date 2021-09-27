@@ -36,7 +36,7 @@ public class SpawnTiro : MonoBehaviour
         if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false)
         {
             Tiro1();
-            FindObjectOfType<Audio_menager>().Play("tiro");
+            //FindObjectOfType<Audio_menager>().Play("tiro");
         }
 
         if(Input.GetKey(KeyCode.K) && Time.time > nextFire && Nave.isDash == false)
@@ -71,6 +71,7 @@ public class SpawnTiro : MonoBehaviour
 
     void Tiro1()
     {
+        FindObjectOfType<Audio_menager>().Play("tiro");
         nextFire = Time.time + fireRate;
         Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
 

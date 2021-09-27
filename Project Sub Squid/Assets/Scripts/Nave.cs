@@ -231,6 +231,7 @@ public class Nave : MonoBehaviour
 
     void ChecarHp()
     {
+        
         float vida_paraBarra = vidaPlayer * 10;
         BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 7 );
     }

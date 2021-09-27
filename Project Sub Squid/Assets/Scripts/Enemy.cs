@@ -94,6 +94,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Tiro")
         {
+            FindObjectOfType<Audio_menager>().Play("tiro");
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - danoSofrido;
         }

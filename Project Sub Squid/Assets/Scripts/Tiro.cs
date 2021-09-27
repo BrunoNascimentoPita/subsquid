@@ -10,7 +10,7 @@ public class Tiro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<Audio_menager>().Play("tiro");
     }
 
     // Update is called once per frame

@@ -8168,28 +8168,28 @@ MonoBehaviour:
   - name: faseambientacao
     clip: {fileID: 8300000, guid: 06e73486b3683a044bc96bffbfafecde, type: 3}
     group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.754
+    volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: musicafase
     clip: {fileID: 8300000, guid: acb09494b4acff544971600f041fc323, type: 3}
     group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.767
+    volume: 0.312
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: tiro
     clip: {fileID: 8300000, guid: 2b29e843fc83b6c42acfeb699ca731df, type: 3}
     group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.509
+    volume: 0.244
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: tiroagua
     clip: {fileID: 8300000, guid: b25e9feb7be8f494fbf0af2219d2e8fa, type: 3}
     group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.482
+    volume: 0.17
     pitch: 1
     loop: 0
     source: {fileID: 0}

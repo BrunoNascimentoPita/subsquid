@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class GameController : MonoBehaviour
     public GameObject pauseTela;
     public GameObject volumeSlider;
 
-    public Text scoreText;
+    public Text scoreText1;
+
+    public TextMeshProUGUI scoreText;
     private int score;
 
     // chamar boss
@@ -103,6 +106,7 @@ public class GameController : MonoBehaviour
     public void SetScore(int scorePoints)
     {
         score += scorePoints;
+        scoreText1.text = score.ToString();
         scoreText.text = score.ToString();
     }
 

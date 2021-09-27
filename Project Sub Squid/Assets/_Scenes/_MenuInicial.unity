@@ -152,8 +152,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 713815779}
-  - {fileID: 1872147592}
   - {fileID: 1869204309}
+  - {fileID: 1872147592}
   - {fileID: 1891193166}
   m_Father: {fileID: 344037216}
   m_RootOrder: 1
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 1312761552}
   - component: {fileID: 1312761551}
   m_Layer: 5
-  m_Name: TextPlay
+  m_Name: TextQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 1844158688}
   - component: {fileID: 1844158687}
   m_Layer: 5
-  m_Name: TextPlay
+  m_Name: TextOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1039,7 +1039,7 @@ RectTransform:
   m_Children:
   - {fileID: 1844158686}
   m_Father: {fileID: 39310683}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1500,7 +1500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6074437288536987897, guid: 4908d32434df48a42927250acf45f0af, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6074437288536987897, guid: 4908d32434df48a42927250acf45f0af, type: 3}
       propertyPath: m_AnchorMax.x

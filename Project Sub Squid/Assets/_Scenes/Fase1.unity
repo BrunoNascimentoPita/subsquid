@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -515,7 +515,7 @@ MonoBehaviour:
   bullet3: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
   bulletPesado: {fileID: 5426075593347914917, guid: b30b6eb8eeb789548985075a44188635, type: 3}
   bulletZigZag: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
-  bulletLaser: {fileID: 0}
+  bulletLaser: {fileID: 5887727564790872156, guid: c4bce1be8864cba46b995208cb732804, type: 3}
   shotSpawn: {fileID: 173748818}
   fireRate: 0.2
 --- !u!114 &173748820
@@ -534,7 +534,7 @@ MonoBehaviour:
   bulletPw1: {fileID: 6967154269048400682, guid: e1bec5b7599debc419ad6a3af1db610d, type: 3}
   bulletPw2: {fileID: 5426075593347914917, guid: b30b6eb8eeb789548985075a44188635, type: 3}
   bulletPw3: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
-  bulletPW4: {fileID: 0}
+  bulletPW4: {fileID: 5887727564790872156, guid: c4bce1be8864cba46b995208cb732804, type: 3}
   shotSpawn: {fileID: 173748818}
   fireRate: 0.2
 --- !u!1 &233905595
@@ -8776,7 +8776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791598881000100992, guid: 3bceba97ff1e52b42a5cf4802ead6eb6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.000576
       objectReference: {fileID: 0}
     - target: {fileID: 2791598881000100992, guid: 3bceba97ff1e52b42a5cf4802ead6eb6, type: 3}
       propertyPath: m_LocalPosition.x

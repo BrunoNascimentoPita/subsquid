@@ -4,39 +4,31 @@ using UnityEngine;
 
 public class TiroLaser : MonoBehaviour
 {
-    public float tamanhoLaser;
-    public LineRenderer LaserLineRenderer;
+   
+    public float speedTiro = 10f;
+   
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        LaserLineRenderer = GetComponent<LineRenderer>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        RaycastHit2D raioLaser = Physics2D.Raycast(transform.position, transform.right, tamanhoLaser);
+        transform.position += Vector3.right * speedTiro * Time.deltaTime;
+        Destroy(this.gameObject, 5.0f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
 
 
-        if (raioLaser == true)
+        if (other.gameObject.tag == "Enemy")
         {
-            LaserLineRenderer.SetPosition(1, transform.position);
-            LaserLineRenderer.SetPosition(0, raioLaser.point);
 
+            Destroy(this.gameObject, 0.1f);
         }
-        else
+
+        if (other.gameObject.tag == "Boss1")
         {
-            Vector3 fimLaser = new Vector3(transform.position.y, transform.position.x + tamanhoLaser, 0);
-            LaserLineRenderer.SetPosition(1, transform.position);
-            LaserLineRenderer.SetPosition(0, fimLaser);
 
-
+            Destroy(this.gameObject, 0.1f);
         }
+
     }
 }
-   
-   
-
-
-

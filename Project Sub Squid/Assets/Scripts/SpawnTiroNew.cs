@@ -13,8 +13,10 @@ public class SpawnTiroNew : MonoBehaviour
 
     public Transform bulletPW4;
 
+  
+
     //public GameObject shot;
-	public Transform shotSpawn;
+    public Transform shotSpawn;
     
     public float fireRate;
 	private float nextFire;
@@ -68,7 +70,12 @@ public class SpawnTiroNew : MonoBehaviour
         Instantiate(bulletPw3, shotSpawn.position, shotSpawn.rotation);
         }
 
-        
+        if (Nave.powerUp4)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(bulletPW4, shotSpawn.position, shotSpawn.rotation);
+        }
+
 
     }
 

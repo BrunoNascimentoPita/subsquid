@@ -24,10 +24,11 @@ public class Nave : MonoBehaviour
     public static bool powerUp1 = false;
     public static bool powerUp2 = false;
     public static bool powerUp3 = false;
+    public static bool powerUp4 = false;
 
     // Tiro K
 
-     public float fireRate;
+    public float fireRate;
 	 private float nextFire;
 
 
@@ -226,6 +227,17 @@ public class Nave : MonoBehaviour
             StartCoroutine ("NoPowerUps");
             
         }
+        if (other.gameObject.tag == "PW4")
+        {
+
+            noPowerUp = false;
+            powerUp1 = false;
+            powerUp2 = false;
+            powerUp3 = false;
+            powerUp4 = true;
+            StartCoroutine("NoPowerUps");
+
+        }
 
     }
 
@@ -243,6 +255,7 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = false;
+            powerUp4 = false;
     }
     
 

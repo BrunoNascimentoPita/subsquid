@@ -67,7 +67,7 @@ public class Nave : MonoBehaviour
         
         shoot = Input.GetKey(KeyCode.K);
 
-        if(shoot && Time.time > nextFire)
+        if(shoot && Time.time > nextFire && SpawnTiroNew.tiroPadrao == false)
         {
             shoot = false;
             foreach(Gun gun in guns)

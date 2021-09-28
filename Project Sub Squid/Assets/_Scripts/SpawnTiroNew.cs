@@ -20,6 +20,8 @@ public class SpawnTiroNew : MonoBehaviour
     
     public float fireRate;
 	private float nextFire;
+
+    public static bool tiroPadrao;
     
     // Start is called before the first frame update
     void Start()
@@ -31,13 +33,22 @@ public class SpawnTiroNew : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false)
+        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false && Gun.tiroExtra == false)
         {
             Tiro();
+            tiroPadrao = true;
+            StartCoroutine ("NoTiroPadrao");
         }
 
 
 
+    }
+
+    IEnumerator NoTiroPadrao()
+    {
+        yield return new WaitForSeconds (0.5f);
+        tiroPadrao = false;
+        
     }
 
     void Tiro()

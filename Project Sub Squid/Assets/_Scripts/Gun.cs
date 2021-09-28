@@ -7,6 +7,7 @@ public class Gun : MonoBehaviour
 
     public TiroNew bullet;
     Vector2 direction;
+    public static bool tiroExtra;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,17 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
+        tiroExtra = true;
         GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
         TiroNew goBullet = go.GetComponent<TiroNew>();
         goBullet.direction = direction;
+        StartCoroutine ("NoTiroExtra");
+    }
+
+    IEnumerator NoTiroExtra()
+    {
+        yield return new WaitForSeconds (0.5f);
+        tiroExtra = false;
+        
     }
 }

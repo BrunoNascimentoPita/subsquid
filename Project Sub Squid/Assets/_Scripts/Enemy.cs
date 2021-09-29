@@ -40,11 +40,14 @@ public class Enemy : MonoBehaviour
 
     //particulas explosion
     public ParticleSystem particulaExplosaoPrefab;
+    public ParticleSystem particulaSanguePrefab;
+
 
     void Start () 
     {
         enemy.transform.Rotate(rotationX, rotationY, 0);
         rb = this.GetComponent<Rigidbody>();
+        
 
     }
 
@@ -97,24 +100,33 @@ public class Enemy : MonoBehaviour
             //FindObjectOfType<Audio_menager>().Play("tiro");
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - danoSofrido;
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
+
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - 2;
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - 1;
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
             Debug.Log("levou um tiro do Inimigo");
             vidaInimigo = vidaInimigo - 4;
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
             
         }
 
@@ -122,6 +134,8 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("levou um tiro do Inimigo");
             vidaInimigo = vidaInimigo - 0.5f;
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
             
         }
 

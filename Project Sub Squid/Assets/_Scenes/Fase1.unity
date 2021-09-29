@@ -3609,6 +3609,11 @@ MonoBehaviour:
   velocidade: 10
   vidaPlayer: 10
   danoPlayer: 2
+  maxMin: 1
+  xMin: -13.95
+  yMin: -8.23
+  xMax: 15.55
+  yMax: 8.3
 --- !u!4 &952804648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
@@ -10508,7 +10513,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1564728733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10620,11 +10625,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.48
+      value: -12.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
       propertyPath: m_LocalPosition.z

@@ -51,6 +51,16 @@ public class Nave : MonoBehaviour
 
     Gun[] guns;
     bool shoot;
+
+    // limites
+
+    private Transform target;
+
+	public bool maxMin;
+	public float xMin;
+	public float yMin;
+	public float xMax;
+	public float yMax;
     
 
     void Start () 
@@ -58,12 +68,25 @@ public class Nave : MonoBehaviour
         corpoRigido2D = GetComponent<Rigidbody> ();
         BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
         guns = transform.GetComponentsInChildren<Gun>();
+        target = GameObject.FindGameObjectWithTag ("Player").transform;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (target) {
+		
+			transform.position = Vector3.Lerp (transform.position, target.position, velocidade) + new Vector3(0,0,target.position.z);
+
+			if (maxMin) {
+			
+				transform.position = new Vector3 (Mathf.Clamp (target.position.x, xMin, xMax), Mathf.Clamp (target.position.y, yMin, yMax), 2*target.position.z);
+
+			}
+		
+		}
+
         
         shoot = Input.GetKey(KeyCode.K);
 
@@ -103,6 +126,7 @@ public class Nave : MonoBehaviour
         
             // Impedir o player de sair da area da camera
 
+        /*
         var distanceZ = (transform.position - Camera.main.transform.position).z;
 
 		var leftBorder = Camera.main.ViewportToWorldPoint (new Vector3 (0, 0, distanceZ)).x;
@@ -114,7 +138,7 @@ public class Nave : MonoBehaviour
 		var bottomBorder = Camera.main.ViewportToWorldPoint (new Vector3 (0, 1, distanceZ)).y;
 
         transform.position = new Vector3 (Mathf.Clamp (transform.position.x, leftBorder, rightBorder), Mathf.Clamp (transform.position.y, topBorder, bottomBorder), transform.position.z);
-
+        */
         //
 
         if(vidaPlayer <= 0)
@@ -258,5 +282,4 @@ public class Nave : MonoBehaviour
             powerUp4 = false;
     }
     
-
 }

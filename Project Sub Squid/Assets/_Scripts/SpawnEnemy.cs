@@ -29,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("StartSpawn", tempoSpawn, tempoSpawn);
+        StartCoroutine ("StartSpawn");
         InvokeRepeating("StartSpawnES", tempoSpawnES, tempoSpawnES);
         InvokeRepeating("SpawnRandomPW", spawntime, spawndelay);
     }
@@ -37,14 +37,25 @@ public class SpawnEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (GameController.contadorEnemy >= 5 && GameController.contadorEnemy <= 15)
+        {
+            tempoSpawn = 5;
+        }
     }
 
-    void StartSpawn()
+    void ChamarSpawn()
     {
+        //InvokeRepeating("StartSpawn", tempoSpawn, tempoSpawn);
+    }
+
+    IEnumerator StartSpawn()
+    {
+            yield return new WaitForSeconds (tempoSpawn);
             randowEnemy = Random.Range(0, enemy.Length);
             int PontosSpawnIndexEnemy = Random.Range(0, pontosdeSpawnEnemy.Length);
             Instantiate(enemy[randowEnemy], pontosdeSpawnEnemy[PontosSpawnIndexEnemy].position, Quaternion.identity);
+            StartCoroutine ("StartSpawn");
 
     }
 

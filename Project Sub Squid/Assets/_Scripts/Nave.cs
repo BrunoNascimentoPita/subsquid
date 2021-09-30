@@ -61,11 +61,21 @@ public class Nave : MonoBehaviour
 	public float yMin;
 	public float xMax;
 	public float yMax;
+
+    // fluido
+
+    public float acceleration;
+    public float deceleration;
+ 
+    private Vector2 direction;
     
 
     void Start () 
     {
         corpoRigido2D = GetComponent<Rigidbody> ();
+        //corpoRigido2D.gravityScale = 0;
+        corpoRigido2D.drag = deceleration;
+        direction = UnityEngine.Random.insideUnitCircle;
         BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
         guns = transform.GetComponentsInChildren<Gun>();
         target = GameObject.FindGameObjectWithTag ("Player").transform;
@@ -100,7 +110,7 @@ public class Nave : MonoBehaviour
             }
         }
 
-        Movimentacao ();
+        //Movimentacao ();
     
         /*
         float x = Input.GetAxis("Horizontal");
@@ -156,6 +166,15 @@ public class Nave : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        //Movimentacao ();
+        Vector2 directionalForce = direction * acceleration;
+        corpoRigido2D.AddForce(directionalForce * Time.deltaTime, ForceMode.Impulse);
+        corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
+        corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+    }
+
     IEnumerator IsDash()
     {
         yield return new WaitForSeconds (0.3f);
@@ -163,17 +182,19 @@ public class Nave : MonoBehaviour
         
     }
 
+    /*
     void Movimentacao() 
     {
       corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
       corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
     }
+    */
 
     void DashM() 
     {
         Debug.Log("Dash");
-      corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
-      corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
+        corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
+        corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
       
     }
 

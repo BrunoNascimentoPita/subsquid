@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
     // TIRO
     public Transform bulletEnemy;
 
-    public static bool podeAtirar = false;
+    public bool podeAtirar = false;
 
     //public GameObject shot;
 	public Transform shotSpawnEnemy;

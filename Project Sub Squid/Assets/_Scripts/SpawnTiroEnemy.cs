@@ -22,7 +22,7 @@ public class SpawnTiroEnemy : MonoBehaviour
     void Update()
     {
         
-        if(Time.time > nextFire && Enemy.podeAtirar == true)
+        if(Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             Instantiate(bulletEnemy, shotSpawnEnemy.position, shotSpawnEnemy.rotation);

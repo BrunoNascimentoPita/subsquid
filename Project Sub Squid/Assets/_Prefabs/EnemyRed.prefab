@@ -140,7 +140,18 @@ MonoBehaviour:
   rotationY: 270
   rotationX: 0
   bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
+  podeAtirar: 0
   shotSpawnEnemy: {fileID: 4120225856145921775}
   fireRate: 3
   particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
   particulaSanguePrefab: {fileID: 8648786967167552825, guid: 12aa29c4a82a3d74ebf67eddce5d05ef, type: 3}
+  materialsEnemy:
+  - {fileID: 6577551568847681163, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
+  - {fileID: -3597792400778177293, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
+  - {fileID: 2321595615710281431, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
+  - {fileID: 7378327510708903205, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
+  - {fileID: 1265062935378540075, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
+  - {fileID: 0}
+  corDano: {r: 1, g: 0.3647059, b: 0.3647059, a: 0}
+  originColor: {r: 0, g: 0, b: 0, a: 0}
+  timeCorDano: 0.15

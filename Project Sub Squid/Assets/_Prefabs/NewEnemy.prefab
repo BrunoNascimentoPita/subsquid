@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a068fad97b23c834cb399e74cd1a002a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   vidaInimigo: 15
   danoSofrido: 3
   velocity: 10
@@ -141,7 +141,18 @@ MonoBehaviour:
   rotationY: 90
   rotationX: 0
   bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
+  podeAtirar: 0
   shotSpawnEnemy: {fileID: 5485333698811337229}
   fireRate: 3.5
   particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
   particulaSanguePrefab: {fileID: 8648786967167552825, guid: 12aa29c4a82a3d74ebf67eddce5d05ef, type: 3}
+  materialsEnemy:
+  - {fileID: 4533390132219030117, guid: 386b13a341f38404788440c8a5b5f82b, type: 3}
+  - {fileID: -3597792400778177293, guid: 386b13a341f38404788440c8a5b5f82b, type: 3}
+  - {fileID: 7378327510708903205, guid: 386b13a341f38404788440c8a5b5f82b, type: 3}
+  - {fileID: -1880488188248130637, guid: 386b13a341f38404788440c8a5b5f82b, type: 3}
+  - {fileID: -173482714909070930, guid: f518ae55278fc0c4f98fe97c7d4eeaf9, type: 3}
+  - {fileID: -3772405135773769215, guid: 386b13a341f38404788440c8a5b5f82b, type: 3}
+  corDano: {r: 1, g: 0.3647059, b: 0.3647059, a: 0.5803922}
+  originColor: {r: 0, g: 0, b: 0, a: 0}
+  timeCorDano: 0.15

@@ -44,6 +44,15 @@ public class Enemy : MonoBehaviour
     public ParticleSystem particulaExplosaoPrefab;
     public ParticleSystem particulaSanguePrefab;
 
+    //
+    public Material[] materialsEnemy;
+
+    public Color corDano;
+
+    public Color originColor;
+
+    public float timeCorDano = 0.01f;
+
 
     void Start () 
     {
@@ -95,6 +104,30 @@ public class Enemy : MonoBehaviour
         
     }
 
+    IEnumerator DanoCor()
+    {
+        GetComponent<Renderer>().materials[0].color = corDano;
+        GetComponent<Renderer>().materials[1].color = corDano;
+        GetComponent<Renderer>().materials[2].color = corDano;
+        GetComponent<Renderer>().materials[3].color = corDano;
+        //GetComponent<Renderer>().materials[4].color = corDano;
+        //GetComponent<Renderer>().materials[5].color = corDano;
+
+        yield return new WaitForSeconds(timeCorDano);
+
+        GetComponent<Renderer>().materials[0].color = materialsEnemy[0].color;
+        GetComponent<Renderer>().materials[1].color = materialsEnemy[1].color;
+        GetComponent<Renderer>().materials[2].color = materialsEnemy[2].color;
+        GetComponent<Renderer>().materials[3].color = materialsEnemy[3].color;
+        //GetComponent<Renderer>().materials[4].color = materialsEnemy[4].color;
+        //GetComponent<Renderer>().materials[5].color = materialsEnemy[5].color;
+    }
+
+    void PararDanoCor()
+    {
+
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Tiro")
@@ -102,6 +135,7 @@ public class Enemy : MonoBehaviour
             //FindObjectOfType<Audio_menager>().Play("tiro");
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - danoSofrido;
+            StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
 
@@ -111,6 +145,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - 2;
+            StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
@@ -119,6 +154,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("levou um tiro do player");
             vidaInimigo = vidaInimigo - 1;
+            StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
@@ -127,6 +163,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("levou um tiro do Inimigo");
             vidaInimigo = vidaInimigo - 4;
+            StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
             
@@ -136,6 +173,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("levou um tiro do Inimigo");
             vidaInimigo = vidaInimigo - 0.5f;
+            StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
             

@@ -10193,7 +10193,7 @@ MonoBehaviour:
   - {fileID: 3631637680032664661, guid: cb01ae6d7e447fb41a0e819010e7b68e, type: 3}
   - {fileID: 5139734463530483895, guid: aa5596a258d0a294d8878c2d600e9dd3, type: 3}
   - {fileID: 6991730774829601032, guid: 65b947be2609bb44c9c08b8b810fb30f, type: 3}
-  tempoSpawn: 10
+  tempoSpawn: 3
   pontosdeSpawnEnemy:
   - {fileID: 88699355}
   - {fileID: 741223165}
@@ -10203,7 +10203,7 @@ MonoBehaviour:
   - {fileID: 730430400}
   - {fileID: 1318644727}
   enemySeguir: {fileID: 5229211859737062910, guid: b2651f661f08d10458bc6d5d45cc0c81, type: 3}
-  tempoSpawnES: 8
+  tempoSpawnES: 15
   pontosdeSpawnES:
   - {fileID: 1633228331}
   - {fileID: 119607484}

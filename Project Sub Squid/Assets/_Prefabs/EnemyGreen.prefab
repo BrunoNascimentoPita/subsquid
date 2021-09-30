@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8886177899338565767}
   - component: {fileID: 3970521865138592675}
   - component: {fileID: 7774751959626063612}
+  - component: {fileID: 7673021825191580480}
   m_Layer: 0
   m_Name: EnemyGreen
   m_TagString: Enemy
@@ -129,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a068fad97b23c834cb399e74cd1a002a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  vidaInimigo: 10
+  speed: 4
+  vidaInimigo: 7
   danoSofrido: 3
   velocity: 10
   eixoX: 0
@@ -143,3 +144,18 @@ MonoBehaviour:
   fireRate: 3
   particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
   particulaSanguePrefab: {fileID: 8648786967167552825, guid: 12aa29c4a82a3d74ebf67eddce5d05ef, type: 3}
+--- !u!114 &7673021825191580480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991730774829601032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc3767c7c9e46043ae039996d8b303e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 2
+  frequency: 0.5
+  inverted: 0

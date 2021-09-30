@@ -32,6 +32,8 @@ public class Enemy : MonoBehaviour
     // TIRO
     public Transform bulletEnemy;
 
+    public static bool podeAtirar = false;
+
     //public GameObject shot;
 	public Transform shotSpawnEnemy;
 
@@ -75,7 +77,7 @@ public class Enemy : MonoBehaviour
         }
         */
         //Tiro
-        if(Time.time > nextFire)
+        if(Time.time > nextFire && podeAtirar == true)
         {
             nextFire = Time.time + fireRate;
             Instantiate(bulletEnemy, shotSpawnEnemy.position, shotSpawnEnemy.rotation);
@@ -145,6 +147,11 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
+        }
+
+        if (other.gameObject.tag == "PodeAtirar")
+        {
+           podeAtirar = true;
         }
 
     }

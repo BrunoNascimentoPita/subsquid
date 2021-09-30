@@ -19,6 +19,7 @@ TagManager:
   - 5Tiros
   - Boss1
   - PontoDoBoss1
+  - PodeAtirar
   layers:
   - Default
   - TransparentFX

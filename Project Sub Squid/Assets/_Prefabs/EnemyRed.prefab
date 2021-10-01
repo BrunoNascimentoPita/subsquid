@@ -154,3 +154,6 @@ MonoBehaviour:
   corDano: {r: 0.9811321, g: 0.34709862, b: 0.35217112, a: 0}
   originColor: {r: 0, g: 0, b: 0, a: 0}
   timeCorDano: 0.3
+  inpulso: 0
+  superImpulso: 20
+  megaImpulso: 0

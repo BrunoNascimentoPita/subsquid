@@ -1391,19 +1391,19 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartSpawn
+          m_StringArgument: StartSpawnES
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1564728733}
         m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: CancelInvoke
+        m_MethodName: StopCoroutine
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartSpawnES
+          m_StringArgument: StartSpawn
           m_BoolArgument: 0
         m_CallState: 2
   gameOver: {fileID: 2046867610}
@@ -1424,7 +1424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &329411726
 GameObject:
@@ -3163,7 +3163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &751742073
 GameObject:
@@ -8740,7 +8740,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 91324ff92d205a3479b968a112acc069, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91324ff92d205a3479b968a112acc069, type: 3}
       propertyPath: m_LocalScale.x
@@ -9630,7 +9630,7 @@ RectTransform:
   - {fileID: 887419178}
   - {fileID: 1292180938}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 14.208, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10629,7 +10629,7 @@ MonoBehaviour:
   - {fileID: 3631637680032664661, guid: cb01ae6d7e447fb41a0e819010e7b68e, type: 3}
   - {fileID: 5139734463530483895, guid: aa5596a258d0a294d8878c2d600e9dd3, type: 3}
   - {fileID: 6991730774829601032, guid: 65b947be2609bb44c9c08b8b810fb30f, type: 3}
-  tempoSpawn: 3
+  tempoSpawn: 10
   pontosdeSpawnEnemy:
   - {fileID: 88699355}
   - {fileID: 741223165}
@@ -10667,7 +10667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633228330
 GameObject:
@@ -10708,7 +10708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 15e78ae4e0c664c4f8b125e6bcb070ea, type: 3}
       propertyPath: m_LocalScale.x
@@ -17089,6 +17089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroupZZ
       objectReference: {fileID: 0}
+    - target: {fileID: 756068758892101923, guid: aa536530561713d41967ae2e2703ff6a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 756068758892109532, guid: aa536530561713d41967ae2e2703ff6a, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -17160,7 +17164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5491238121187443226, guid: 0986ae07d3d80ba449b06703ecff989d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5491238121187443226, guid: 0986ae07d3d80ba449b06703ecff989d, type: 3}
       propertyPath: m_LocalPosition.x

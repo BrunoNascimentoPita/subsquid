@@ -52,6 +52,12 @@ public class EnemyRed : MonoBehaviour
 
     public float timeCorDano = 0.5f;
 
+    public bool inpulso = false;
+
+    public float superImpulso = 50f;
+
+    public bool megaImpulso = false;
+
 
     void Start () 
     {
@@ -64,7 +70,16 @@ public class EnemyRed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(-speed, 0, 0);
+
+        if (!inpulso)
+        {
+            rb.velocity = new Vector3(-speed, 0, 0);
+        }
+
+        if (megaImpulso)
+        {
+            rb.velocity = new Vector3(-superImpulso, 0, 0);
+        }
         
         /*
         if(dirRight)
@@ -92,6 +107,12 @@ public class EnemyRed : MonoBehaviour
         }
         //
 
+        if(vidaInimigo >= 1 && vidaInimigo <= 3 && inpulso == false)
+        {   
+            
+           StartCoroutine(SuperInpulso());
+        }
+
         if(vidaInimigo <= 0)
         {
             GameController.instance.SetScore(10);
@@ -101,6 +122,18 @@ public class EnemyRed : MonoBehaviour
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
         
+    }
+
+    IEnumerator SuperInpulso()
+    {
+        rb.velocity = new Vector3(superImpulso, 0, 0);
+
+        yield return new WaitForSeconds(0.2f);
+
+        inpulso = true;
+
+        megaImpulso = true;
+
     }
 
     IEnumerator DanoCor()

@@ -2005,7 +2005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557402116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.04}
   m_LocalScale: {x: 32.897438, y: 18.097174, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3576,8 +3576,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a477cf16147e9064ab34ba07bc82bbf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 175
+  dashSpeed: 2
   fireRateDash: 0.5
+  baseSpeed: 13.5
+  dashPower: 2
+  dashTime: 0.3
+  isDashing: 0
   fireRate: 0.6
   velocidade: 13.5
   vidaPlayer: 10

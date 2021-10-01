@@ -18,6 +18,13 @@ public class Nave : MonoBehaviour
 
     public static bool isDash = false;
 
+    public float baseSpeed;
+
+    public float dashPower;
+    public float dashTime;
+
+    public bool isDashing = false;
+
     // Powerups
 
     public static bool noPowerUp = true;
@@ -29,7 +36,7 @@ public class Nave : MonoBehaviour
     // Tiro K
 
     public float fireRate;
-	 private float nextFire;
+	private float nextFire;
 
 
     
@@ -79,6 +86,7 @@ public class Nave : MonoBehaviour
         BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
         guns = transform.GetComponentsInChildren<Gun>();
         target = GameObject.FindGameObjectWithTag ("Player").transform;
+        velocidade = baseSpeed;
         
     }
 
@@ -124,13 +132,16 @@ public class Nave : MonoBehaviour
 
         
 
-        if (Input.GetKeyDown(KeyCode.U) && Time.time > nextFireDash)
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            nextFireDash = Time.time + fireRateDash;
-            DashM();
+            if (!isDashing)
+            {
+
+            StartCoroutine (DashM());
             isDash = true;
-            
             StartCoroutine ("IsDash");
+                
+            }
         }
 
         
@@ -190,12 +201,18 @@ public class Nave : MonoBehaviour
     }
     */
 
-    void DashM() 
+    IEnumerator DashM() 
     {
         Debug.Log("Dash");
-        corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
-        corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
-      
+        //corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
+        //corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
+        isDashing = true;
+        velocidade *= dashPower;
+
+        yield return new WaitForSeconds(dashTime);
+        
+        velocidade = baseSpeed;
+        isDashing = false;
     }
 
     void OnTriggerEnter(Collider other)

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2983308519126265216}
   - component: {fileID: 3875004108439124389}
   - component: {fileID: 1007552688775930917}
-  - component: {fileID: 685173494426568045}
+  - component: {fileID: -738281101446723424}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3631637680032664661}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.103, y: 3.2129, z: 0.0182}
+  m_LocalRotation: {x: 0, y: 0.7660445, z: -0, w: -0.6427876}
+  m_LocalPosition: {x: 0.103, y: 3.2129, z: 0}
   m_LocalScale: {x: 61.0306, y: 40.780663, z: 162.75243}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 260, z: 0}
 --- !u!33 &1045433262169266506
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &685173494426568045
+--- !u!114 &-738281101446723424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3631637680032664661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a068fad97b23c834cb399e74cd1a002a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1134027f39f4d42a64ef24cd4d14fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
@@ -137,21 +137,20 @@ MonoBehaviour:
   eixoX: 0
   enemy: {fileID: 3631637680032664661}
   rb: {fileID: 1007552688775930917}
-  rotationY: 270
+  rotationY: 250
   rotationX: 0
   bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
   podeAtirar: 0
   shotSpawnEnemy: {fileID: 4120225856145921775}
-  fireRate: 3
+  fireRate: 2
   particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
-  particulaSanguePrefab: {fileID: 8648786967167552825, guid: 12aa29c4a82a3d74ebf67eddce5d05ef, type: 3}
+  particulaSanguePrefab: {fileID: 3389670043535770039, guid: 4326bd7d473feec46a491c87e0523b7b, type: 3}
   materialsEnemy:
   - {fileID: 6577551568847681163, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
   - {fileID: -3597792400778177293, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
   - {fileID: 2321595615710281431, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
   - {fileID: 7378327510708903205, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
   - {fileID: 1265062935378540075, guid: a787b969f42ba58479989fe8fe8dbf23, type: 3}
-  - {fileID: 0}
-  corDano: {r: 1, g: 0.3647059, b: 0.3647059, a: 0}
+  corDano: {r: 0.9811321, g: 0.34709862, b: 0.35217112, a: 0}
   originColor: {r: 0, g: 0, b: 0, a: 0}
-  timeCorDano: 0.15
+  timeCorDano: 0.3

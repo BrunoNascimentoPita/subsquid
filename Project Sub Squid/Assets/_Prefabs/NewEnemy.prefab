@@ -140,7 +140,7 @@ MonoBehaviour:
   rb: {fileID: 5446374303318728742}
   rotationY: 90
   rotationX: 0
-  bulletEnemy: {fileID: 2542834340434414853, guid: b813ff6d7774d7d45bccefe1ad70b74c, type: 3}
+  bulletEnemy: {fileID: 2654242696788594781, guid: f15774aedee90d0418fcd3febc39b2cc, type: 3}
   podeAtirar: 0
   shotSpawnEnemy: {fileID: 5485333698811337229}
   fireRate: 3.5

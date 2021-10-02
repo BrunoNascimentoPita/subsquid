@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
         instance = this;
         FindObjectOfType<Audio_menager>().Play("faseambientacao");
         FindObjectOfType<Audio_menager>().Play("musicafase");
+        contadorEnemy = 0;
     }
 
     void Update()
@@ -59,7 +60,7 @@ public class GameController : MonoBehaviour
         if(contadorEnemy == 20)
         {
             //chamarBoss1.Invoke();
-            boss1Baleia.SetActive(true);
+            //boss1Baleia.SetActive(true);
 
         }
 

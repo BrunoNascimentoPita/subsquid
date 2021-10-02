@@ -43,7 +43,7 @@ public class NewBoss1 : MonoBehaviour
         posicaoDoBoss1 = GameObject.FindGameObjectWithTag("PontoDoBoss1").transform;
         target = new Vector2(posicaoDoBoss1.position.x, posicaoDoBoss1. position.y);
         
-        //boss1.transform.Rotate(0, 260, 0);
+        boss1.transform.Rotate(0, 90, 0);
         
     }
 

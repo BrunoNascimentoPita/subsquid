@@ -25,6 +25,12 @@ public class SpawnEnemy : MonoBehaviour
 
     public Transform[] pontosdeSpawnPW;
 
+    // spawn Boss1Baleia
+    public GameObject bossBaleia1;
+    public Transform pontosdeSpawnBoss1;
+
+    public bool boss1Chamado = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +48,23 @@ public class SpawnEnemy : MonoBehaviour
         {
             tempoSpawn = 5;
         }
+
+        if (GameController.contadorEnemy == 20 && !boss1Chamado)
+        {
+            StartCoroutine ("ChamarBossBaleia");
+        }
     }
 
     void ChamarSpawn()
     {
         //InvokeRepeating("StartSpawn", tempoSpawn, tempoSpawn);
+    }
+
+    IEnumerator ChamarBossBaleia()
+    {
+        boss1Chamado = true;
+        yield return new WaitForSeconds (1.0f);
+        Instantiate(bossBaleia1, pontosdeSpawnBoss1.position, Quaternion.identity);
     }
 
     IEnumerator StartSpawn()

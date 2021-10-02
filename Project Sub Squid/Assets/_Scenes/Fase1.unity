@@ -1545,49 +1545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c66f4d3f9c36c4bb743434da5823d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chamarBoss1:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 627161858}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1564728733}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: CancelInvoke
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: StartSpawnES
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1564728733}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopCoroutine
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: StartSpawn
-          m_BoolArgument: 0
-        m_CallState: 2
   gameOver: {fileID: 2046867610}
   winTela: {fileID: 1799187892}
   pauseTela: {fileID: 67999715}
   volumeSlider: {fileID: 0}
+  boss1Baleia: {fileID: 627161858}
   scoreText1: {fileID: 887419176}
   scoreText: {fileID: 1292180939}
 --- !u!4 &321848196

@@ -9,11 +9,13 @@ using TMPro;
 public class GameController : MonoBehaviour
 {
 
-    public UnityEvent chamarBoss1;
+    //public UnityEvent chamarBoss1;
     public GameObject gameOver;
     public GameObject winTela;
     public GameObject pauseTela;
     public GameObject volumeSlider;
+
+    public GameObject boss1Baleia;
 
     public Text scoreText1;
 
@@ -56,7 +58,9 @@ public class GameController : MonoBehaviour
 
         if(contadorEnemy == 20)
         {
-            chamarBoss1.Invoke();
+            //chamarBoss1.Invoke();
+            boss1Baleia.SetActive(true);
+
         }
 
     }

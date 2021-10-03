@@ -57,7 +57,8 @@ public class Boss1 : MonoBehaviour
         if(vidaBoss1 <= 0)
         {
             GameController.instance.SetScore(100);
-            Destroy(gameObject);
+            SpawnEnemy.boss1NaCena = false;
+            //Destroy(gameObject);
         }
 
         if(timeBtwShots <=0)

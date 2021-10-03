@@ -29,14 +29,24 @@ public class SpawnEnemy : MonoBehaviour
     public GameObject bossBaleia1;
     public Transform pontosdeSpawnBoss1;
 
-    public bool boss1Chamado = false;
+    // spawn Boss2
+    public GameObject boss2;
+    public Transform pontosdeSpawnBoss2;
+
+    public static bool boss1NaCena = false;
+
+    public static bool boss1JaMorreu;
+    public static bool boss2NaCena = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        boss1NaCena = false;
+        boss2NaCena = false;
+        boss1JaMorreu = false;
         StartCoroutine ("StartSpawn");
-        InvokeRepeating("StartSpawnES", tempoSpawnES, tempoSpawnES);
+        StartCoroutine("StartSpawnES");
         InvokeRepeating("SpawnRandomPW", spawntime, spawndelay);
     }
 
@@ -46,12 +56,22 @@ public class SpawnEnemy : MonoBehaviour
 
         if (GameController.contadorEnemy >= 5 && GameController.contadorEnemy <= 15)
         {
-            tempoSpawn = 5;
+            tempoSpawn = 5.0f;
         }
 
-        if (GameController.contadorEnemy == 20 && !boss1Chamado)
+        if (GameController.contadorEnemy >= 16 && GameController.contadorEnemy <= 30)
+        {
+            tempoSpawn = 2.5f;
+        }
+
+        if (GameController.contadorEnemy == 15 && !boss1NaCena && !boss1JaMorreu)
         {
             StartCoroutine ("ChamarBossBaleia");
+        }
+
+        if (GameController.contadorEnemy == 30 && !boss2NaCena)
+        {
+            StartCoroutine ("ChamarBoss2");
         }
     }
 
@@ -62,26 +82,43 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator ChamarBossBaleia()
     {
-        boss1Chamado = true;
+        boss1NaCena = true;
         yield return new WaitForSeconds (1.0f);
         Instantiate(bossBaleia1, pontosdeSpawnBoss1.position, Quaternion.identity);
+    }
+
+    IEnumerator ChamarBoss2()
+    {
+        boss2NaCena = true;
+        yield return new WaitForSeconds (1.0f);
+        Instantiate(boss2, pontosdeSpawnBoss2.position, Quaternion.identity);
     }
 
     IEnumerator StartSpawn()
     {
             yield return new WaitForSeconds (tempoSpawn);
-            randowEnemy = Random.Range(0, enemy.Length);
-            int PontosSpawnIndexEnemy = Random.Range(0, pontosdeSpawnEnemy.Length);
-            Instantiate(enemy[randowEnemy], pontosdeSpawnEnemy[PontosSpawnIndexEnemy].position, Quaternion.identity);
+            if (!boss1NaCena && !boss2NaCena)
+            {
+                randowEnemy = Random.Range(0, enemy.Length);
+                int PontosSpawnIndexEnemy = Random.Range(0, pontosdeSpawnEnemy.Length);
+                Instantiate(enemy[randowEnemy], pontosdeSpawnEnemy[PontosSpawnIndexEnemy].position, Quaternion.identity);
+                
+            }
             StartCoroutine ("StartSpawn");
 
     }
 
-    void StartSpawnES()
+    IEnumerator StartSpawnES()
     {
-          int PontosSpawnIndexES = Random.Range(0, pontosdeSpawnES.Length);
-          Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnIndexES].position, Quaternion.identity);
+        if (!boss1NaCena && !boss2NaCena)
+        {
+            int PontosSpawnIndexES = Random.Range(0, pontosdeSpawnES.Length);
+            Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnIndexES].position, Quaternion.identity);  
+        }
+        
+        yield return new WaitForSeconds (tempoSpawnES);
 
+        StartCoroutine ("StartSpawnES");
     }
 
     void SpawnRandomPW()

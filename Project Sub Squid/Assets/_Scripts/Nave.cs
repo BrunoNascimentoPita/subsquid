@@ -236,7 +236,15 @@ public class Nave : MonoBehaviour
         if (other.gameObject.tag == "Boss1")
         {
             
-            vidaPlayer = vidaPlayer - 5;
+            vidaPlayer = vidaPlayer - 2;
+            CameraController.instance.CameraTremer();
+            ChecarHp();
+        }
+
+        if (other.gameObject.tag == "Boss2")
+        {
+            
+            vidaPlayer = vidaPlayer - 1;
             CameraController.instance.CameraTremer();
             ChecarHp();
         }

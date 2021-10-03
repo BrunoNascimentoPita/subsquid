@@ -52,7 +52,9 @@ public class NewBoss1 : MonoBehaviour
          if(vidaBoss1 <= 0)
         {
             GameController.instance.SetScore(100);
-            GameController.instance.ShowWinTela();
+            SpawnEnemy.boss1NaCena = false;
+            SpawnEnemy.boss1JaMorreu = true;
+            //GameController.instance.ShowWinTela();
             Destroy(gameObject);
         }
     }

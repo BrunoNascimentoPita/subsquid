@@ -320,7 +320,7 @@ public class Nave : MonoBehaviour
 
     IEnumerator NoPowerUps()
     {
-         yield return new WaitForSeconds (5.0f);
+         yield return new WaitForSeconds (10.0f);
             noPowerUp = true;
             powerUp1 = false;
             powerUp2 = false;

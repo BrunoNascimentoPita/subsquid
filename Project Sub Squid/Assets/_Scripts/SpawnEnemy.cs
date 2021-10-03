@@ -59,7 +59,7 @@ public class SpawnEnemy : MonoBehaviour
             tempoSpawn = 5.0f;
         }
 
-        if (GameController.contadorEnemy >= 16 && GameController.contadorEnemy <= 30)
+        if (GameController.contadorEnemy >= 16 && GameController.contadorEnemy <= 29)
         {
             tempoSpawn = 2.5f;
         }

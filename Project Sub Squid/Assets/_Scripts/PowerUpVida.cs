@@ -7,10 +7,13 @@ public class PowerUpVida : MonoBehaviour
     // Start is called before the first frame update
 
     public Rigidbody rb;
+
+    public GameObject pW;
     public float speed = 5;
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
+        pW.transform.Rotate(0, 88, 0);
     }
 
     // Update is called once per frame

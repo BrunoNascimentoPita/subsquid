@@ -19,6 +19,12 @@ public class NewBoss1 : MonoBehaviour
 
     private Vector2 target;
 
+    public Material[] materialBoss;
+
+    public Color danoCor;
+
+    public float timeCorDano = 0.01f;
+
 
     
     
@@ -71,6 +77,15 @@ public class NewBoss1 : MonoBehaviour
             case State.Attack3: Attack3State(); break;
         }
 
+    }
+
+     IEnumerator DanoCor()
+    {
+        GetComponent<Renderer>().materials[0].color = danoCor;
+
+        yield return new WaitForSeconds(timeCorDano);
+
+        GetComponent<Renderer>().materials[0].color = materialBoss[0].color;
     }
 
     void NormalState()
@@ -148,24 +163,28 @@ public class NewBoss1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Tiro")
         {
+            StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do player");
             vidaBoss1 = vidaBoss1 - 3;
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
+            StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
             vidaBoss1 = vidaBoss1 - 2;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
+            StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
             vidaBoss1 = vidaBoss1 - 1;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
+            StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do player");
             vidaBoss1 = vidaBoss1 - 4;
             
@@ -173,8 +192,9 @@ public class NewBoss1 : MonoBehaviour
 
         if (other.gameObject.tag == "5Tiros")
         {
+            StartCoroutine(DanoCor());
             Debug.Log("lBoss levou um tiro do player");
-            vidaBoss1 = vidaBoss1 - 0.5f;
+            vidaBoss1 = vidaBoss1 - 0.8f;
             
         }
 

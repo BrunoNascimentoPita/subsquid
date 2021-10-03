@@ -87,6 +87,12 @@ public class Nave : MonoBehaviour
         guns = transform.GetComponentsInChildren<Gun>();
         target = GameObject.FindGameObjectWithTag ("Player").transform;
         velocidade = baseSpeed;
+
+        noPowerUp = true;
+        powerUp1 = false;
+        powerUp2 = false;
+        powerUp3 = false;            
+        powerUp4 = false;
         
     }
 

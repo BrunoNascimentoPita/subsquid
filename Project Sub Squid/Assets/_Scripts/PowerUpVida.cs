@@ -10,10 +10,14 @@ public class PowerUpVida : MonoBehaviour
 
     public GameObject pW;
     public float speed = 5;
+
+    public float rotationX;
+
+    public float rotationY;
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        pW.transform.Rotate(0, 88, 0);
+        pW.transform.Rotate(rotationX, rotationY, 0);
     }
 
     // Update is called once per frame

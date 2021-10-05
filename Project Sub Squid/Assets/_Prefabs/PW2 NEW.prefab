@@ -415,9 +415,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8066fde2e60063b4cb047ad15ecfa53a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  pW: {fileID: 0}
+  rb: {fileID: 8576397418930772433}
+  pW: {fileID: 3194820334324425618}
   speed: 5
+  rotationX: 0
+  rotationY: 0
 --- !u!54 &8576397418930772433
 Rigidbody:
   m_ObjectHideFlags: 0

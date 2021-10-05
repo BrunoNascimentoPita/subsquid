@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 31780352}
   m_Layer: 0
   m_Name: PontoSpawnDoBoss2
-  m_TagString: PontoDoBoss2
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31780351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.1, y: -1.25, z: 0}
+  m_LocalPosition: {x: 42.06, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1872846477}
@@ -8872,7 +8872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3969175484739983986, guid: e0c0ffaf220ab5f4097ed3d554043550, type: 3}
   bulletPw1: {fileID: 6967154269048400682, guid: e1bec5b7599debc419ad6a3af1db610d, type: 3}
-  bulletPw2: {fileID: 5426075593347914917, guid: b30b6eb8eeb789548985075a44188635, type: 3}
+  bulletPw2: {fileID: 8345748552112668275, guid: 8d220c6e221cd0b4f9a1e7166db3822d, type: 3}
   bulletPw3: {fileID: 6591196666330745910, guid: 6c687e9746dfaa047a7e43d1ca6d3017, type: 3}
   bulletPW4: {fileID: 5887727564790872156, guid: c4bce1be8864cba46b995208cb732804, type: 3}
   shotSpawn: {fileID: 1194513764}
@@ -10487,10 +10487,10 @@ MonoBehaviour:
   - {fileID: 119607484}
   - {fileID: 1554380500}
   spawnPW:
-  - {fileID: 5803394105571858957, guid: da84a76dff022ba4eae017ce871b145d, type: 3}
-  - {fileID: 8099930264372117470, guid: 582f1549bcd4afa4a8397cc02e1a2aa4, type: 3}
-  - {fileID: 6598040159579898059, guid: cd1ad85037878e84f9580886469dba01, type: 3}
-  - {fileID: 4762893971158984410, guid: 7c762832e0bc8b7429fa22e5bca6e798, type: 3}
+  - {fileID: 5402714528065153377, guid: eb74f21665bec514a93dcce5b570f4e1, type: 3}
+  - {fileID: 7253079925950173440, guid: 8d29acb3842cfae42b02ddea625c5136, type: 3}
+  - {fileID: 3194820334324425618, guid: 7089f07601601d34695db389da075898, type: 3}
+  - {fileID: 6742804652071824495, guid: e79e59ca21f1ed444a90543673899ef7, type: 3}
   spawntime: 10
   spawndelay: 20
   pontosdeSpawnPW:

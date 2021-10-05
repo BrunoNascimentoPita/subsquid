@@ -288,9 +288,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5364890278209658192}
   - component: {fileID: 3708228231465875778}
+  - component: {fileID: 4825682748041106064}
+  - component: {fileID: 6079815274021926431}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Boss1Dano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3802661200861073003}
   m_LocalRotation: {x: -0.6911095, y: 0, z: -0, w: 0.72275007}
-  m_LocalPosition: {x: -0.0000040685254, y: -0.19305536, z: -3.175848}
+  m_LocalPosition: {x: 0, y: 0, z: -3.02}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 4756891347270446088}
@@ -384,6 +386,35 @@ SkinnedMeshRenderer:
     m_Center: {x: -3.7647002, y: 2.3702402, z: -0.000014305115}
     m_Extent: {x: 5.746176, y: 12.273452, z: 4.358169}
   m_DirtyAABB: 0
+--- !u!65 &4825682748041106064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802661200861073003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.716361, y: 24.611988, z: 6.2650466}
+  m_Center: {x: -0.000008554356, y: 0.31526035, z: 0.06351522}
+--- !u!114 &6079815274021926431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802661200861073003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d463048d6e6494b8e4808a7502f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialBoss:
+  - {fileID: 2100000, guid: c940d43dcda6f4b4c9bfb7b82fce87a3, type: 2}
+  danoCor: {r: 0.990566, g: 0.1541919, b: 0.22346753, a: 0}
+  timeCorDano: 0.05
 --- !u!1 &4037325316020812290
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5010648241223307277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.14, z: -14.48}
+  m_LocalPosition: {x: 0, y: -1.9, z: -14.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4756891347270446088}
@@ -521,7 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletEnemy: {fileID: 390409400323742120, guid: 5bbf8c5918e2d1f47b7ec56d43af4ff1, type: 3}
   shotSpawnEnemy: {fileID: 5010648241223307274}
-  fireRate: 3
+  fireRate: 2.5
 --- !u!1 &5280487977970005682
 GameObject:
   m_ObjectHideFlags: 0

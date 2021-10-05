@@ -54,6 +54,7 @@ public class Boss2 : MonoBehaviour
             GameController.instance.SetScore(100);
             GameController.instance.ShowWinTela();
             SpawnEnemy.boss2NaCena = false;
+            SpawnEnemy.boss2JaMorreu = true;
             Destroy(gameObject);
         }
     }

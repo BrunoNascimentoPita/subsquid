@@ -38,6 +38,8 @@ public class SpawnEnemy : MonoBehaviour
     public static bool boss1JaMorreu;
     public static bool boss2NaCena = false;
 
+    public static bool boss2JaMorreu;
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class SpawnEnemy : MonoBehaviour
         boss1NaCena = false;
         boss2NaCena = false;
         boss1JaMorreu = false;
+        boss2JaMorreu = false;
         StartCoroutine ("StartSpawn");
         StartCoroutine("StartSpawnES");
         InvokeRepeating("SpawnRandomPW", spawntime, spawndelay);
@@ -69,7 +72,7 @@ public class SpawnEnemy : MonoBehaviour
             StartCoroutine ("ChamarBossBaleia");
         }
 
-        if (GameController.contadorEnemy == 30 && !boss2NaCena)
+        if (GameController.contadorEnemy == 30 && !boss2NaCena && !boss2JaMorreu)
         {
             StartCoroutine ("ChamarBoss2");
         }
@@ -97,7 +100,7 @@ public class SpawnEnemy : MonoBehaviour
     IEnumerator StartSpawn()
     {
             yield return new WaitForSeconds (tempoSpawn);
-            if (!boss1NaCena && !boss2NaCena)
+            if (!boss1NaCena && !boss2NaCena && !boss2JaMorreu)
             {
                 randowEnemy = Random.Range(0, enemy.Length);
                 int PontosSpawnIndexEnemy = Random.Range(0, pontosdeSpawnEnemy.Length);
@@ -110,7 +113,7 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator StartSpawnES()
     {
-        if (!boss1NaCena && !boss2NaCena)
+        if (!boss1NaCena && !boss2NaCena && !boss2JaMorreu)
         {
             int PontosSpawnIndexES = Random.Range(0, pontosdeSpawnES.Length);
             Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnIndexES].position, Quaternion.identity);  

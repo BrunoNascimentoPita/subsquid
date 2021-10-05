@@ -26,5 +26,15 @@ public class TiroPesado : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
         }
 
+        if (other.gameObject.tag == "Boss1")
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
+
+        if (other.gameObject.tag == "Boss2")
+        {
+            Destroy(this.gameObject, 0.1f);
+        }
+
     }
 }

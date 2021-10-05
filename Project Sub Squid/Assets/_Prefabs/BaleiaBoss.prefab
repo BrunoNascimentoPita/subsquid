@@ -660,7 +660,7 @@ MonoBehaviour:
   speedAttack: 22
   attack1Duration: 1.1
   stateNormalDuration: 3
-  vidaBoss1: 100
+  vidaBoss1: 150
   boss1: {fileID: 5280487977970005682}
   posicaoDoBoss1: {fileID: 0}
   materialBoss:

@@ -10,6 +10,13 @@ public class SpawnEnemy : MonoBehaviour
     public float tempoSpawn;
     public Transform[] pontosdeSpawnEnemy;
 
+    // grupe enemy
+
+    public GameObject[] enemyGroup;
+    int randowEnemyG;
+    public float tempoSpawnEG;
+    public Transform pontosdeSpawnEG;
+
     // Inimigo Seguir
 
     public GameObject enemySeguir;
@@ -49,6 +56,7 @@ public class SpawnEnemy : MonoBehaviour
         boss1JaMorreu = false;
         boss2JaMorreu = false;
         StartCoroutine ("StartSpawn");
+        StartCoroutine ("StartSpawnEG");
         StartCoroutine("StartSpawnES");
         InvokeRepeating("SpawnRandomPW", spawntime, spawndelay);
     }
@@ -108,6 +116,20 @@ public class SpawnEnemy : MonoBehaviour
                 
             }
             StartCoroutine ("StartSpawn");
+
+    }
+
+    IEnumerator StartSpawnEG()
+    {
+            yield return new WaitForSeconds (tempoSpawnEG);
+            if (!boss1NaCena && !boss2NaCena && !boss2JaMorreu)
+            {
+                randowEnemyG = Random.Range(0, enemyGroup.Length);
+                
+                Instantiate(enemyGroup[randowEnemyG], pontosdeSpawnEG.position, Quaternion.identity);
+                
+            }
+            StartCoroutine ("StartSpawnEG");
 
     }
 

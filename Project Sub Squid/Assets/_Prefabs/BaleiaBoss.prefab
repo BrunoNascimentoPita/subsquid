@@ -663,6 +663,7 @@ MonoBehaviour:
   vidaBoss1: 150
   boss1: {fileID: 5280487977970005682}
   posicaoDoBoss1: {fileID: 0}
+  particulaExplosaoPrefab: {fileID: 7798639036510016278, guid: bec223e72e9ee9c4bbc029bc88d43f04, type: 3}
   materialBoss:
   - {fileID: 2100000, guid: c940d43dcda6f4b4c9bfb7b82fce87a3, type: 2}
   danoCor: {r: 1, g: 0.5865263, b: 0, a: 0}

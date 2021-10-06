@@ -43,6 +43,10 @@ public class EnemyRed : MonoBehaviour
     public ParticleSystem particulaExplosaoPrefab;
     public ParticleSystem particulaSanguePrefab;
 
+    public GameObject[] powerUpDropavelPrefab;
+
+    public int randomPW;
+
     //
     public Material[] materialsEnemy;
 
@@ -115,6 +119,14 @@ public class EnemyRed : MonoBehaviour
 
         if(vidaInimigo <= 0)
         {
+            if (GameController.contadorEnemyPW >= 5)
+            {
+                GameController.contadorEnemyPW = 0;
+                randomPW = Random.Range(0 ,powerUpDropavelPrefab.Length);
+                GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab[randomPW], this.transform.position, Quaternion.identity);
+
+            }
+
             GameController.instance.SetScore(10);
             GameController.instance.ContadorDeinimigos();
             Destroy(gameObject);

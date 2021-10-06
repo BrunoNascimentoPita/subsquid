@@ -44,6 +44,10 @@ public class Enemy : MonoBehaviour
     public ParticleSystem particulaExplosaoPrefab;
     public ParticleSystem particulaSanguePrefab;
 
+    public GameObject[] powerUpDropavelPrefab;
+
+    public int randomPW;
+
     //
     public Material[] materialsEnemy;
 
@@ -95,8 +99,16 @@ public class Enemy : MonoBehaviour
 
         if(vidaInimigo <= 0)
         {
+            if (GameController.contadorEnemyPW >= 5)
+            {
+                GameController.contadorEnemyPW = 0;
+                randomPW = Random.Range(0 ,powerUpDropavelPrefab.Length);
+                GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab[randomPW], this.transform.position, Quaternion.identity);
+
+            }
             GameController.instance.SetScore(10);
             GameController.instance.ContadorDeinimigos();
+            GameController.instance.ContadorDeinimigosPW();
             Destroy(gameObject);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
@@ -133,7 +145,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             //FindObjectOfType<Audio_menager>().Play("tiro");
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - danoSofrido;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -143,7 +155,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "TiroDuplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - 2;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -152,7 +164,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "TiroTriplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - 1;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -161,7 +173,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "TiroPesado")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigo = vidaInimigo - 4;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -171,7 +183,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "5Tiros")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigo = vidaInimigo - 0.5f;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -181,7 +193,7 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("chocou com o player");
+            
             Destroy(this.gameObject, 0.1f);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo

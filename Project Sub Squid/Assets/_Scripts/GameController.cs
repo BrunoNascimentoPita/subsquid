@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     // chamar boss
 
     public static int contadorEnemy;
+    public static int contadorEnemyPW;
 
     public static GameController instance;
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Audio_menager>().Play("faseambientacao");
         FindObjectOfType<Audio_menager>().Play("musicafase");
         contadorEnemy = 0;
+        contadorEnemyPW = 0;
     }
 
     void Update()
@@ -55,7 +57,7 @@ public class GameController : MonoBehaviour
         }
         */
 
-        Debug.Log("Inimigos mortos" + contadorEnemy);
+        Debug.Log("Inimigos mortos para o power ups" + contadorEnemyPW);
 
         if(contadorEnemy == 20)
         {
@@ -118,6 +120,11 @@ public class GameController : MonoBehaviour
     public void ContadorDeinimigos()
     {
         contadorEnemy += 1;
+    }
+
+    public void ContadorDeinimigosPW()
+    {
+        contadorEnemyPW += 1;
     }
     
 

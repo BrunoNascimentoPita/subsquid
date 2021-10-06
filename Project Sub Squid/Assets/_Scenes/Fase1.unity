@@ -10501,7 +10501,7 @@ MonoBehaviour:
   - {fileID: 3631637680032664661, guid: cb01ae6d7e447fb41a0e819010e7b68e, type: 3}
   - {fileID: 5139734463530483895, guid: aa5596a258d0a294d8878c2d600e9dd3, type: 3}
   - {fileID: 6991730774829601032, guid: 65b947be2609bb44c9c08b8b810fb30f, type: 3}
-  tempoSpawn: 10
+  tempoSpawn: 9
   pontosdeSpawnEnemy:
   - {fileID: 88699355}
   - {fileID: 741223165}
@@ -10526,8 +10526,8 @@ MonoBehaviour:
   - {fileID: 7253079925950173440, guid: 8d29acb3842cfae42b02ddea625c5136, type: 3}
   - {fileID: 3194820334324425618, guid: 7089f07601601d34695db389da075898, type: 3}
   - {fileID: 6742804652071824495, guid: e79e59ca21f1ed444a90543673899ef7, type: 3}
-  spawntime: 10
-  spawndelay: 20
+  spawntime: 0
+  spawndelay: 0
   pontosdeSpawnPW:
   - {fileID: 1743949142}
   - {fileID: 886169917}

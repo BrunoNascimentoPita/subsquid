@@ -13,6 +13,10 @@ public class EnemyZigZag : MonoBehaviour
     public ParticleSystem particulaExplosaoPrefab;
     public ParticleSystem particulaSanguePrefab;
 
+    public GameObject[] powerUpDropavelPrefab;
+
+    public int randomPW;
+
     //public Rigidbody enemyG;
 
     // Start is called before the first frame update
@@ -29,7 +33,16 @@ public class EnemyZigZag : MonoBehaviour
 
         if(vidaEnemyGroup <= 0)
         {
+             if (GameController.contadorEnemyPW >= 5)
+            {
+                GameController.contadorEnemyPW = 0;
+                randomPW = Random.Range(0 ,powerUpDropavelPrefab.Length);
+                GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab[randomPW], this.transform.position, Quaternion.identity);
+
+            }
             GameController.instance.SetScore(10);
+            GameController.instance.ContadorDeinimigos();
+            GameController.instance.ContadorDeinimigosPW();
             Destroy(gameObject);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo

@@ -135,13 +135,14 @@ public class SpawnEnemy : MonoBehaviour
 
     IEnumerator StartSpawnES()
     {
+        yield return new WaitForSeconds (tempoSpawnES);
+        
         if (!boss1NaCena && !boss2NaCena && !boss2JaMorreu)
         {
             int PontosSpawnIndexES = Random.Range(0, pontosdeSpawnES.Length);
             Instantiate(enemySeguir, pontosdeSpawnES[PontosSpawnIndexES].position, Quaternion.identity);  
         }
         
-        yield return new WaitForSeconds (tempoSpawnES);
 
         StartCoroutine ("StartSpawnES");
     }

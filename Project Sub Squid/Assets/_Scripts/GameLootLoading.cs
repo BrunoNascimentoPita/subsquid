@@ -13,6 +13,7 @@ public class GameLootLoading : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         string sceneName = PlayerPrefs.GetString("SCENE_TO_LOAD", "_MenuInicial");
         PlayerPrefs.SetString("SCENE_TO_LOAD", "_MenuInicial");
         PlayerPrefs.Save();

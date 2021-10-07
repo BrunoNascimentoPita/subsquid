@@ -7,17 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class GameLootLoading : MonoBehaviour
 {
-    //public Text percentText;
-    //public Image foregroundImage;
+    public Text porcetagem;
+    public Image barrinhaImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        string sceneName = PlayerPrefs.GetString("SCENE_TO_LOAD", "MenuInicial");
-        PlayerPrefs.SetString("SCENE_TO_LOAD", "MenuInicial");
+        string sceneName = PlayerPrefs.GetString("SCENE_TO_LOAD", "_MenuInicial");
+        PlayerPrefs.SetString("SCENE_TO_LOAD", "_MenuInicial");
         PlayerPrefs.Save();
-        //foregroundImage.fillAmout = 0;
-        //percentText.text = "0%";
+        barrinhaImage.fillAmount = 0;
+        porcetagem.text = "0%";
 
         StartCoroutine(LoadSceneAsync(sceneName));
     }
@@ -40,8 +40,8 @@ public class GameLootLoading : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            //percentText.Text = (asyncLoad.progress * 100).ToString("N0") + "%";
-            //foregroundImage.fillAmout = asyncLoad.progress;
+            porcetagem.text = (asyncLoad.progress * 100).ToString("N0") + "%";
+            barrinhaImage.fillAmount = asyncLoad.progress;
             yield return new WaitForEndOfFrame();
         }
 

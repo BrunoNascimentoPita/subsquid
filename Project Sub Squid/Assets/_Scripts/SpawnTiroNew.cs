@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class SpawnTiroNew : MonoBehaviour
 {
@@ -22,11 +24,17 @@ public class SpawnTiroNew : MonoBehaviour
 	private float nextFire;
 
     public static bool tiroPadrao;
+
+    // tiros PW
+
+    public static int qTiros;
+    public TextMeshProUGUI qTirosText;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        qTiros = 0;
     }
 
     // Update is called once per frame
@@ -39,6 +47,19 @@ public class SpawnTiroNew : MonoBehaviour
             tiroPadrao = true;
             StartCoroutine ("NoTiroPadrao");
         }
+
+        if(Input.GetKey(KeyCode.L) && Time.time > nextFire && Nave.isDash == false && Gun.tiroExtra == false && qTiros >= 1)
+        {
+            TiroPW();
+            tiroPadrao = true;
+            StartCoroutine ("NoTiroPadrao");
+            qTiros = qTiros - 1;
+        }
+
+
+        qTirosText.text = qTiros.ToString();
+
+        
 
 
 
@@ -53,14 +74,43 @@ public class SpawnTiroNew : MonoBehaviour
 
     void Tiro()
     {
-        if(Nave.noPowerUp)
-        {
         nextFire = Time.time + fireRate;
         Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
         FindObjectOfType<Audio_menager>().Play("tiro");
 
+        /*
+        if(Nave.powerUp1)
+        {
+        nextFire = Time.time + fireRate;
+        Instantiate(bulletPw1, shotSpawn.position, shotSpawn.rotation);
+        FindObjectOfType<Audio_menager>().Play("tiroagua");
+
         }
 
+        if(Nave.powerUp2)
+        {
+        nextFire = Time.time + fireRate;
+        Instantiate(bulletPw2, shotSpawn.position, shotSpawn.rotation);
+        }
+
+        if(Nave.powerUp3)
+        {
+        nextFire = Time.time + fireRate;
+        Instantiate(bulletPw3, shotSpawn.position, shotSpawn.rotation);
+        }
+
+        if (Nave.powerUp4)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(bulletPW4, shotSpawn.position, shotSpawn.rotation);
+        }
+        */
+
+
+    }
+
+    void TiroPW()
+    {
         if(Nave.powerUp1)
         {
         nextFire = Time.time + fireRate;

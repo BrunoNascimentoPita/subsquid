@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Nave : MonoBehaviour
 {   
@@ -25,7 +26,9 @@ public class Nave : MonoBehaviour
 
     public bool isDashing = false;
 
-    // Powerups
+    // Powerups e tiro L
+
+
 
     public static bool noPowerUp = true;
     public static bool powerUp1 = false;
@@ -264,54 +267,54 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW1")
         {
-            
+            SpawnTiroNew.qTiros = 20;
             noPowerUp = false;
             powerUp1 = true;
             powerUp2 = false;
             powerUp3 = false;
-            StartCoroutine ("NoPowerUps");
+            //StartCoroutine ("NoPowerUps");
 
         }
 
         if (other.gameObject.tag == "PW2")
         {
-            
+            SpawnTiroNew.qTiros = 20;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = true;
             powerUp3 = false;
-            StartCoroutine ("NoPowerUps");
+            //StartCoroutine ("NoPowerUps");
         }
 
         if (other.gameObject.tag == "PW3")
         {
-            
+            SpawnTiroNew.qTiros = 20;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = true;
-            StartCoroutine ("NoPowerUps");
+            //StartCoroutine ("NoPowerUps");
         }
 
         if (other.gameObject.tag == "PW3")
         {
-            
+            SpawnTiroNew.qTiros = 20;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = true;
-            StartCoroutine ("NoPowerUps");
+            //StartCoroutine ("NoPowerUps");
             
         }
         if (other.gameObject.tag == "PW4")
         {
-
+            SpawnTiroNew.qTiros = 20;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = false;
             powerUp4 = true;
-            StartCoroutine("NoPowerUps");
+            //StartCoroutine("NoPowerUps");
 
         }
 

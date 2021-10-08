@@ -198,7 +198,14 @@ public class NewBoss1 : MonoBehaviour
         {
             StartCoroutine(DanoCor());
             Debug.Log("lBoss levou um tiro do player");
-            vidaBoss1 = vidaBoss1 - 0.8f;
+            vidaBoss1 = vidaBoss1 - 1f;
+            
+        }
+
+        if (other.gameObject.tag == "TiroZigZag")
+        {
+            StartCoroutine(DanoCor());
+            vidaBoss1 = vidaBoss1 - 6;
             
         }
 

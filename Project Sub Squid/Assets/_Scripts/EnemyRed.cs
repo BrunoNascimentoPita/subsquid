@@ -217,7 +217,17 @@ public class EnemyRed : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             Debug.Log("levou um tiro do Inimigo");
-            vidaInimigo = vidaInimigo - 0.5f;
+            vidaInimigo = vidaInimigo - 1f;
+            StartCoroutine(DanoCor());
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
+            
+        }
+
+        if (other.gameObject.tag == "TiroZigZag")
+        {
+            Debug.Log("levou um tiro do Inimigo");
+            vidaInimigo = vidaInimigo - 6f;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo

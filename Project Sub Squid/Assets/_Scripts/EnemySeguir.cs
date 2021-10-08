@@ -117,9 +117,16 @@ public class EnemySeguir : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             Debug.Log("levou um tiro do Inimigo");
-            vidaInimigoSeguir = vidaInimigoSeguir - 0.5f;
+            vidaInimigoSeguir = vidaInimigoSeguir - 1f;
             
         }
+
+        if (other.gameObject.tag == "TiroZigZag")
+        {
+            vidaInimigoSeguir = vidaInimigoSeguir - 6;
+            
+        }
+        
 
         if (other.gameObject.tag == "Player")
         {

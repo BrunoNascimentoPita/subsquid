@@ -184,7 +184,17 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             
-            vidaInimigo = vidaInimigo - 0.5f;
+            vidaInimigo = vidaInimigo - 1f;
+            StartCoroutine(DanoCor());
+            ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
+            
+        }
+
+        if (other.gameObject.tag == "TiroZigZag")
+        {
+            
+            vidaInimigo = vidaInimigo - 6f;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo

@@ -126,6 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d88bd9fa41a750448af9d1f85a9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTiro: 10
-  tempoMinimo: 0.3
-  tempoMaximo: 0.6
+  speedTiro: 20
+  tempoMinimo: 0.4
+  tempoMaximo: 0.8

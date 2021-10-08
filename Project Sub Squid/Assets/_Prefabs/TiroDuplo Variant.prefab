@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 3541339074741729607}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0, y: -0.3, z: -0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children: []
   m_Father: {fileID: 6967154269048400682}
   m_RootOrder: 1
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a106a2a6c0ccaa49ba4c8e7e9c2208f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTiro: 25
+  speedTiro: 30
 --- !u!1 &5742963874562902352
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 5742963874562902352}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0, y: 0.3, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children: []
   m_Father: {fileID: 6967154269048400682}
   m_RootOrder: 0
@@ -285,4 +285,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a106a2a6c0ccaa49ba4c8e7e9c2208f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTiro: 25
+  speedTiro: 30

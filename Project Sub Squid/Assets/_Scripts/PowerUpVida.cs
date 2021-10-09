@@ -32,6 +32,7 @@ public class PowerUpVida : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
+            FindObjectOfType<UIManager>().SetMessagePW("Pegou o PowerUp");
         }
 
     }

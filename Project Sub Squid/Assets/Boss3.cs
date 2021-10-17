@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnProjectile : MonoBehaviour
+public class Boss3 : MonoBehaviour
 {
-	[SerializeField]
+    [SerializeField]
 	int numberOfProjectiles;
 
 	[SerializeField]
@@ -15,22 +15,21 @@ public class SpawnProjectile : MonoBehaviour
 	float radius, moveSpeed;
 
 	// Use this for initialization
-	void Start() 
-	{
+	void Start () {
 		radius = 5f;
 		moveSpeed = 5f;
-		SpawnProjectiles (numberOfProjectiles);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) {
-			startPoint = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-			SpawnProjectiles (numberOfProjectiles);
+			startPoint = transform.position;
+
+			StartCoroutine (SpawnProjectiles(numberOfProjectiles));
 		}
 	}
 
-	void SpawnProjectiles(int numberOfProjectiles)
+	IEnumerator SpawnProjectiles(int numberOfProjectiles)
 	{
 		float angleStep = 360f / numberOfProjectiles;
 		float angle = 0f;
@@ -49,6 +48,11 @@ public class SpawnProjectile : MonoBehaviour
 
 			angle += angleStep;
 		}
+
+        yield return new WaitForSeconds (0.2f);
+
+        StartCoroutine (SpawnProjectiles(numberOfProjectiles));
+
 	}
 
 }

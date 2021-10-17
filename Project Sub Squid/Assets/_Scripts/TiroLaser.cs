@@ -43,6 +43,7 @@ public class TiroLaser : MonoBehaviour
             }
             else
             {
+                
                 laserLine.SetPosition(1, rayOrigin + ( transform.position * weaponRange));
             }
 

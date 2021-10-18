@@ -123,18 +123,21 @@ public class SpawnTiroNew : MonoBehaviour
         {
         nextFire = Time.time + fireRate;
         Instantiate(bulletPw2, shotSpawn.position, shotSpawn.rotation);
+        FindObjectOfType<Audio_menager>().Play("tiroDuplo");
         }
 
         if(Nave.powerUp3)
         {
         nextFire = Time.time + fireRate;
         Instantiate(bulletPw3, shotSpawn.position, shotSpawn.rotation);
+        FindObjectOfType<Audio_menager>().Play("tiroTriplo");
         }
 
         if (Nave.powerUp4)
         {
             nextFire = Time.time + fireRate;
             Instantiate(bulletPW4, shotSpawn.position, shotSpawn.rotation);
+            FindObjectOfType<Audio_menager>().Play("tiroPesado");
         }
 
 

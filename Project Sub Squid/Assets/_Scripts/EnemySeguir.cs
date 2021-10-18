@@ -74,6 +74,7 @@ public class EnemySeguir : MonoBehaviour
             Destroy(gameObject);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
+            FindObjectOfType<Audio_menager>().Play("explosion");
         }
     }
 
@@ -134,6 +135,7 @@ public class EnemySeguir : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
+            FindObjectOfType<Audio_menager>().Play("explosion");
         }
 
     }

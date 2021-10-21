@@ -267,7 +267,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW1")
         {
-            SpawnTiroNew.qTiros = 20;
+            SpawnTiroNew.qTiros = 30;
             noPowerUp = false;
             powerUp1 = true;
             powerUp2 = false;
@@ -278,7 +278,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW2")
         {
-            SpawnTiroNew.qTiros = 20;
+            SpawnTiroNew.qTiros = 30;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = true;
@@ -288,7 +288,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW3")
         {
-            SpawnTiroNew.qTiros = 20;
+            SpawnTiroNew.qTiros = 30;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
@@ -298,7 +298,7 @@ public class Nave : MonoBehaviour
 
         if (other.gameObject.tag == "PW3")
         {
-            SpawnTiroNew.qTiros = 20;
+            SpawnTiroNew.qTiros = 30;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;
@@ -308,7 +308,7 @@ public class Nave : MonoBehaviour
         }
         if (other.gameObject.tag == "PW4")
         {
-            SpawnTiroNew.qTiros = 20;
+            SpawnTiroNew.qTiros = 30;
             noPowerUp = false;
             powerUp1 = false;
             powerUp2 = false;

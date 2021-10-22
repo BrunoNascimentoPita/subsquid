@@ -8,8 +8,8 @@ public class LogicaFullScreen : MonoBehaviour
 {
     public Toggle toggle;
     
-    public TMP_Dropdown resolutionDropDown;
-    Resolution [] resolutions;
+    public TMP_Dropdown resolucionesDropDown;
+    Resolution [] resoluciones;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class LogicaFullScreen : MonoBehaviour
            toggle.isOn = false; 
         }
 
-        RevisarResolution();
+        RevisarResolucion();
 
     }
 
@@ -39,39 +39,39 @@ public class LogicaFullScreen : MonoBehaviour
 
     }
 
-    public void RevisarResolution()
+    public void RevisarResolucion()
     {
-        resolutions = Screen.resolutions;
-        resolutionDropDown.ClearOptions();
-        List<string> options = new List<string>();
-        int resolutionActual = 0;
+        resoluciones = Screen.resolutions;
+        resolucionesDropDown.ClearOptions();
+        List<string> opciones = new List<string>();
+        int resolucionActual = 0;
 
-        for (int i = 0; i < resolutions.Length; i++)
+        for (int i = 0; i < resoluciones.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
+            string opcion = resoluciones[i].width + " x " + resoluciones[i].height;
+            opciones.Add(opcion);
             
-            if (Screen.fullScreen && resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
+            if (Screen.fullScreen && resoluciones[i].width == Screen.currentResolution.width && resoluciones[i].height == Screen.currentResolution.height)
             {
-                resolutionActual = i;
+                resolucionActual = i;
 
             }
 
         }
 
-        resolutionDropDown.AddOptions(options);
-        resolutionDropDown.value = resolutionActual;
-        resolutionDropDown.RefreshShownValue();
+        resolucionesDropDown.AddOptions(opciones);
+        resolucionesDropDown.value = resolucionActual;
+        resolucionesDropDown.RefreshShownValue();
 
-        resolutionDropDown.value = PlayerPrefs.GetInt("numeroResolution", 0);
+        resolucionesDropDown.value = PlayerPrefs.GetInt("numeroResolucion", 0);
     }
 
-    public void CambiarResolution(int indiceResolution)
+    public void CambiarResolucion(int indiceResolucion)
     {
-        PlayerPrefs.SetInt("numeroResolution", resolutionDropDown.value);
+        PlayerPrefs.SetInt("numeroResolucion", resolucionesDropDown.value);
 
-        Resolution resolution = resolutions[indiceResolution];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        Resolution resolucion = resoluciones[indiceResolucion];
+        Screen.SetResolution(resolucion.width, resolucion.height, Screen.fullScreen);
 
     }
 

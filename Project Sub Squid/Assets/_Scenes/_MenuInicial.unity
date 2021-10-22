@@ -571,8 +571,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 660385724}
         m_TargetAssemblyTypeName: LogicaFullScreen, Assembly-CSharp
-        m_MethodName: CambiarResolution
-        m_Mode: 3
+        m_MethodName: CambiarResolucion
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1679,8 +1679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec62734d35047b4e9e252eeaab5cdea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggle: {fileID: 0}
-  resolutionDropDown: {fileID: 240031797}
+  toggle: {fileID: 1985416016}
+  resolucionesDropDown: {fileID: 240031797}
 --- !u!4 &660385725
 Transform:
   m_ObjectHideFlags: 0
@@ -5781,7 +5781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggle: {fileID: 1985416016}
-  resolutionDropDown: {fileID: 240031797}
+  resolucionesDropDown: {fileID: 240031797}
 --- !u!1 &2045090890
 GameObject:
   m_ObjectHideFlags: 0

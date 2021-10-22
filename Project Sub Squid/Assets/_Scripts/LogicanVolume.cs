@@ -24,4 +24,10 @@ public class LogicanVolume : MonoBehaviour
         myAudioMixer.SetFloat("Music", Mathf.Log10(sliderValue) * 20);
 
     }
+
+    public void SetVolumeSFX(float sliderValue)
+    {
+        myAudioMixer.SetFloat("SFX", Mathf.Log10(sliderValue) * 20);
+
+    }
 }

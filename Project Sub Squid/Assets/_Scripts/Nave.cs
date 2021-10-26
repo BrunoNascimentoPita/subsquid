@@ -122,6 +122,7 @@ public class Nave : MonoBehaviour
             shoot = false;
             foreach(Gun gun in guns)
             {
+                FindObjectOfType<Audio_menager>().Play("5Tiros");
                 nextFire = Time.time + fireRate;
                 gun.Shoot();
             }

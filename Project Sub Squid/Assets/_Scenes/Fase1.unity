@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8766,6 +8766,20 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: 5Tiros
+    clip: {fileID: 8300000, guid: 1a2614656baf675459c2703b507133e8, type: 3}
+    group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
+    volume: 0.547
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ExplosionBaleia
+    clip: {fileID: 8300000, guid: 2bd343185623cba4bb2b135b4ad2215a, type: 3}
+    group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
+    volume: 0.547
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &999673998
 Transform:
   m_ObjectHideFlags: 0
@@ -9335,7 +9349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2791598881000100992, guid: 3bceba97ff1e52b42a5cf4802ead6eb6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2660831
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2791598881000100992, guid: 3bceba97ff1e52b42a5cf4802ead6eb6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16812,7 +16826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1967505447
 MonoBehaviour:
   m_ObjectHideFlags: 0

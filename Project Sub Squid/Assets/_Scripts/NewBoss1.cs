@@ -64,6 +64,7 @@ public class NewBoss1 : MonoBehaviour
             SpawnEnemy.boss1JaMorreu = true;
             //GameController.instance.ShowWinTela();
             Destroy(gameObject);
+            FindObjectOfType<Audio_menager>().Play("ExplosionBaleia");
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }

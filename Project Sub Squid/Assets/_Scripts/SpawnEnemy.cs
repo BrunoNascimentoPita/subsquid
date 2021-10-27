@@ -130,6 +130,7 @@ public class SpawnEnemy : MonoBehaviour
         boss2NaCena = true;
         yield return new WaitForSeconds (1.0f);
         Instantiate(boss2, pontosdeSpawnBoss2.position, Quaternion.identity);
+        FindObjectOfType<Audio_menager>().Play("musicaBossFinal");
     }
 
     IEnumerator StartSpawn()

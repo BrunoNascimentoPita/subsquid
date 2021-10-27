@@ -8780,6 +8780,13 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: musicaBossFinal
+    clip: {fileID: 8300000, guid: d7e473007846e2b4e8c1287ab96bb96a, type: 3}
+    group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
+    volume: 0.547
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &999673998
 Transform:
   m_ObjectHideFlags: 0
@@ -11024,6 +11031,7 @@ MonoBehaviour:
   pontosdeSpawnBoss1: {fileID: 886169917}
   boss2: {fileID: 9201872105345517729, guid: 8782320f81b2acf499030bfed677dda2, type: 3}
   pontosdeSpawnBoss2: {fileID: 31780352}
+  bossTime: 0
 --- !u!4 &1564728734
 Transform:
   m_ObjectHideFlags: 0

@@ -47,6 +47,11 @@ public class SpawnEnemy : MonoBehaviour
 
     public static bool boss2JaMorreu;
 
+    // boss timer
+
+    [SerializeField]private float bossTime;
+    public static bool timeRun;
+
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +60,10 @@ public class SpawnEnemy : MonoBehaviour
         boss2NaCena = false;
         boss1JaMorreu = false;
         boss2JaMorreu = false;
+
+        bossTime = 0;
+        timeRun = true;
+
         StartCoroutine ("StartSpawn");
         StartCoroutine ("StartSpawnEG");
         StartCoroutine("StartSpawnES");
@@ -75,12 +84,30 @@ public class SpawnEnemy : MonoBehaviour
             tempoSpawn = 2.5f;
         }
 
+        /*
         if (GameController.contadorEnemy == 15 && !boss1NaCena && !boss1JaMorreu)
         {
             StartCoroutine ("ChamarBossBaleia");
         }
 
         if (GameController.contadorEnemy == 30 && !boss2NaCena && !boss2JaMorreu)
+        {
+            StartCoroutine ("ChamarBoss2");
+        }
+        */
+
+        if (timeRun == true)
+        {
+            bossTime = bossTime + Time.deltaTime;
+            
+        }
+
+        if (bossTime >= 96.0f && !boss1NaCena && !boss1JaMorreu)
+        {
+            StartCoroutine ("ChamarBossBaleia");
+        }
+
+        if (bossTime >= 205.0f && !boss2NaCena && !boss2JaMorreu)
         {
             StartCoroutine ("ChamarBoss2");
         }

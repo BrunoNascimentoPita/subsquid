@@ -91,6 +91,8 @@ public class GameController : MonoBehaviour
         pauseTela.SetActive(true);
         //volumeSlider.SetActive(true);
         Time.timeScale = 0;
+        SpawnEnemy.timeRun = false;
+        FindObjectOfType<Audio_menager>().StopPlaying("musicafase");
     }
 
     public void Resume()
@@ -98,6 +100,8 @@ public class GameController : MonoBehaviour
         pauseTela.SetActive(false);
         //volumeSlider.SetActive(false);
         Time.timeScale = 1;
+        SpawnEnemy.timeRun = true;
+        FindObjectOfType<Audio_menager>().Play("musicafase");
     }
 
     public void MenuInicial()

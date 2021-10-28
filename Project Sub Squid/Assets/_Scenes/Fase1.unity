@@ -8722,7 +8722,7 @@ MonoBehaviour:
     group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
     volume: 0.115
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: tiro
     clip: {fileID: 8300000, guid: 732d93f29ab384041b5bebd569ca049a, type: 3}
@@ -11010,7 +11010,7 @@ MonoBehaviour:
   - {fileID: 696081956888929458, guid: 33d4ad28df5eef44ab4a792221f5bb29, type: 3}
   tempoSpawnEG: 20
   pontosdeSpawnEG: {fileID: 1501732876}
-  enemySeguir: {fileID: 5229211859737062910, guid: b2651f661f08d10458bc6d5d45cc0c81, type: 3}
+  enemySeguir: {fileID: 7726212110189623070, guid: 8b127133fd6dd2f4682b3f722ce6ada0, type: 3}
   tempoSpawnES: 10
   pontosdeSpawnES:
   - {fileID: 1633228331}

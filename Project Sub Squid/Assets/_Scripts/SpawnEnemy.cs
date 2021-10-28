@@ -74,12 +74,17 @@ public class SpawnEnemy : MonoBehaviour
     void Update()
     {
 
-        if (GameController.contadorEnemy >= 5 && GameController.contadorEnemy <= 15)
+        if (bossTime >= 45f && bossTime <= 89f)
+        {
+            tempoSpawn = 7.5f;
+        }
+
+        if (bossTime >= 90f && bossTime <= 125.0f)
         {
             tempoSpawn = 5.0f;
         }
 
-        if (GameController.contadorEnemy >= 16 && GameController.contadorEnemy <= 29)
+        if (bossTime >= 126.0f && bossTime <= 175.0f)
         {
             tempoSpawn = 2.5f;
         }

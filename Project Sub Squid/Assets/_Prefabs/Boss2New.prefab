@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ab70d47951dbc41bd91e5366b78bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEnemy: {fileID: 7833102847960033648, guid: 3ca8c3e96423c25419ececb20b13fdd1, type: 3}
+  bulletEnemy: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   shotSpawnEnemy: {fileID: 9201872106443055667}
   fireRate: 5
 --- !u!54 &9201872106266413181
@@ -1607,7 +1607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ab70d47951dbc41bd91e5366b78bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEnemy: {fileID: 7833102847960033648, guid: 3ca8c3e96423c25419ececb20b13fdd1, type: 3}
+  bulletEnemy: {fileID: 2216712538860760642, guid: 18d89158644f73541a556c7b7071a960, type: 3}
   shotSpawnEnemy: {fileID: 9201872106038911127}
   fireRate: 5
 --- !u!54 &9201872106731132871

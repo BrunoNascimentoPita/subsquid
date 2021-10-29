@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5457815504722526485}
   m_Layer: 0
   m_Name: TiroZigZag
-  m_TagString: Tiro
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2216712538860760644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.46}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14cc321f15ae44a4d8ead98d7550ee77, type: 2}
+  - {fileID: 2100000, guid: 5a993984cec64544e92f380d114789e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d88bd9fa41a750448af9d1f85a9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedTiro: 20
-  tempoMinimo: 0.4
-  tempoMaximo: 0.8
+  speedTiro: -5
+  tempoMinimo: 0.5
+  tempoMaximo: 1

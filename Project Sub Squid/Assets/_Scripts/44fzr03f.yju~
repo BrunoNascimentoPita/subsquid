@@ -5,16 +5,16 @@ public class Laser : MonoBehaviour
     public Color corLaser = Color.green;
     public int DistanciaDoLaser = 100;
     public float LarguraInicial = 0.2f, LarguraFinal = 0.1f;
+    public Material material;
+    public int damage = 40;
     public float fireRate = 3f;
 
-    private WaitForSeconds shotDuration = new WaitForSeconds(0.8f);
-    public Material material;
+    private LineRenderer lineRenderer;
+    private WaitForSeconds shotDuration = new WaitForSeconds(0.7f);
+    private float nextFire;
     private GameObject luzColisao;
     private Vector3 posicLuz;
     private bool ligado;
-    private float nextFire;
-    private AudioSource laserAudio;
-
     void Start()
     {
         luzColisao = new GameObject();
@@ -26,7 +26,6 @@ public class Laser : MonoBehaviour
         posicLuz = new Vector3(0, 0, LarguraFinal);
         //
         LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
-        laserAudio = GetComponent<AudioSource>();
         lineRenderer.material = new Material(material);
         lineRenderer.SetColors(corLaser, corLaser);
         lineRenderer.SetWidth(LarguraInicial, LarguraFinal);
@@ -34,7 +33,7 @@ public class Laser : MonoBehaviour
     }
     void Update()
     {
-        if (ligado == true)
+        if (Input.GetKey(KeyCode.I) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             StartCoroutine(ShotEffect());
@@ -44,60 +43,29 @@ public class Laser : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.right, out PontoDeColisao, DistanciaDoLaser))
             {
                 GetComponent<LineRenderer>().SetPosition(0, transform.position);
-                GetComponent<LineRenderer>().SetPosition(1, PontoDeColisao.point);
+                
                 luzColisao.transform.position = (PontoDeColisao.point - posicLuz);
             }
             else
             {
-                GetComponent<LineRenderer>().SetPosition(0, transform.position);
+                
                 GetComponent<LineRenderer>().SetPosition(1, PontoFinalDoLaser);
                 luzColisao.transform.position = PontoFinalDoLaser;
             }
         }
-        else
-        {
+             else
+             {
             GetComponent<LineRenderer>().SetPosition(0, transform.position);
             GetComponent<LineRenderer>().SetPosition(1, transform.position);
             luzColisao.SetActive(false);
         }
-        if (Input.GetKey(KeyCode.I) && Time.time > nextFire)
+        IEnumerator ShotEffect()
         {
-                       
-            ligado = !ligado;
-        }
-
-
-      IEnumerator ShotEffect()
-        {
-            laserAudio.Play();
-            ligado= true;
+            lineRenderer.enabled = true;
             yield return shotDuration;
-            ligado = false;
-            
-                }
-
-
-        void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.tag == "Enemy")
-            {
-
-                Destroy(this.gameObject, 0.1f);
-            }
-
-            if (other.gameObject.tag == "Boss1")
-            {
-
-                Destroy(this.gameObject, 0.1f);
-            }
-
-            if (other.gameObject.tag == "Boss2")
-            {
-
-                Destroy(this.gameObject, 0.1f);
-            }
+            lineRenderer.enabled = false;
 
         }
-    }
 
+    }
 }

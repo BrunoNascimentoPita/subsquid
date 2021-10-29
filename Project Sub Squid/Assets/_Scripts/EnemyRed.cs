@@ -234,6 +234,7 @@ public class EnemyRed : MonoBehaviour
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
             
         }
+      
 
         if (other.gameObject.tag == "Player")
         {

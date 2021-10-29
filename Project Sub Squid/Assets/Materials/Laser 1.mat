@@ -10,7 +10,7 @@ Material:
   m_Name: Laser 1
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -62,9 +62,9 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.62
+    - _Glossiness: 0.4
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.87
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
@@ -75,5 +75,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.57794017, b: 0, a: 1}
-    - _EmissionColor: {r: 0.6698113, g: 0.009478444, b: 0.009478444, a: 1}
+    - _EmissionColor: {r: 0.67058825, g: 0.041654203, b: 0.007843148, a: 1}
   m_BuildTextureStacks: []

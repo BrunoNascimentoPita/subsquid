@@ -34,10 +34,13 @@ public class Boss2 : MonoBehaviour
 
     public float timeCorDano = 0.01f;
 
+    public GameObject powerUpDropavelPrefab;
+
     void Start()
     {
         rbBoss2 = this.GetComponent<Rigidbody>();
         posicaoDoBoss2 = GameObject.FindGameObjectWithTag("PontoDoBoss2").transform;
+        GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab, this.transform.position, Quaternion.identity);
     }
 
     // Update is called once per frame

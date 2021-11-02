@@ -78,6 +78,8 @@ public class Nave : MonoBehaviour
     public float deceleration;
  
     private Vector2 direction;
+
+    public ParticleSystem particulaExplosaoPrefab;
     
 
     void Start () 
@@ -174,9 +176,11 @@ public class Nave : MonoBehaviour
 
         if(vidaPlayer <= 0)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             GameController.instance.ShowGameOver();
             Destroy(gameObject);
+            ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
+            Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
 
 

@@ -3165,11 +3165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91324ff92d205a3479b968a112acc069, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13
+      value: -12.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91324ff92d205a3479b968a112acc069, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 91324ff92d205a3479b968a112acc069, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4228,6 +4228,7 @@ MonoBehaviour:
   yMax: 8
   acceleration: 10
   deceleration: 2
+  particulaExplosaoPrefab: {fileID: 3789267699254107085, guid: a0ab06f9be04e56419721c9cb50e4288, type: 3}
 --- !u!65 &1452290777
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class TiroZigZag : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);
         }

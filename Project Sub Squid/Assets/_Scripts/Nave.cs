@@ -234,7 +234,7 @@ public class Nave : MonoBehaviour
         if (other.gameObject.tag == "TiroEnemy")
         {
             
-            vidaPlayer = vidaPlayer - danoPlayer;
+            vidaPlayer = vidaPlayer - 1;
             CameraController.instance.CameraTremer();
             ChecarHp();
         }
@@ -242,7 +242,7 @@ public class Nave : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             
-            vidaPlayer = vidaPlayer - 2;
+            vidaPlayer = vidaPlayer - 1;
             CameraController.instance.CameraTremer();
             ChecarHp();
         }
@@ -266,7 +266,7 @@ public class Nave : MonoBehaviour
         if (other.gameObject.tag == "PowerUpVida")
         {
             
-            vidaPlayer = vidaPlayer + 2;
+            vidaPlayer = vidaPlayer + 3;
             ChecarHp();
         }
 

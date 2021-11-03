@@ -52,10 +52,16 @@ public class SpawnEnemy : MonoBehaviour
     [SerializeField]private float bossTime;
     public static bool timeRun;
 
+    public GameObject lifeBossTela;
+
+    public static SpawnEnemy instancia;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        instancia = this;
+
         boss1NaCena = false;
         boss2NaCena = false;
         boss1JaMorreu = false;
@@ -112,11 +118,22 @@ public class SpawnEnemy : MonoBehaviour
             StartCoroutine ("ChamarBossBaleia");
         }
 
-        if (bossTime >= 205.0f && !boss2NaCena && !boss2JaMorreu)
+        if (bossTime >= 206.0f && !boss2NaCena && !boss2JaMorreu)
         {
             StartCoroutine ("ChamarBoss2");
         }
     }
+
+    public void ShowLifeBoss2()
+    {
+        lifeBossTela.SetActive(true);
+    }
+    public void QuitLifeBoss2()
+    {
+        lifeBossTela.SetActive(false);
+    }
+
+
 
     void ChamarSpawn()
     {

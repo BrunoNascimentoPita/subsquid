@@ -9,6 +9,7 @@ public class Boss2 : MonoBehaviour
 
     
     public float vidaBoss2 = 1000.0f;
+    public static float vidaDoBoss2UI;
     public float danoBoss2 = 3.0f;
     
 
@@ -36,11 +37,16 @@ public class Boss2 : MonoBehaviour
 
     public GameObject powerUpDropavelPrefab;
 
+    public Transform pontosdeSpawnPWBoss;
+
+
     void Start()
     {
         rbBoss2 = this.GetComponent<Rigidbody>();
         posicaoDoBoss2 = GameObject.FindGameObjectWithTag("PontoDoBoss2").transform;
-        GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab, this.transform.position, Quaternion.identity);
+        pontosdeSpawnPWBoss = GameObject.Find("PontoDeSpawnPW2").transform;
+        GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab, pontosdeSpawnPWBoss.position, Quaternion.identity);
+        SpawnEnemy.instancia.ShowLifeBoss2();
     }
 
     // Update is called once per frame
@@ -56,10 +62,13 @@ public class Boss2 : MonoBehaviour
         {
             GameController.instance.SetScore(100);
             GameController.instance.ShowWinTela();
+            SpawnEnemy.instancia.QuitLifeBoss2();
             SpawnEnemy.boss2NaCena = false;
             SpawnEnemy.boss2JaMorreu = true;
             Destroy(gameObject);
         }
+
+        vidaDoBoss2UI = vidaBoss2;
     }
 
     IEnumerator DanoCor()

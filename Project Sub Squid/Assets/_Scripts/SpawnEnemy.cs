@@ -113,7 +113,7 @@ public class SpawnEnemy : MonoBehaviour
             
         }
 
-        if (bossTime >= 96.0f && !boss1NaCena && !boss1JaMorreu)
+        if (bossTime >= 6.0f && !boss1NaCena && !boss1JaMorreu)
         {
             StartCoroutine ("ChamarBossBaleia");
         }

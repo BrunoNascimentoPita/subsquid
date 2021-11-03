@@ -4943,7 +4943,7 @@ MonoBehaviour:
   - {fileID: 1743949142}
   - {fileID: 886169917}
   - {fileID: 1221160925}
-  bossBaleia1: {fileID: 5280487977970005682, guid: 7e8f479bdb0d5f645b3847e22f91ee5a, type: 3}
+  bossBaleia1: {fileID: 7850272265970624075, guid: 41f3fed0ce215d34fb89e267488834e2, type: 3}
   pontosdeSpawnBoss1: {fileID: 886169917}
   boss2: {fileID: 9201872105345517729, guid: 8782320f81b2acf499030bfed677dda2, type: 3}
   pontosdeSpawnBoss2: {fileID: 31780352}

@@ -12,6 +12,8 @@ public class NewBoss1 : MonoBehaviour
     [SerializeField] float stateNormalDuration = 8f;
     [SerializeField] float vidaBoss1 = 100f;
 
+    public static float vidaBoss1UI;
+
     public GameObject boss1;
     private Transform posicaoDoJogador;
 
@@ -26,6 +28,12 @@ public class NewBoss1 : MonoBehaviour
     public Color danoCor;
 
     public float timeCorDano = 0.01f;
+
+    public Transform HealthBar;
+    public GameObject HealthBarObject;
+
+    private Vector3 healthBarScale;
+    private float healthPercent;
 
 
     
@@ -52,7 +60,17 @@ public class NewBoss1 : MonoBehaviour
         target = new Vector2(posicaoDoBoss1.position.x, posicaoDoBoss1. position.y);
         
         boss1.transform.Rotate(0, 90, 0);
+
+        healthBarScale = HealthBar.localScale;
+        healthPercent = healthBarScale.x / vidaBoss1;
         
+    }
+
+    void UpdateHealthBar()
+    {
+        healthBarScale.x = healthPercent * vidaBoss1;
+        HealthBar.localScale = healthBarScale; 
+
     }
 
     void Update()
@@ -68,6 +86,8 @@ public class NewBoss1 : MonoBehaviour
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
         }
+
+        vidaBoss1UI = vidaBoss1;
     }
 
 
@@ -171,6 +191,7 @@ public class NewBoss1 : MonoBehaviour
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do player");
             vidaBoss1 = vidaBoss1 - 3;
+            UpdateHealthBar();
         }
 
         if (other.gameObject.tag == "TiroDuplo")
@@ -178,6 +199,7 @@ public class NewBoss1 : MonoBehaviour
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
             vidaBoss1 = vidaBoss1 - 2;
+            UpdateHealthBar();
         }
 
         if (other.gameObject.tag == "TiroTriplo")
@@ -185,6 +207,7 @@ public class NewBoss1 : MonoBehaviour
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
             vidaBoss1 = vidaBoss1 - 1;
+            UpdateHealthBar();
         }
 
         if (other.gameObject.tag == "TiroPesado")
@@ -192,6 +215,7 @@ public class NewBoss1 : MonoBehaviour
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do player");
             vidaBoss1 = vidaBoss1 - 4;
+            UpdateHealthBar();
             
         }
 
@@ -200,11 +224,13 @@ public class NewBoss1 : MonoBehaviour
             StartCoroutine(DanoCor());
             Debug.Log("lBoss levou um tiro do player");
             vidaBoss1 = vidaBoss1 - 1f;
+            UpdateHealthBar();
             
         }
 
         if (other.gameObject.tag == "TiroZigZag")
         {
+            UpdateHealthBar();
             StartCoroutine(DanoCor());
             vidaBoss1 = vidaBoss1 - 6;
             

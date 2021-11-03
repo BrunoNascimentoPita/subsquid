@@ -568,6 +568,7 @@ MonoBehaviour:
   danoCor: {r: 1, g: 0, b: 0, a: 0}
   timeCorDano: 0.05
   powerUpDropavelPrefab: {fileID: 5402714528065153377, guid: eb74f21665bec514a93dcce5b570f4e1, type: 3}
+  pontosdeSpawnPWBoss: {fileID: 0}
 --- !u!54 &9201872105345517730
 Rigidbody:
   m_ObjectHideFlags: 0

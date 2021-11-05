@@ -80,6 +80,12 @@ public class Nave : MonoBehaviour
     private Vector2 direction;
 
     public ParticleSystem particulaExplosaoPrefab;
+
+    public GameObject IMGpw1;
+
+    public GameObject IMGpw2;
+
+    public GameObject IMGpwP;
     
 
     void Start () 
@@ -189,6 +195,13 @@ public class Nave : MonoBehaviour
             Time.timeScale = 0;
             GameController.instance.ShowPauseTela();
         }
+
+        if (SpawnTiroNew.qTiros <= 0)
+        {
+            IMGpw1.SetActive(false);
+            IMGpw2.SetActive(false);
+            IMGpwP.SetActive(false);
+        }
     }
 
     void FixedUpdate()
@@ -277,6 +290,12 @@ public class Nave : MonoBehaviour
             powerUp1 = true;
             powerUp2 = false;
             powerUp3 = false;
+
+            IMGpw1.SetActive(true);
+            IMGpw2.SetActive(false);
+            IMGpwP.SetActive(false);
+
+
             //StartCoroutine ("NoPowerUps");
 
         }
@@ -288,6 +307,10 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = true;
             powerUp3 = false;
+
+            IMGpw1.SetActive(false);
+            IMGpw2.SetActive(false);
+            IMGpwP.SetActive(true);
             //StartCoroutine ("NoPowerUps");
         }
 
@@ -298,6 +321,10 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = true;
+
+            IMGpw1.SetActive(false);
+            IMGpw2.SetActive(true);
+            IMGpwP.SetActive(false);
             //StartCoroutine ("NoPowerUps");
         }
 
@@ -328,8 +355,8 @@ public class Nave : MonoBehaviour
     void ChecarHp()
     {
         
-        float vida_paraBarra = vidaPlayer * 10;
-        BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 7 );
+        float vida_paraBarra = vidaPlayer * 16.7f;
+        BarraHp.rectTransform.sizeDelta = new Vector2(vida_paraBarra, 117 );
     }
 
     IEnumerator NoPowerUps()

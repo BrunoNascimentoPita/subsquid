@@ -1028,7 +1028,7 @@ MonoBehaviour:
   speedAttack: 22
   attack1Duration: 1.1
   stateNormalDuration: 3
-  vidaBoss1: 150
+  vidaBoss1: 400
   boss1: {fileID: 7850272265970624075}
   posicaoDoBoss1: {fileID: 0}
   particulaExplosaoPrefab: {fileID: 7798639036510016278, guid: bec223e72e9ee9c4bbc029bc88d43f04, type: 3}

@@ -39,13 +39,16 @@ public class Boss2 : MonoBehaviour
 
     public Transform pontosdeSpawnPWBoss;
 
+    public ParticleSystem particulaExplosaoPrefab;
+
+    public Transform[] pontosDeExplosao;
+
 
     void Start()
     {
         rbBoss2 = this.GetComponent<Rigidbody>();
         posicaoDoBoss2 = GameObject.FindGameObjectWithTag("PontoDoBoss2").transform;
         pontosdeSpawnPWBoss = GameObject.Find("PontoDeSpawnPW2").transform;
-        GameObject powerUpDropavel = Instantiate(this.powerUpDropavelPrefab, pontosdeSpawnPWBoss.position, Quaternion.identity);
         SpawnEnemy.instancia.ShowLifeBoss2();
     }
 
@@ -65,6 +68,14 @@ public class Boss2 : MonoBehaviour
             SpawnEnemy.instancia.QuitLifeBoss2();
             SpawnEnemy.boss2NaCena = false;
             SpawnEnemy.boss2JaMorreu = true;
+            ParticleSystem particulaExplosao1 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[0].position, Quaternion.identity);
+            ParticleSystem particulaExplosao2 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[1].position, Quaternion.identity);
+            ParticleSystem particulaExplosao3 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[2].position, Quaternion.identity);
+            ParticleSystem particulaExplosao4 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[3].position, Quaternion.identity);
+            ParticleSystem particulaExplosao5 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[4].position, Quaternion.identity);
+            ParticleSystem particulaExplosao6 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[5].position, Quaternion.identity);
+            ParticleSystem particulaExplosao7 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[6].position, Quaternion.identity);
+            ParticleSystem particulaExplosao8 = Instantiate(this.particulaExplosaoPrefab, pontosDeExplosao[7].position, Quaternion.identity);
             Destroy(gameObject);
         }
 

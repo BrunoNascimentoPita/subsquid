@@ -569,6 +569,16 @@ MonoBehaviour:
   timeCorDano: 0.05
   powerUpDropavelPrefab: {fileID: 5402714528065153377, guid: eb74f21665bec514a93dcce5b570f4e1, type: 3}
   pontosdeSpawnPWBoss: {fileID: 0}
+  particulaExplosaoPrefab: {fileID: 4418385936605576049, guid: 38c11856b0deb0c478bb9bcaace1da61, type: 3}
+  pontosDeExplosao:
+  - {fileID: 9201872105055771284}
+  - {fileID: 9201872106259189180}
+  - {fileID: 9201872106436078737}
+  - {fileID: 9201872106375956856}
+  - {fileID: 9201872104906906556}
+  - {fileID: 9201872106394841398}
+  - {fileID: 9201872106266413180}
+  - {fileID: 9201872106731132870}
 --- !u!54 &9201872105345517730
 Rigidbody:
   m_ObjectHideFlags: 0

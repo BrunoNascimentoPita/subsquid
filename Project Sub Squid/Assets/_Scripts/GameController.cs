@@ -91,7 +91,14 @@ public class GameController : MonoBehaviour
 
     public void ShowWinTela()
     {
+        StartCoroutine(WinGameCR());
+    }
+
+    IEnumerator WinGameCR()
+    {
+        yield return new WaitForSeconds(2.0f);
         winTela.SetActive(true);
+
     }
 
     public void ShowPauseTela()

@@ -86,6 +86,8 @@ public class Nave : MonoBehaviour
     public GameObject IMGpw2;
 
     public GameObject IMGpwP;
+
+    public bool pegouPWtiro;
     
 
     void Start () 
@@ -104,6 +106,8 @@ public class Nave : MonoBehaviour
         powerUp2 = false;
         powerUp3 = false;            
         powerUp4 = false;
+
+        pegouPWtiro = false;
         
     }
 
@@ -202,6 +206,7 @@ public class Nave : MonoBehaviour
             IMGpw2.SetActive(false);
             IMGpwP.SetActive(false);
         }
+
     }
 
     void FixedUpdate()
@@ -295,8 +300,10 @@ public class Nave : MonoBehaviour
             IMGpw2.SetActive(false);
             IMGpwP.SetActive(false);
 
+            pegouPWtiro = true;
 
-            //StartCoroutine ("NoPowerUps");
+
+            StartCoroutine ("PegouPWtiro");
 
         }
 
@@ -311,7 +318,10 @@ public class Nave : MonoBehaviour
             IMGpw1.SetActive(false);
             IMGpw2.SetActive(false);
             IMGpwP.SetActive(true);
-            //StartCoroutine ("NoPowerUps");
+
+            pegouPWtiro = true;
+
+            StartCoroutine ("PegouPWtiro");
         }
 
         if (other.gameObject.tag == "PW3")
@@ -325,7 +335,10 @@ public class Nave : MonoBehaviour
             IMGpw1.SetActive(false);
             IMGpw2.SetActive(true);
             IMGpwP.SetActive(false);
-            //StartCoroutine ("NoPowerUps");
+
+            pegouPWtiro = true;
+
+            StartCoroutine ("PegouPWtiro");
         }
 
         if (other.gameObject.tag == "PW3")
@@ -335,7 +348,10 @@ public class Nave : MonoBehaviour
             powerUp1 = false;
             powerUp2 = false;
             powerUp3 = true;
-            //StartCoroutine ("NoPowerUps");
+
+            pegouPWtiro = true;
+
+            StartCoroutine ("PegouPWtiro");
             
         }
         if (other.gameObject.tag == "PW4")
@@ -346,7 +362,10 @@ public class Nave : MonoBehaviour
             powerUp2 = false;
             powerUp3 = false;
             powerUp4 = true;
-            //StartCoroutine("NoPowerUps");
+
+            pegouPWtiro = true;
+
+            StartCoroutine ("PegouPWtiro");
 
         }
 
@@ -368,5 +387,19 @@ public class Nave : MonoBehaviour
             powerUp3 = false;
             powerUp4 = false;
     }
+
+     IEnumerator PegouPWtiro()
+     {
+         if(SpawnTiroNew.qTiros == 30 && pegouPWtiro == true)
+        {
+            GameController.instance.SetScore(15);
+            Debug.Log("ADC 15 pontos");
+        }
+        
+         yield return new WaitForSeconds (0.5f);
+         pegouPWtiro = false;
+
+
+     }
     
 }

@@ -4716,6 +4716,7 @@ MonoBehaviour:
   IMGpw1: {fileID: 904572125}
   IMGpw2: {fileID: 801897938}
   IMGpwP: {fileID: 1834314086}
+  pegouPWtiro: 0
 --- !u!65 &1452290777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5136,7 +5137,7 @@ MonoBehaviour:
   tempoSpawnEG: 20
   pontosdeSpawnEG: {fileID: 1501732876}
   enemySeguir: {fileID: 7726212110189623070, guid: 8b127133fd6dd2f4682b3f722ce6ada0, type: 3}
-  tempoSpawnES: 10
+  tempoSpawnES: 15
   pontosdeSpawnES:
   - {fileID: 1633228331}
   - {fileID: 119607484}

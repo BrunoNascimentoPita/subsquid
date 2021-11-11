@@ -41,14 +41,14 @@ public class SpawnTiroNew : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false && Gun.tiroExtra == false)
+        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false && Nave.shoot == false)
         {
             Tiro();
             tiroPadrao = true;
             StartCoroutine ("NoTiroPadrao");
         }
 
-        if(Input.GetKey(KeyCode.L) && Time.time > nextFire && Nave.isDash == false && Gun.tiroExtra == false && qTiros >= 1)
+        if(Input.GetKey(KeyCode.L) && Time.time > nextFire && Nave.isDash == false && qTiros >= 1 && Nave.shoot == false)
         {
             TiroPW();
             tiroPadrao = true;

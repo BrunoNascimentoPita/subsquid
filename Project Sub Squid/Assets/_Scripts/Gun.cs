@@ -23,7 +23,6 @@ public class Gun : MonoBehaviour
 
     public void Shoot()
     {
-        tiroExtra = true;
         GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
         TiroNew goBullet = go.GetComponent<TiroNew>();
         goBullet.direction = direction;

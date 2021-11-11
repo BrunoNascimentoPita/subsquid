@@ -60,7 +60,7 @@ public class Nave : MonoBehaviour
     // tiros novos
 
     Gun[] guns;
-    bool shoot;
+    public static bool shoot;
 
     // limites
 
@@ -129,9 +129,9 @@ public class Nave : MonoBehaviour
         
         shoot = Input.GetKey(KeyCode.K);
 
-        if(shoot && Time.time > nextFire && SpawnTiroNew.tiroPadrao == false)
+        if(shoot && Time.time > nextFire)
         {
-            shoot = false;
+            //shoot = false;
             foreach(Gun gun in guns)
             {
                 FindObjectOfType<Audio_menager>().Play("5Tiros");

@@ -27,6 +27,9 @@ public class GameController : MonoBehaviour
     public static int contadorEnemy;
     public static int contadorEnemyPW;
 
+    public GameObject pontosText;
+    public GameObject tirosText;
+
     public static GameController instance;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,9 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Audio_menager>().Play("musicafase");
         contadorEnemy = 0;
         contadorEnemyPW = 0;
+
+        pontosText.SetActive(true);
+        tirosText.SetActive(true);
     }
 
     void Update()
@@ -80,6 +86,8 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         gameOver.SetActive(true);
         Time.timeScale = 0;
+        pontosText.SetActive(false);
+        tirosText.SetActive(false);
     }
 
     public void RestartGame(string lvlName)
@@ -87,6 +95,9 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(lvlName);
         Time.timeScale = 1;
         contadorEnemy = 0;
+
+        pontosText.SetActive(true);
+        tirosText.SetActive(true);
     }
 
     public void ShowWinTela()
@@ -99,6 +110,9 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         winTela.SetActive(true);
 
+        pontosText.SetActive(false);
+        tirosText.SetActive(false);
+
     }
 
     public void ShowPauseTela()
@@ -109,6 +123,9 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         SpawnEnemy.timeRun = false;
         FindObjectOfType<Audio_menager>().StopPlaying("musicafase");
+
+        pontosText.SetActive(false);
+        tirosText.SetActive(false);
     }
 
     public void Resume()
@@ -118,6 +135,9 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         SpawnEnemy.timeRun = true;
         FindObjectOfType<Audio_menager>().Play("musicafase");
+
+        pontosText.SetActive(true);
+        tirosText.SetActive(true);
     }
 
     public void MenuInicial()

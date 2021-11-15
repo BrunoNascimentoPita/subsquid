@@ -88,6 +88,16 @@ public class Nave : MonoBehaviour
     public GameObject IMGpwP;
 
     public bool pegouPWtiro;
+
+    //Nova movimentação
+
+    private Vector2 teclasApertadas;
+
+    // nova movimetnação
+
+    public float horizontal;
+    public float vertical;
+    public float moveLimiter = 0.7f;
     
 
     void Start () 
@@ -207,15 +217,27 @@ public class Nave : MonoBehaviour
             IMGpwP.SetActive(false);
         }
 
+        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
     }
 
     void FixedUpdate()
     {
         //Movimentacao ();
-        Vector2 directionalForce = direction * acceleration;
-        corpoRigido2D.AddForce(directionalForce * Time.deltaTime, ForceMode.Impulse);
-        corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
-        corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+        //Vector2 directionalForce = direction * acceleration;
+        //corpoRigido2D.AddForce(directionalForce * Time.deltaTime, ForceMode.Impulse);
+        //corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal").normalized * velocidade, corpoRigido2D.velocity.y);
+        //corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+
+        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        {
+            // limit movement speed diagonally, so you move at 70% speed
+            horizontal *= moveLimiter;
+            vertical *= moveLimiter;
+        } 
+
+        corpoRigido2D.velocity = new Vector2(horizontal * velocidade, vertical * velocidade);
     }
 
     IEnumerator IsDash()
@@ -225,11 +247,11 @@ public class Nave : MonoBehaviour
         
     }
 
-    /*
+    /*    
     void Movimentacao() 
     {
-      corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * velocidade, corpoRigido2D.velocity.y);
-      corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * velocidade);
+      teclasApertadas = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+      corpoRigido2D.velocity = teclasApertadas.normalized * velocidade;
     }
     */
 

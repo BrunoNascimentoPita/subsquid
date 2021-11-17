@@ -198,7 +198,7 @@ public class NewBoss1 : MonoBehaviour
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
-            vidaBoss1 = vidaBoss1 - 2;
+            vidaBoss1 = vidaBoss1 - 4;
             UpdateHealthBar();
         }
 
@@ -206,7 +206,7 @@ public class NewBoss1 : MonoBehaviour
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
-            vidaBoss1 = vidaBoss1 - 1;
+            vidaBoss1 = vidaBoss1 - 3;
             UpdateHealthBar();
         }
 
@@ -214,7 +214,7 @@ public class NewBoss1 : MonoBehaviour
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do player");
-            vidaBoss1 = vidaBoss1 - 4;
+            vidaBoss1 = vidaBoss1 - 6;
             UpdateHealthBar();
             
         }

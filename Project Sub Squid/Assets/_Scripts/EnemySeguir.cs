@@ -93,25 +93,25 @@ public class EnemySeguir : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigoSeguir = vidaInimigoSeguir - danoSofridoSeguir;
+            vidaInimigoSeguir = vidaInimigoSeguir - 3;
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigoSeguir = vidaInimigoSeguir - 2;
+            vidaInimigoSeguir = vidaInimigoSeguir - 4;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigoSeguir = vidaInimigoSeguir - 1;
+            vidaInimigoSeguir = vidaInimigoSeguir - 3;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
             Debug.Log("levou um tiro do Inimigo");
-            vidaInimigoSeguir = vidaInimigoSeguir - 4;
+            vidaInimigoSeguir = vidaInimigoSeguir - 6;
             
         }
 

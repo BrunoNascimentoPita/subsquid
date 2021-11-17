@@ -104,21 +104,21 @@ public class Boss2 : MonoBehaviour
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
-            vidaBoss2 = vidaBoss2 - 2;
+            vidaBoss2 = vidaBoss2 - 4;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss levou um tiro do playerr");
-            vidaBoss2 = vidaBoss2 - 1;
+            vidaBoss2 = vidaBoss2 - 3;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
             StartCoroutine(DanoCor());
             Debug.Log("Boss2 levou um tiro do player");
-            vidaBoss2 = vidaBoss2 - 4;
+            vidaBoss2 = vidaBoss2 - 6;
             
         }
 

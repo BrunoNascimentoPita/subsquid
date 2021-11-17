@@ -180,7 +180,7 @@ public class EnemyRed : MonoBehaviour
         {
             //FindObjectOfType<Audio_menager>().Play("tiro");
             Debug.Log("levou um tiro do player");
-            vidaInimigo = vidaInimigo - danoSofrido;
+            vidaInimigo = vidaInimigo - 3;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
@@ -190,7 +190,7 @@ public class EnemyRed : MonoBehaviour
         if (other.gameObject.tag == "TiroDuplo")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigo = vidaInimigo - 2;
+            vidaInimigo = vidaInimigo - 4;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
@@ -199,7 +199,7 @@ public class EnemyRed : MonoBehaviour
         if (other.gameObject.tag == "TiroTriplo")
         {
             Debug.Log("levou um tiro do player");
-            vidaInimigo = vidaInimigo - 1;
+            vidaInimigo = vidaInimigo - 3;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
@@ -208,7 +208,7 @@ public class EnemyRed : MonoBehaviour
         if (other.gameObject.tag == "TiroPesado")
         {
             Debug.Log("levou um tiro do Inimigo");
-            vidaInimigo = vidaInimigo - 4;
+            vidaInimigo = vidaInimigo - 6;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo

@@ -77,7 +77,7 @@ public class EnemyZigZag : MonoBehaviour
         if (other.gameObject.tag == "TiroDuplo")
         {
             
-            vidaEnemyGroup = vidaEnemyGroup - 2;
+            vidaEnemyGroup = vidaEnemyGroup - 4;
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
@@ -85,7 +85,7 @@ public class EnemyZigZag : MonoBehaviour
         if (other.gameObject.tag == "TiroTriplo")
         {
             
-            vidaEnemyGroup = vidaEnemyGroup - 1;
+            vidaEnemyGroup = vidaEnemyGroup - 3;
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }
@@ -93,7 +93,7 @@ public class EnemyZigZag : MonoBehaviour
         if (other.gameObject.tag == "TiroPesado")
         {
             
-            vidaEnemyGroup = vidaEnemyGroup - 5;
+            vidaEnemyGroup = vidaEnemyGroup - 6;
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaSangue.gameObject, 0.2f); // Destr�i a part�cula ap�s 1 segundo
         }

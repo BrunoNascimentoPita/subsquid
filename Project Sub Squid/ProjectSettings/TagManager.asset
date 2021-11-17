@@ -23,6 +23,7 @@ TagManager:
   - Boss2
   - PontoDoBoss2
   - Boss1Dano
+  - EscudoBoss
   layers:
   - Default
   - TransparentFX

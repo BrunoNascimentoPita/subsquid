@@ -40,11 +40,5 @@ public class Tiro : MonoBehaviour
             Destroy(this.gameObject, 0.1f);
         }
 
-        if (other.gameObject.tag == "EscudoBoss")
-        {
-           
-            Destroy(this.gameObject);
-        }
-
     }
 }

@@ -4185,6 +4185,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
   m_PrefabInstance: {fileID: 1228099948}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1021423732
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021423727}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 176151280b9cbbb4788a09b918a8e705, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1022524323
 GameObject:
   m_ObjectHideFlags: 0
@@ -5183,6 +5202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 17.975008
       objectReference: {fileID: 0}
+    - target: {fileID: 4264825972211556216, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -3732613735515289327, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
     - target: {fileID: 4795587997381210429, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -2.23364

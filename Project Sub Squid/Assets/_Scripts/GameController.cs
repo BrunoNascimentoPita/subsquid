@@ -123,6 +123,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         SpawnEnemy.timeRun = false;
         FindObjectOfType<Audio_menager>().StopPlaying("musicafase");
+        FindObjectOfType<Audio_menager>().Play("Pause");
 
         pontosText.SetActive(false);
         tirosText.SetActive(false);
@@ -135,6 +136,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         SpawnEnemy.timeRun = true;
         FindObjectOfType<Audio_menager>().Play("musicafase");
+        FindObjectOfType<Audio_menager>().StopPlaying("Pause");
 
         pontosText.SetActive(true);
         tirosText.SetActive(true);

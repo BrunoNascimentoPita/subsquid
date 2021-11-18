@@ -4021,28 +4021,28 @@ MonoBehaviour:
   - name: musicafase
     clip: {fileID: 8300000, guid: b654591ce4de82041b7e0e58007ba9aa, type: 3}
     group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.115
+    volume: 0.681
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: tiro
     clip: {fileID: 8300000, guid: 732d93f29ab384041b5bebd569ca049a, type: 3}
     group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.244
+    volume: 0.366
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: tiroagua
     clip: {fileID: 8300000, guid: ec3f2bdea5a7d43438816f173e0b10bb, type: 3}
     group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.17
+    volume: 0.321
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: explosion
     clip: {fileID: 8300000, guid: ff9c002417135bc41a565ac6e2fef116, type: 3}
     group: {fileID: 6357246861606615349, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
-    volume: 0.547
+    volume: 0.662
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -4087,6 +4087,13 @@ MonoBehaviour:
     volume: 0.547
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Pause
+    clip: {fileID: 8300000, guid: 373513ca3aefc074c96476932da64a51, type: 3}
+    group: {fileID: 8887114358859446092, guid: 28a1828fd7962874da73fb1d99e633ba, type: 2}
+    volume: 0.717
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &999673998
 Transform:
@@ -4155,8 +4162,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.7424302, y: 23.101536, z: 4.2405076}
-  m_Center: {x: 0.20036301, y: 0.599494, z: 0.27001008}
+  m_Size: {x: 4.174802, y: 23.101538, z: 7.6658797}
+  m_Center: {x: -0.015829835, y: 0.5994942, z: -0.12739068}
 --- !u!54 &1021423730
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4598,19 +4605,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9125,7 +9132,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -80.6, y: 55.35, z: 170.35}
 --- !u!224 &2145152377 stripped
 RectTransform:

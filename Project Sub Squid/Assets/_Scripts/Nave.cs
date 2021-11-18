@@ -98,6 +98,9 @@ public class Nave : MonoBehaviour
     public float horizontal;
     public float vertical;
     public float moveLimiter = 0.7f;
+
+
+    private Animation anim;
     
 
     void Start () 
@@ -118,6 +121,8 @@ public class Nave : MonoBehaviour
         powerUp4 = false;
 
         pegouPWtiro = false;
+
+        anim = gameObject.GetComponent<Animation>();
         
     }
 
@@ -219,6 +224,9 @@ public class Nave : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+
+
+        //anim.Play("Anim01");
 
     }
 

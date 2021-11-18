@@ -101,6 +101,7 @@ public class Nave : MonoBehaviour
 
 
     private Animation anim;
+
     
 
     void Start () 
@@ -144,7 +145,7 @@ public class Nave : MonoBehaviour
         
         shoot = Input.GetKey(KeyCode.K);
 
-        if(shoot && Time.time > nextFire)
+        if(shoot && Time.time > nextFire && SpawnTiroNew.tiroJ == false)
         {
             //shoot = false;
             foreach(Gun gun in guns)

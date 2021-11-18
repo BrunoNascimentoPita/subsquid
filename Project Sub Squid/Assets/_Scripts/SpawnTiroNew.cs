@@ -30,6 +30,8 @@ public class SpawnTiroNew : MonoBehaviour
     public static int qTiros;
     public TextMeshProUGUI qTirosText;
 
+    public static bool tiroJ;
+
     
     // Start is called before the first frame update
     void Start()
@@ -40,8 +42,9 @@ public class SpawnTiroNew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Input.GetKey(KeyCode.J) && Time.time > nextFire && Nave.isDash == false && Nave.shoot == false)
+        tiroJ = Input.GetKey(KeyCode.J);
+
+        if(tiroJ && Time.time > nextFire && Nave.isDash == false && Nave.shoot == false)
         {
             Tiro();
             tiroPadrao = true;

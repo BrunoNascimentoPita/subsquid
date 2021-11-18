@@ -16,11 +16,11 @@ GameObject:
   - component: {fileID: 3912480442003356327}
   m_Layer: 0
   m_Name: Escudo
-  m_TagString: Untagged
+  m_TagString: EscudoBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1753361532169422254
 Transform:
   m_ObjectHideFlags: 0
@@ -709,6 +709,7 @@ MonoBehaviour:
   - {fileID: 9201872106394841398}
   - {fileID: 9201872106266413180}
   - {fileID: 9201872106731132870}
+  EscudoDoBoss: {fileID: 157510151780012893}
 --- !u!54 &9201872105345517730
 Rigidbody:
   m_ObjectHideFlags: 0

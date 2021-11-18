@@ -8,7 +8,7 @@ public class Boss2 : MonoBehaviour
     //private float speed = 2f;
 
     
-    public float vidaBoss2 = 1000.0f;
+    public float vidaBoss2 = 600.0f;
     public static float vidaDoBoss2UI;
     public float danoBoss2 = 3.0f;
     
@@ -43,6 +43,8 @@ public class Boss2 : MonoBehaviour
 
     public Transform[] pontosDeExplosao;
 
+    public GameObject EscudoDoBoss;
+
 
     void Start()
     {
@@ -59,6 +61,11 @@ public class Boss2 : MonoBehaviour
         {
            
             transform.position = Vector2.MoveTowards(transform.position, posicaoDoBoss2.position, speed * Time.deltaTime);
+        }
+
+        if (vidaBoss2 <= 300)
+        {
+            EscudoDoBoss.SetActive(true);
         }
 
         if(vidaBoss2 <= 0)

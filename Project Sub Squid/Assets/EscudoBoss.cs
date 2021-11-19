@@ -46,7 +46,7 @@ public class EscudoBoss : MonoBehaviour
             Destroy(gameObject);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
-            FindObjectOfType<Audio_menager>().Play("explosion");
+            //FindObjectOfType<Audio_menager>().Play("explosion");
         }
     }
 

@@ -168,6 +168,5 @@ public class GameController : MonoBehaviour
     {
         contadorEnemyPW += 1;
     }
-    
 
 }

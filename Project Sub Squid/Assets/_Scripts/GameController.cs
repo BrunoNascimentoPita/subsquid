@@ -88,6 +88,11 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         pontosText.SetActive(false);
         tirosText.SetActive(false);
+
+        FindObjectOfType<Audio_menager>().Play("GameOver");
+        FindObjectOfType<Audio_menager>().StopPlaying("musicafase");
+
+
     }
 
     public void RestartGame(string lvlName)

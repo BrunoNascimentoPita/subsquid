@@ -14,19 +14,59 @@ public class Boss3 : MonoBehaviour
 
 	float radius, moveSpeed;
 
+
+	public float m_Velocidade;
+
+	public Transform m_Posicao;
+
+	public float m_TempoEspera;
+
+	public float x_Min, x_Max, y_Min, y_Max;
+
+	public float m_Tempo;
+
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		radius = 5f;
 		moveSpeed = 5f;
+		StartCoroutine (SpawnProjectiles(numberOfProjectiles));
+
+		m_Posicao.position = new Vector2(Random.Range(x_Min, x_Max), Random.Range(y_Min, y_Max));
+		m_Tempo = m_TempoEspera;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+		
 		if (Input.GetButtonDown ("Fire1")) {
-			startPoint = transform.position;
 
-			StartCoroutine (SpawnProjectiles(numberOfProjectiles));
+			//StartCoroutine (SpawnProjectiles(numberOfProjectiles));
 		}
+			
+			
+		startPoint = transform.position;
+
+
+		transform.position = Vector2.MoveTowards(transform.position, m_Posicao.position, m_Velocidade * Time.deltaTime);
+		
+		float _dist = Vector2.Distance(transform.position, m_Posicao.position);
+
+		if (_dist <= .2f)
+		{
+			if (m_Tempo <= 0)
+			{
+				m_Posicao.position = new Vector2(Random.Range(x_Min, x_Max), Random.Range(y_Min, y_Max));
+				m_Tempo = m_TempoEspera;
+			}
+
+			else
+			m_Tempo -= Time.deltaTime;
+			
+		} 
+
+
 	}
 
 	IEnumerator SpawnProjectiles(int numberOfProjectiles)
@@ -49,9 +89,9 @@ public class Boss3 : MonoBehaviour
 			angle += angleStep;
 		}
 
-        yield return new WaitForSeconds (0.2f);
+        yield return new WaitForSeconds (0.5f);
 
-        StartCoroutine (SpawnProjectiles(numberOfProjectiles));
+        //StartCoroutine (SpawnProjectiles(numberOfProjectiles));
 
 	}
 

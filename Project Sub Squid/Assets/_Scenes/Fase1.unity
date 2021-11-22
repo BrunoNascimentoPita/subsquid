@@ -2027,7 +2027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mr: {fileID: 557402119}
-  speedmr: 0.02
+  speedmr: 0.005
 --- !u!64 &557402118
 MeshCollider:
   m_ObjectHideFlags: 0

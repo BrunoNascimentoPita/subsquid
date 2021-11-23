@@ -7,7 +7,7 @@ public class BarraLifeBoss : MonoBehaviour
 {
     private Image HealthBar;
     public float CurrentHealth;
-    private float MaxHealth = 600f;
+    private float MaxHealth = 800f;
 
     // Start is called before the first frame update
     void Start()

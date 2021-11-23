@@ -17,6 +17,17 @@ void Start()
     FindObjectOfType<Audio_menager>().Play("menuinicial");
 }
 
+public void DesativarParaVideo()
+{
+    StartCoroutine(DesativarVideo());
+}
+
+IEnumerator DesativarVideo()
+{
+    yield return new WaitForSeconds(1.5f);
+    gameObject.SetActive(false);
+}
+
 
 public void Sair()
     {

@@ -1599,7 +1599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0968612bb9d445247a3dba80a63c3ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 600
+  CurrentHealth: 800
 --- !u!114 &447944809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5594,11 +5594,11 @@ PrefabInstance:
     - target: {fileID: 4264825972211556216, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 7bad240b09ef0c448a8ce9b01bbbb6d0, type: 2}
+      objectReference: {fileID: -3732613735515289327, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
     - target: {fileID: 4264825972211556216, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 4d6128c8eeea05549a850c0bfd15aa10, type: 2}
+      objectReference: {fileID: 869498593788732020, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
     - target: {fileID: 4795587997381210429, guid: e8fdf91b487ae8145a88d1c47afe8f9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -1.9960563

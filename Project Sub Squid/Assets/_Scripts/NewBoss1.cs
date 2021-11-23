@@ -23,6 +23,8 @@ public class NewBoss1 : MonoBehaviour
 
     public ParticleSystem particulaExplosaoPrefab;
 
+    public GameObject vidaDropavelPrefab;
+
     public Material[] materialBoss;
 
     public Color danoCor;
@@ -85,6 +87,7 @@ public class NewBoss1 : MonoBehaviour
             FindObjectOfType<Audio_menager>().Play("ExplosionBaleia");
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo
+            GameObject vidaDropavel = Instantiate(this.vidaDropavelPrefab, this.transform.position, Quaternion.identity);
         }
 
         vidaBoss1UI = vidaBoss1;

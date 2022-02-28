@@ -9,9 +9,9 @@ Shoot em'up 2.5D
 
 
 # Autores: 
- - Andre Menezes - Programation
- - Bruno Nascimento - Concept Art, UI
- - João Chervinski - Game Design and Level Design
- - Lohan Sampaio - Programation
- - Matheus Lopes - 3D Art
- - Nilton Pedrett - Sound Design
+ - Andre Menezes - Programmer
+ - Bruno Nascimento - Concept Artist, UI
+ - João Chervinski - Game Designer and Level Designer
+ - Lohan Sampaio - Programmer
+ - Matheus Lopes - 3D Artist
+ - Nilton Pedrett - Sound Designer

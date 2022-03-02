@@ -13,5 +13,5 @@ Shoot em'up 2.5D
  - Bruno Nascimento - Concept Artist, UI
  - João Chervinski - Game Designer and Level Designer
  - Lohan Sampaio - Programmer
- - Matheus Lopes - 3D Artist
+ - Matheus Lopes - 3D Modeller
  - Nilton Pedrett - Sound Designer

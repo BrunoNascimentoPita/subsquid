@@ -1,5 +1,5 @@
 # Sub Squid - game
-Projeto de jogo da faculdade
+Projeto de jogo desenvolvido na UNEB- Universidade do Estado da Bahia
 
 # História do jogo
 Durante a guerra fria um casal de cientistas (Boris e Agnes) transformam animais marinhos em máquinas de guerra usando clonagem e bioengenharia. Os americanos atacam a base separando o casal e sequestrando Agnes para que ela complete os experimentos para os americanos. A única esperança de Agnes é Kal’mar, uma lula geneticamente modificada, e agora controlada pela mente do Dr. Boris.

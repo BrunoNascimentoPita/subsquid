@@ -48,6 +48,14 @@ MonoBehaviour:
   moveSpeed: 5
   vidaEnemyGroup: 5
   danoEnemyGroup: 2
+  particulaExplosaoPrefab: {fileID: 2872037061854940680, guid: aea48dd6991a62144acd57b80188ddc3, type: 3}
+  particulaSanguePrefab: {fileID: 8648786967167552825, guid: 12aa29c4a82a3d74ebf67eddce5d05ef, type: 3}
+  powerUpDropavelPrefab:
+  - {fileID: 7253079925950173440, guid: 8d29acb3842cfae42b02ddea625c5136, type: 3}
+  - {fileID: 3194820334324425618, guid: 7089f07601601d34695db389da075898, type: 3}
+  - {fileID: 6742804652071824495, guid: e79e59ca21f1ed444a90543673899ef7, type: 3}
+  - {fileID: 5402714528065153377, guid: eb74f21665bec514a93dcce5b570f4e1, type: 3}
+  randomPW: 4
 --- !u!114 &-8974015351755046574
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -109,11 +109,11 @@ public class NewBoss1 : MonoBehaviour
 
      IEnumerator DanoCor()
     {
-        GetComponent<Renderer>().materials[0].color = danoCor;
+        //GetComponent<Renderer>().materials[0].color = danoCor;
 
         yield return new WaitForSeconds(timeCorDano);
 
-        GetComponent<Renderer>().materials[0].color = materialBoss[0].color;
+        //GetComponent<Renderer>().materials[0].color = materialBoss[0].color;
     }
 
     void NormalState()

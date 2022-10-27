@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameLootLoading : MonoBehaviour
 {
-    public Text porcetagem;
+    //public Text porcetagem;
     public Image barrinhaImage;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class GameLootLoading : MonoBehaviour
         PlayerPrefs.SetString("SCENE_TO_LOAD", "_MenuInicial");
         PlayerPrefs.Save();
         barrinhaImage.fillAmount = 0;
-        porcetagem.text = "0%";
+        //porcetagem.text = "0%";
 
         StartCoroutine(LoadSceneAsync(sceneName));
     }
@@ -41,7 +41,7 @@ public class GameLootLoading : MonoBehaviour
 
         while (!asyncLoad.isDone)
         {
-            porcetagem.text = (asyncLoad.progress * 100).ToString("N0") + "%";
+            //porcetagem.text = (asyncLoad.progress * 100).ToString("N0") + "%";
             barrinhaImage.fillAmount = asyncLoad.progress;
             yield return new WaitForEndOfFrame();
         }

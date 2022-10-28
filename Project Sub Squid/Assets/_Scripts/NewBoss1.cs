@@ -118,7 +118,7 @@ public class NewBoss1 : MonoBehaviour
 
     void NormalState()
     {
-        Debug.Log("State normal");
+        
 
         currentAttack += Time.fixedDeltaTime;
 
@@ -147,7 +147,7 @@ public class NewBoss1 : MonoBehaviour
 
     void Attack1State()
     {
-        Debug.Log("State attack1");
+        
 
         currentAttack += Time.fixedDeltaTime;
 
@@ -192,7 +192,7 @@ public class NewBoss1 : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do player");
+            
             vidaBoss1 = vidaBoss1 - 3;
             UpdateHealthBar();
         }
@@ -200,7 +200,7 @@ public class NewBoss1 : MonoBehaviour
         if (other.gameObject.tag == "TiroDuplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do playerr");
+            
             vidaBoss1 = vidaBoss1 - 4;
             UpdateHealthBar();
         }
@@ -208,7 +208,7 @@ public class NewBoss1 : MonoBehaviour
         if (other.gameObject.tag == "TiroTriplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do playerr");
+            
             vidaBoss1 = vidaBoss1 - 3;
             UpdateHealthBar();
         }
@@ -216,7 +216,7 @@ public class NewBoss1 : MonoBehaviour
         if (other.gameObject.tag == "TiroPesado")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do player");
+           
             vidaBoss1 = vidaBoss1 - 6;
             UpdateHealthBar();
             
@@ -225,7 +225,7 @@ public class NewBoss1 : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("lBoss levou um tiro do player");
+          
             vidaBoss1 = vidaBoss1 - 1f;
             UpdateHealthBar();
             

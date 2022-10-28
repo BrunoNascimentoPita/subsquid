@@ -96,28 +96,28 @@ public class Boss2 : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do player");
+            
             vidaBoss2 = vidaBoss2 - 3;
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do playerr");
+           
             vidaBoss2 = vidaBoss2 - 4;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss levou um tiro do playerr");
+            
             vidaBoss2 = vidaBoss2 - 3;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("Boss2 levou um tiro do player");
+            
             vidaBoss2 = vidaBoss2 - 6;
             
         }
@@ -125,7 +125,7 @@ public class Boss2 : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("lBoss2 levou um tiro do player");
+           
             vidaBoss2 = vidaBoss2 - 1f;
             
         }

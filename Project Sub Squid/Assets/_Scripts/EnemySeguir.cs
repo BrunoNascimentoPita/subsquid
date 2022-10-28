@@ -92,32 +92,32 @@ public class EnemySeguir : MonoBehaviour
     {
         if (other.gameObject.tag == "Tiro")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigoSeguir = vidaInimigoSeguir - 3;
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigoSeguir = vidaInimigoSeguir - 4;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigoSeguir = vidaInimigoSeguir - 3;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigoSeguir = vidaInimigoSeguir - 6;
             
         }
 
         if (other.gameObject.tag == "5Tiros")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigoSeguir = vidaInimigoSeguir - 1f;
             
         }
@@ -131,7 +131,7 @@ public class EnemySeguir : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("chocou com o player");
+            
             Destroy(this.gameObject, 0.1f);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo

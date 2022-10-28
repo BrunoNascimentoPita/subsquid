@@ -77,40 +77,37 @@ public class Boss1 : MonoBehaviour
     {
         if (other.gameObject.tag == "Tiro")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaBoss1 = vidaBoss1 - danoBoss1;
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
-            Debug.Log("levou um tiro do player");
+           
             vidaBoss1 = vidaBoss1 - 2;
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaBoss1 = vidaBoss1 - 1;
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
-            Debug.Log("levou um tiro do Inimigo");
+           
             vidaBoss1 = vidaBoss1 - 4;
             
         }
 
         if (other.gameObject.tag == "5Tiros")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaBoss1 = vidaBoss1 - 0.5f;
             
         }
 
-        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("chocou com o player");
-        }
+       
 
     }
 }

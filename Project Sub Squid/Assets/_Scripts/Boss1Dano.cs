@@ -38,27 +38,27 @@ public class Boss1Dano : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("BossDano levou um tiro do playerr");
+            
             
         }
 
         if (other.gameObject.tag == "TiroDuplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("BossDano levou um tiro do playerr");
+           
             
         }
 
         if (other.gameObject.tag == "TiroTriplo")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("BossDano levou um tiro do playerr");
+           
         }
 
         if (other.gameObject.tag == "TiroPesado")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("BossDano levou um tiro do playerr");
+           
            
             
         }
@@ -66,7 +66,7 @@ public class Boss1Dano : MonoBehaviour
         if (other.gameObject.tag == "5Tiros")
         {
             StartCoroutine(DanoCor());
-            Debug.Log("BossDano levou um tiro do playerr");
+            
     
             
         }

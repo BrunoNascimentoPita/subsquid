@@ -151,7 +151,7 @@ public class EnemyRed : MonoBehaviour
 
     IEnumerator DanoCor()
     {
-        Debug.Log("CorDOTiro");
+        
         GetComponent<Renderer>().materials[0].color = corDano;
         GetComponent<Renderer>().materials[1].color = corDano;
         GetComponent<Renderer>().materials[2].color = corDano;
@@ -179,7 +179,7 @@ public class EnemyRed : MonoBehaviour
         if (other.gameObject.tag == "Tiro")
         {
             //FindObjectOfType<Audio_menager>().Play("tiro");
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - 3;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -189,7 +189,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "TiroDuplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - 4;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -198,7 +198,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "TiroTriplo")
         {
-            Debug.Log("levou um tiro do player");
+            
             vidaInimigo = vidaInimigo - 3;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -207,7 +207,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "TiroPesado")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigo = vidaInimigo - 6;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -217,7 +217,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "5Tiros")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigo = vidaInimigo - 1f;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -227,7 +227,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "TiroZigZag")
         {
-            Debug.Log("levou um tiro do Inimigo");
+            
             vidaInimigo = vidaInimigo - 6f;
             StartCoroutine(DanoCor());
             ParticleSystem particulaSangue = Instantiate(this.particulaSanguePrefab, this.transform.position, Quaternion.identity);
@@ -238,7 +238,7 @@ public class EnemyRed : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("chocou com o player");
+            
             Destroy(this.gameObject, 0.1f);
             ParticleSystem particulaExplosao = Instantiate(this.particulaExplosaoPrefab, this.transform.position, Quaternion.identity);
             Destroy(particulaExplosao.gameObject, 1f); // Destr�i a part�cula ap�s 1 segundo

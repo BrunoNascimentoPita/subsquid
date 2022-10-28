@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
         }
         */
 
-        Debug.Log("Inimigos mortos para o power ups" + contadorEnemyPW);
+        
 
         if(contadorEnemy == 20)
         {
@@ -130,8 +130,7 @@ public class GameController : MonoBehaviour
         FindObjectOfType<Audio_menager>().StopPlaying("musicafase");
         FindObjectOfType<Audio_menager>().Play("Pause");
 
-        pontosText.SetActive(false);
-        tirosText.SetActive(false);
+        
     }
 
     public void Resume()
@@ -162,6 +161,7 @@ public class GameController : MonoBehaviour
         score += scorePoints;
         scoreText1.text = score.ToString();
         scoreText.text = score.ToString();
+        
     }
 
     public void ContadorDeinimigos()

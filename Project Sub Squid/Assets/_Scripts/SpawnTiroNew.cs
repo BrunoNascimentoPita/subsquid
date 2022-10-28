@@ -15,7 +15,7 @@ public class SpawnTiroNew : MonoBehaviour
 
     public Transform bulletPW4;
 
-  
+
 
     //public GameObject shot;
     public Transform shotSpawn;
@@ -37,6 +37,7 @@ public class SpawnTiroNew : MonoBehaviour
     void Start()
     {
         qTiros = 0;
+        
     }
 
     // Update is called once per frame
@@ -58,8 +59,13 @@ public class SpawnTiroNew : MonoBehaviour
             StartCoroutine ("NoTiroPadrao");
             qTiros = qTiros - 1;
         }
-
-
+        if(qTiros==0){
+            qTirosText.color= new Color32(255,255,255,255);
+        }else if(qTiros <= 10){
+        qTirosText.color= new Color32(243,0,0,255);
+    }else if(qTiros >10 ){
+        qTirosText.color= new Color32(255,255,255,255);
+    }
         qTirosText.text = qTiros.ToString();
 
         

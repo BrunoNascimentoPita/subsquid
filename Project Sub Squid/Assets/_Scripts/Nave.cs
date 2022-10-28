@@ -15,7 +15,7 @@ public class Nave : MonoBehaviour
     public float dashSpeed = 35;
 
      public float fireRateDash = 0.5f;
-    private float nextFireDash = 0.0f;
+  
 
     public static bool isDash = false;
 
@@ -266,7 +266,7 @@ public class Nave : MonoBehaviour
 
     IEnumerator DashM() 
     {
-        Debug.Log("Dash");
+        
         //corpoRigido2D.velocity = new Vector2 (Input.GetAxis ("Horizontal") * dashSpeed, corpoRigido2D.velocity.y);
         //corpoRigido2D.velocity = new Vector2 (corpoRigido2D.velocity.x, Input.GetAxis ("Vertical") * dashSpeed);
         isDashing = true;
@@ -322,6 +322,7 @@ public class Nave : MonoBehaviour
         if (other.gameObject.tag == "PW1")
         {
             SpawnTiroNew.qTiros = 30;
+            
             noPowerUp = false;
             powerUp1 = true;
             powerUp2 = false;
@@ -424,7 +425,7 @@ public class Nave : MonoBehaviour
          if(SpawnTiroNew.qTiros == 30 && pegouPWtiro == true)
         {
             GameController.instance.SetScore(15);
-            Debug.Log("ADC 15 pontos");
+            
         }
         
          yield return new WaitForSeconds (0.5f);

@@ -14,4 +14,4 @@ Shoot em'up 2.5D
  - João Chervinski - Game Designer and Level Designer
  - Lohan Sampaio - Programmer
  - Matheus Lopes - 3D Modeller
- - Nilton Pedrett - Sound Designer
+ - Nilton Pedrett - Sound Designer 

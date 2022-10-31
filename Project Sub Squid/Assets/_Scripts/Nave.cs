@@ -45,7 +45,7 @@ public class Nave : MonoBehaviour
     
     
 
-    Rigidbody corpoRigido2D;
+    public Rigidbody corpoRigido2D;
     public float velocidade = 2;
 
 
@@ -55,7 +55,7 @@ public class Nave : MonoBehaviour
 
     // Barra de HP
 
-    private Image BarraHp;
+    public Image BarraHp;
 
     // tiros novos
 
@@ -64,7 +64,7 @@ public class Nave : MonoBehaviour
 
     // limites
 
-    private Transform target;
+    public Transform target;
 
 	public bool maxMin;
 	public float xMin;
@@ -106,13 +106,12 @@ public class Nave : MonoBehaviour
 
     void Start () 
     {
-        corpoRigido2D = GetComponent<Rigidbody> ();
         //corpoRigido2D.gravityScale = 0;
         corpoRigido2D.drag = deceleration;
         direction = UnityEngine.Random.insideUnitCircle;
-        BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
+        //BarraHp = GameObject.FindGameObjectWithTag("Hp_Barra").GetComponent<Image>();
         guns = transform.GetComponentsInChildren<Gun>();
-        target = GameObject.FindGameObjectWithTag ("Player").transform;
+        //target = GameObject.FindGameObjectWithTag ("Player").transform;
         velocidade = baseSpeed;
 
         noPowerUp = true;

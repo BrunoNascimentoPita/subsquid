@@ -983,7 +983,9 @@ MonoBehaviour:
   stateNormalDuration: 3
   vidaBoss1: 500
   boss1: {fileID: 7850272265970624075}
+  posicaoDoJogador: {fileID: 1455312270859064818, guid: c0f66d2a65f544848be2f3e2065c9b32, type: 3}
   posicaoDoBoss1: {fileID: 0}
+  target: {x: 0, y: 0}
   particulaExplosaoPrefab: {fileID: 7798639036510016278, guid: bec223e72e9ee9c4bbc029bc88d43f04, type: 3}
   vidaDropavelPrefab: {fileID: 5402714528065153377, guid: eb74f21665bec514a93dcce5b570f4e1, type: 3}
   materialBoss:

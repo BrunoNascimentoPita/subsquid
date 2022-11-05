@@ -45,7 +45,7 @@ public class SpawnTiroNew : MonoBehaviour
     {
         tiroJ = Input.GetKey(KeyCode.J);
 
-        if(tiroJ && Time.time > nextFire && Nave.isDash == false && Nave.shoot == false)
+        if(Time.time > nextFire && Nave.isDash == false && Nave.shoot == false)
         {
             Tiro();
             tiroPadrao = true;
